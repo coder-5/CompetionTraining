@@ -35,7 +35,6 @@
         .Q5Button {
             position: relative;
             top: 50px;
-            right: 150px;
         }
         button {
             border-radius: 25px;
@@ -93,7 +92,7 @@
         <p>Focus on the top-left quarter. Consider moving a single triangle. The shaded area in the problem is exactly the same as the shaded area in this diagram (and the top-left quarter is outlined in bold):</p>
         <img src="Assets/Images/1-sol.svg">
         <p>But then it is obvious that exactly half of the top-left quarter is shaded, and so the answer is 50% which is choice <b>B.</b></p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rGEGn7U4uHk?si=1k5HXTgkr_SUKJB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen allow></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rGEGn7U4uHk?si=1k5HXTgkr_SUKJB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="Question" id="Q2" hidden="true">
         <h2>Queston 2</h2>
@@ -155,8 +154,12 @@
         <button id="5e" onclick="wrong(5, 'e')" class="Q5Button e">E. $28$</button>
     </div>
     <div class="solution" id="Q5Sol" hidden="true">
-        <p>We plug $a=100, d=-7$ and $n=10$ into the formula $a+d(n-1)$ for the $n$th term of an arithmetic sequence whose first term is $a$ and common difference is $d$ to get $100-7(10-1) = \boxed{\text{(B)\ 37}}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rf5c9ulMA2I?si=Pr_FBj8VARSyJI6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3>Solution 1</h3>
+        <p>Each shortest possible path from $A$ to $B$ follows the edges of the rectangle. The following path outlines a path of $\boxed{\textbf{(C)}\ 24}$ units:</p>
+        <img src="./Assets/Images/Q5SolImage.png">
+        <h3>Solution 2</h3>
+        <p>We can find the shortest distance using a line diagonally from one point to the other, creating a sort of slope, then find the sum of rise and run of the slope, which happens to be the shortest distance, repeat this process until you get back to Point $F$, and you should get $2 + 1 + 3 + 7 + 4 + 2 + 1 + 4$, which is equal to $\boxed{\textbf{(C)}\ 24}$.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/n6M3y_1dsOk?si=JrQdVHiRiIwAA6Ns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
