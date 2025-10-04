@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+        <script>
+      MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']], // Inline math delimiters
+          displayMath: [['$$', '$$'], ['\\[', '\\]']] // Display math delimiters
+        },
+        svg: {
+          fontCache: 'global'
+        }
+      };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="./quiz.js"></script>
+    <style>
+        #Q1Image {
+            width: 200px;
+            height: 200px;
+        }
+        .Q1Button {
+            position: relative;
+            top: 50px;
+            right: 200px;
+        }
+        .Q2Button {
+            position: relative;
+            top: 50px;
+            right: 150px;
+        }
+        button {
+            border-radius: 25px;
+            padding: 10px 20px;
+            background-color: aquamarine;
+        }
+        div {
+            background-color: rgb(233, 233, 233);
+            border-radius: 25px;
+            margin: 10px;
+            padding: 20px;
+        }
+        .Question {
+            width: 1000px;
+            height: 600px;
+        }
+        #QuestionNavigator {
+            position: absolute;
+            left: 1100px;
+            bottom: 600px;
+            Width: 600px;
+            height: 200px;
+        }
+        button {
+            margin: 0px;
+        }
+        .questionNavButton {
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            margin: 5px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        .solution {
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <h1>AMC 8 2025 Test</h1>
+    <div class="Question" id="Q1">
+        <h2>Queston 1</h2>
+        <p>The eight-pointed star, shown in the figure below, is a popular quilting pattern. What percent of the entire $4\times4$ grid is covered by the star?</p>
+        <img src="./Assets/Images/Q1Image.png" id="Q1Image">
+        <button id="1a" onclick="wrong(1, 'a')" class="Q1Button a">A. $40$</button>
+        <button id="1b" onclick="right(1, 'b')" class="Q1Button b right">B. $50$</button>
+        <button id="1c" onclick="wrong(1, 'c')" class="Q1Button c">C. $60$</button>
+        <button id="1d" onclick="wrong(1, 'd')" class="Q1Button d">D. $75$</button>
+        <button id="1e" onclick="wrong(1, 'e')" class="Q1Button e">E. $80$</button>
+    </div>
+    <div class="solution" id="Q1Sol" hidden="true">
+        <p>There is symmetry, and so whatever fraction of the top-left quarter is shaded, is the same as the fraction of the entire square that is shaded.</p>
+        <p>Focus on the top-left quarter. Consider moving a single triangle. The shaded area in the problem is exactly the same as the shaded area in this diagram (and the top-left quarter is outlined in bold):</p>
+        <img src="Assets/Images/1-sol.svg">
+        <p>But then it is obvious that exactly half of the top-left quarter is shaded, and so the answer is 50% which is choice <b>B.</b></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rGEGn7U4uHk?si=1k5HXTgkr_SUKJB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="Question" id="Q2" hidden="true">
+        <h2>Queston 2</h2>
+        <p>The table below shows the ancient Egyptian heiroglyphs that were used to represent different numbers.</p>
+        <img src="./Assets/Images/Q2Image1.svg" id="Q2Image1">
+        <p>For example, the number  32 was represented by:</p>
+        <img src="./Assets/Images/Q2Image2.svg" id="Q2Image2">
+        <p>What number was represented by the following combination of heiroglyphs?</p>
+        <img src="./Assets/Images/Q2Image3.svg">
+        <button id="2a" onclick="wrong(2, 'a')" class="Q2Button a">A. $1,423$</button>
+        <button id="2b" onclick="right(2, 'b')" class="Q2Button b right">B. $10,423$</button>
+        <button id="2c" onclick="wrong(2, 'c')" class="Q2Button c">C. $14,023$</button>
+        <button id="2d" onclick="wrong(2, 'd')" class="Q2Button d">D. $14,203$</button>
+        <button id="2e" onclick="wrong(2, 'e')" class="Q2Button e">E. $14,230$</button>
+    </div>
+    <div class="solution" id="Q2Sol" hidden="true">
+        <p>We just need to count how many of each type of glyph there are.</p>
+        <p>There is 1 glyph worth 10,000.</p>
+        <p>There are 4 glyphs worth 100 each.</p>
+        <p>There are 2 glyphs worth 10 each.</p>
+        <p>There are 3 glyphs worth 1 each.</p>
+        <p>So, the answer is 10,423, which is choice <b>B.</b></p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/j20JsyEXKcs?si=qw2QDc4UfsO4uPgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="Question" id="Q3" hidden="true">
+        <h2>Queston 3</h2>
+        <p>Buffalo Shuffle-o is a card game in which all the cards are distributed evenly among all players at the start of the game. When Annika and 3 of her friends play Buffalo Shuffle-o, each player is dealt 15 cards. Suppose 2 more friends join the next game. How many cards will be dealt to each player?</p>
+        <button id="3a" onclick="wrong(3, 'a')" class="Q3Button a">A. $8$</button>
+        <button id="3b" onclick="wrong(3, 'b')" class="Q3Button b">B. $9$</button>
+        <button id="3c" onclick="right(3, 'c')" class="Q3Button c right">C. $10$</button>
+        <button id="3d" onclick="wrong(3, 'd')" class="Q3Button d">D. $11$</button>
+        <button id="3e" onclick="wrong(3, 'e')" class="Q3Button e">E. $12$</button>
+    </div>
+        <div class="solution" id="Q3Sol" hidden="true">
+        <p>We start with Annika and $3$ of her friends playing, meaning that there are $4$ players. This must mean that there is a total of $4 \cdot 15 = 60$ cards. If $2$ more players joined, there would be $6$ players, and since the cards need to be split evenly, this would mean that each player gets $\frac{60}{6}=\boxed{\text{(C) 10}}$ Buffalo Shuffle-O cards each meaning that the final answer is 10.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TbwqZy5_Q18?si=FOUkOBb3Ha0sMPCO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="Question" id="Q4" hidden="true">
+        <h2>Queston 4</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos architecto quasi, quisquam vitae optio quo sed, repudiandae excepturi, unde nulla quis. Aperiam et consequatur distinctio vel cumque vero corrupti eaque?</p>
+        <button id="4a" onclick="wrong(4, 'a')" class="Q4Button a">A. $30$</button>
+        <button id="4b" onclick="right(4, 'b')" class="Q4Button b right">B. $37$</button>
+        <button id="4c" onclick="wrong(4, 'c')" class="Q4Button c">C. $42$</button>
+        <button id="4d" onclick="wrong(4, 'd')" class="Q4Button d">D. $44$</button>
+        <button id="4e" onclick="wrong(4, 'e')" class="Q4Button e">E. $47$</button>
+    </div>
+    <div class="solution" id="Q4Sol" hidden="true">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cumque nulla accusantium dolorem ad aperiam voluptatum ab, quaerat tenetur exercitationem natus necessitatibus! Dolorem eum autem nihil odit quo est numquam iusto.</p>
+    </div>
+    <div id="QuestionNavigator">
+        <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
+        <button class="questionNavButton" id="Q2NavButton" onclick="QuestionSwitch(2)">2</button>
+        <button class="questionNavButton" id="Q3NavButton" onclick="QuestionSwitch(3)">3</button>
+        <button class="questionNavButton" id="Q4NavButton" onclick="QuestionSwitch(4)">4</button>
+        <button class="questionNavButton" id="Q5NavButton" onclick="QuestionSwitch(4)">5</button>
+        <button class="questionNavButton" id="Q6NavButton" onclick="QuestionSwitch(6)">6</button>
+        <button class="questionNavButton" id="Q7NavButton" onclick="QuestionSwitch(7)">7</button>
+        <button class="questionNavButton" id="Q8NavButton" onclick="QuestionSwitch(8)">8</button>
+        <button class="questionNavButton" id="Q9NavButton" onclick="QuestionSwitch(9)">9</button>
+        <button class="questionNavButton" id="Q10NavButton" onclick="QuestionSwitch(10)">10</button>
+        <button class="questionNavButton" id="Q11NavButton" onclick="QuestionSwitch(11)">11</button>
+        <button class="questionNavButton" id="Q12NavButton" onclick="QuestionSwitch(12)">12</button>
+        <button class="questionNavButton" id="Q13NavButton" onclick="QuestionSwitch(13)">13</button>
+        <button class="questionNavButton" id="Q14NavButton" onclick="QuestionSwitch(14)">14</button>
+        <button class="questionNavButton" id="Q15NavButton" onclick="QuestionSwitch(15)">15</button>
+        <button class="questionNavButton" id="Q16NavButton" onclick="QuestionSwitch(16)">16</button>
+        <button class="questionNavButton" id="Q17NavButton" onclick="QuestionSwitch(17)">17</button>
+        <button class="questionNavButton" id="Q18NavButton" onclick="QuestionSwitch(18)">18</button>
+        <button class="questionNavButton" id="Q19NavButton" onclick="QuestionSwitch(19)">19</button>
+        <button class="questionNavButton" id="Q20NavButton" onclick="QuestionSwitch(20)">20</button>
+        <button class="questionNavButton" id="Q21NavButton" onclick="QuestionSwitch(21)">21</button>
+        <button class="questionNavButton" id="Q22NavButton" onclick="QuestionSwitch(22)">22</button>
+        <button class="questionNavButton" id="Q23NavButton" onclick="QuestionSwitch(23)">23</button>
+        <button class="questionNavButton" id="Q24NavButton" onclick="QuestionSwitch(24)">24</button>
+        <button class="questionNavButton" id="Q25NavButton" onclick="QuestionSwitch(25)">25</button>
+    </div>
+
+</body>
+</html>

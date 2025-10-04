@@ -1,0 +1,28 @@
+.testbox {
+    border-radius: 25px;
+    border: 3px solid black;
+    width: 200px;
+    height: 130px;
+    background-color: antiquewhite;
+    position: absolute;
+}
+.testname {
+    text-align: center;
+}
+button {
+    border-radius: 25px;
+    margin: 0px 60px;
+    background-color: aquamarine;
+}
+#MOEMSE {
+    top: 127px;
+    left: 240px;
+}
+#MOEMSM {
+    top: 127px;
+    left: 480px;
+}
+#AMC10 {
+    top: 127px;
+    left: 720px;
+}
