@@ -28,7 +28,7 @@ function wrong(questionNumber, letter) {
         for (let i = 0; i < buttons.length; i++) {
             buttons[i].disabled = "true"
         }
-        document.getElementsByClassName("right")[0].style.backgroundColor = "#00fa04"
+        document.getElementsByClassName("right")[questionNumber - 1].style.backgroundColor = "#00fa04"
         document.getElementById(`Q${questionNumber}Sol`).removeAttribute('hidden');
         wrongCountMCQ = 0;
         answered[questionNumber - 1] = true

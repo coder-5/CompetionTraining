@@ -37,6 +37,11 @@
             top: 50px;
             right: 300px;
         }
+        .Q8Button {
+            position: relative;
+            top: 50px;
+            right: 420px;
+        }
         button {
             border-radius: 25px;
             padding: 10px 20px;
@@ -200,6 +205,23 @@
         <h3>Solution 2</h3>
         <p>Let $a$ denote the number of people who had a score of at least $85$, but less than $90$, and let $b$ denote the number of people who had a score of at least $80$ but less than $85$. Our answer is equal to $a+b$. We find $a = 27 - 13 = 14$, while $b = 50 - 27 = 23$. Thus, the answer is $23 + 14 = \boxed{\text{(D) 37}}$.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/nkpdskFVgdM?si=9h2a26OHBRK27drU&amp;start=245" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+        <div class="Question" id="Q8" hidden="true">
+        <h2>Queston 8</h2>
+        <p>Isaiah cuts open a cardboard cube along some of its edges to form the flat shape shown on the right, which has an area of $18$ square centimeters. What is the volume of the cube in cubic centimeters?</p>
+        <img src="Assets/Images/Amc8_2025_prob8.png">
+        <button id="8a" onclick="right(8, 'a')" class="Q8Button a right">A. $3\sqrt{3}$</button>
+        <button id="8b" onclick="wrong(8, 'b')" class="Q8Button b">B. $6$</button>
+        <button id="8c" onclick="wrong(8, 'c')" class="Q8Button c">C. $9$</button>
+        <button id="8d" onclick="wrong(8, 'd')" class="Q8Button d">D. $6\sqrt{3}$</button>
+        <button id="8e" onclick="wrong(8, 'e')" class="Q8Button e">E. $9\sqrt{3}$</button>
+    </div>
+    <div class="solution" id="Q8Sol" hidden="true">
+        <h3>Solution 1</h3>
+        <p>Each of the $6$ faces of the cube have equal area, so the area of each face is equal to $\frac{18}{6} = 3$, making the side length $\sqrt3$. From this, we can see that the volume of the cube is $\sqrt{3}^3 = \boxed{\textbf{(A)}3\sqrt{3}}$.</p>
+        <h3>Solution 2</h3>
+        <p>Let the side length of the cube shown be equal to $s$ centimeters. The surface area of this cube is equal to the area of the net of the cube, which is equal to $18$ square centimeters. The surface area of this cube is also $6s^2$ square centimeters, so we have\[6s^2 = 18 \implies s^2 = \frac{18}{6} = 3 \implies s = \sqrt{3}.\]However, we aren't done. We have found that the side length of the cube is $\sqrt{3} cm$, but the question asks for the volume of the cube, which is equal to $s^3 = \sqrt{3}^3 = \boxed{\textbf{(A)}3\sqrt{3}}$ cubic centimeters.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=cXBOnHlVV66aHWOL&amp;start=577" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
