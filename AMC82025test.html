@@ -84,6 +84,13 @@
         .solution {
             width: 1000px;
         }
+        .I13Image {
+            width: 300px;
+            height: 150px;
+        }
+        #Q13 {
+            height: 800px;
+        }
     </style>
 </head>
 <body>
@@ -317,7 +324,7 @@
         <h2>Queston 12</h2>
         <p>The region shown below consists of 24 squares, each with side length 1 centimeter. What is the area, in square centimeters, of the largest circle that can fit inside the region, possibly touching the boundaries?</p>
         <img src="Assets/Images/12Image.svg">
-        <button id="12a" onclick="wrong(12, 'a')" class="Q21Button a">A. $3\pi$</button>
+        <button id="12a" onclick="wrong(12, 'a')" class="Q12Button a">A. $3\pi$</button>
         <button id="12b" onclick="wrong(12, 'b')" class="Q12Button b">B. $4\pi$</button>
         <button id="12c" onclick="right(12, 'c')" class="Q12Button c right">C. $5\pi$</button>
         <button id="12d" onclick="wrong(12, 'd')" class="Q12Button d">D. $6\pi$</button>
@@ -329,6 +336,22 @@
         <h3>Solution 2</h3>
         <p>Draw the circle in the grid and analyze the radius. Its radius is a little more than 2 but a lot less than 2.5, so the area is a little more than 4π. So, the area of the circle is $\boxed{\textbf{(C) } 5\pi}$ with a radius of approximately 2.23.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=uXsoJaMCWGXKT0c7&amp;start=1096" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="Question" id="Q13" hidden="true">
+        <h2>Queston 13</h2>
+        <p>Each of the even numbers $2, 4, 6, \ldots, 50$ is divided by $7$. The remainders are recorded. Which histogram displays the number of times each remainder occurs?</p>
+        <button id="13a" onclick="right(13, 'a')" class="Q13Button a right">A. <img src="./Assets/Images/13a.png" class="I13Image"></button>
+        <button id="13b" onclick="wrong(13, 'b')" class="Q13Button b">B. <img src="./Assets/Images/13b.png" class="I13Image"></button>
+        <button id="13c" onclick="wrong(13, 'c')" class="Q13Button c">C. <img src="./Assets/Images/13c.png" class="I13Image"></button>
+        <button id="13d" onclick="wrong(13, 'd')" class="Q13Button d">D. <img src="./Assets/Images/13d.png" class="I13Image"></button>
+        <button id="13e" onclick="wrong(13, 'e')" class="Q13Button e">E. <img src="./Assets/Images/13e.png" class="I13Image"></button>
+    </div>
+    <div class="solution" id="Q13Sol" hidden="true">
+        <h3>Solution 1</h3>
+        <p>Let's take the numbers 2 through 14 (evens). The remainders will be 2, 4, 6, 1, 3, 5, and 0. This sequence keeps repeating itself over and over. We can take $\left\lfloor\frac{50}{14}\right\rfloor$, so after the number 42, every remainder has been achieved 3 times. However, since 44, 46, 48, and 50 are left, the remainders of those will be 2, 4, 6, and 1 respectively. The only histogram in which those 4 numbers are set at 4 is histogram $\boxed{\textbf{(A)}}$.</p>
+        <h3>Solution 2</h3>
+        <p>Writing down all the remainders gives us $2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1.$ In this list, there are $3$ numbers with remainder $0$, $4$ numbers with remainder $1$, $4$ numbers with remainder $2$, $3$ numbers with remainder $3$, $4$ numbers with remainder $4$, $3$ numbers with remainder $5$, and $4$ numbers with remainder $6$. Manually computation of every single term can be avoided by recognizing the pattern alternates from $0, 2, 4, 6$ to $1, 3, 5$ and there are $25$ terms. The only histogram that matches this is $\boxed{\textbf{(A)}}$.</p>
+        
     </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
