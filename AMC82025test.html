@@ -292,6 +292,27 @@
         <p>The area of each rectangle is $5 \cdot 3 = 15$. Then the sum of the areas of the two regions is the sum of the areas of the two rectangles, minus the area of their overlap. To find the area of the overlap, we note that the region of overlap is a square, each of whose sides have length $2.5$ (as they are formed by the midpoint of one of the long sides, the vertex, and also, since it is rotated 90 degrees). Then the answer is $15+15-2.5^2=\boxed{\textbf{(D)}~23.75}$.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/BRnILzqVwHk?si=WVYhX87UZlI5F65n&amp;start=560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+    <div class="Question" id="Q11" hidden="true">
+        <h2>Queston 11</h2>
+        <p>A $\textit{tetromino}$ consists of four squares connected along their edges. There are five possible tetromino shapes, $I$, $O$, $L$, $T$, and $S$, shown below, which can be rotated or flipped over. Three tetrominoes are used to completely cover a $3\times4$ rectangle. At least one of the tiles is an $S$ tile. What are the other two tiles?</p>
+        <img src="Assets/Images/11Image.png">
+        <button id="11a" onclick="wrong(11, 'a')" class="Q11Button a">A. $21$</button>
+        <button id="11b" onclick="wrong(11, 'b')" class="Q11Button b">B. $22.25$</button>
+        <button id="11c" onclick="right(11, 'c')" class="Q11Button c right">C. $23$</button>
+        <button id="11d" onclick="wrong(11, 'd')" class="Q11Button d">D. $23.75$</button>
+        <button id="11e" onclick="wrong(11, 'e')" class="Q11Button e">E. $25$</button>
+    </div>
+    <div class="solution" id="Q11Sol" hidden="true">
+        <h3>Solution 1</h3>
+        <p>The $3\times4$ rectangle allows for $7$ possible places to put the S piece, with each possible placement having an inverted version. One of the cases looks like this:</p>
+        <img src="./Assets/Images/Q11Sol1.png">
+        <p>As you can see, there is a hole in the top left corner of the board, which would be impossible to fill using the tetrominos. There are three cases in which a hole isn't created; the S lies flat in the bottom left corner, it lies flat in the top right corner, or it stands upright in the center. All three tilings are shown below.</p>
+        <img src="./Assets/Images/Q11Sol2.png">
+        <img src="./Assets/Images/Q11Sol3.png">
+        <img src="./Assets/Images/Q11Sol4.png">
+        <p>For each of the inverted cases, the L pieces can be inverted along with the S piece. Because the only cases that fill the rectangle after the S is placed are the ones that use two L pieces, the answer must be $\boxed{\textbf{(C)}~L \ and \ L}$.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=eZopaGBiLpRg0lhi&amp;start=965" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
         <button class="questionNavButton" id="Q2NavButton" onclick="QuestionSwitch(2)">2</button>
