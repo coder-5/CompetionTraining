@@ -313,6 +313,23 @@
         <p>For each of the inverted cases, the L pieces can be inverted along with the S piece. Because the only cases that fill the rectangle after the S is placed are the ones that use two L pieces, the answer must be $\boxed{\textbf{(C)}~L \ and \ L}$.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=eZopaGBiLpRg0lhi&amp;start=965" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+    <div class="Question" id="Q12" hidden="true">
+        <h2>Queston 12</h2>
+        <p>The region shown below consists of 24 squares, each with side length 1 centimeter. What is the area, in square centimeters, of the largest circle that can fit inside the region, possibly touching the boundaries?</p>
+        <img src="Assets/Images/12Image.svg">
+        <button id="12a" onclick="wrong(12, 'a')" class="Q21Button a">A. $3\pi$</button>
+        <button id="12b" onclick="wrong(12, 'b')" class="Q12Button b">B. $4\pi$</button>
+        <button id="12c" onclick="right(12, 'c')" class="Q12Button c right">C. $5\pi$</button>
+        <button id="12d" onclick="wrong(12, 'd')" class="Q12Button d">D. $6\pi$</button>
+        <button id="12e" onclick="wrong(12, 'e')" class="Q12Button e">E. $8\pi$</button>
+    </div>
+    <div class="solution" id="Q12Sol" hidden="true">
+        <h3>Solution 1</h3>
+        <p>The largest circle that can fit inside the figure has its center in the middle of the figure and will be tangent to the figure in $8$ points. By the Pythagorean Theorem, the distance from the center to one of these $8$ points is $\sqrt{2^2 + 1^2} = \sqrt5$, so the area of this circle is $\pi \sqrt{5}^2 = \boxed{\textbf{(C) } 5\pi}$.</p>
+        <h3>Solution 2</h3>
+        <p>Draw the circle in the grid and analyze the radius. Its radius is a little more than 2 but a lot less than 2.5, so the area is a little more than 4π. So, the area of the circle is $\boxed{\textbf{(C) } 5\pi}$ with a radius of approximately 2.23.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=uXsoJaMCWGXKT0c7&amp;start=1096" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
         <button class="questionNavButton" id="Q2NavButton" onclick="QuestionSwitch(2)">2</button>
