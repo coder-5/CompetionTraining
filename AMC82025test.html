@@ -178,6 +178,29 @@
         <p>The sum of the residues of these numbers modulo $4$ is $-1+0+1+2+3=5 \equiv 1 \pmod 4$. Hence, the number being subtracted must be congruent to $1$ modulo $4$. The only such answer is $\boxed{\textbf{(C)}~17}$.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/nkpdskFVgdM?si=n-Dpzv5sn-R1ffdt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+    <div class="Question" id="Q7" hidden="true">
+        <h2>Queston 7</h2>
+        <p>On the most recent exam on Prof. Xochi's class,</p>
+        <ul style="list-style-type: square;">
+            <li>$5$ students earned a score of at least $95\%$,</li>
+            <li>$13$ students earned a score of at least $90\%$,</li>
+            <li>$27$ students earned a score of at least $85\%$,</li>
+            <li>$50$ students earned a score of at least $80\%$,</li>
+        </ul>
+        <p>How many students earned a score of at least $80\%$ and less than $90\%$?</p>
+        <button id="7a" onclick="wrong(7, 'a')" class="Q7Button a">A. $8$</button>
+        <button id="7b" onclick="wrong(7, 'b')" class="Q7Button b">B. $14$</button>
+        <button id="7c" onclick="wrong(7, 'c')" class="Q7Button c">C. $22$</button>
+        <button id="7d" onclick="right(7, 'd')" class="Q7Button d right">D. $37$</button>
+        <button id="7e" onclick="wrong(7, 'e')" class="Q7Button e">E. $45$</button>
+    </div>
+    <div class="solution" id="Q7Sol" hidden="true">
+        <h3>Solution 1</h3>
+        <p>$50$ people scored at least $80\%$, and out of these $50$ people, $13$ of them earned a score that was not less than $90\%$, so the number of people that scored in between at least $80\%$ and less than $90\%$ is $50-13 = \boxed{\text{(D) 37}}$.</p>
+        <h3>Solution 2</h3>
+        <p>Let $a$ denote the number of people who had a score of at least $85$, but less than $90$, and let $b$ denote the number of people who had a score of at least $80$ but less than $85$. Our answer is equal to $a+b$. We find $a = 27 - 13 = 14$, while $b = 50 - 27 = 23$. Thus, the answer is $23 + 14 = \boxed{\text{(D) 37}}$.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/nkpdskFVgdM?si=9h2a26OHBRK27drU&amp;start=245" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
         <button class="questionNavButton" id="Q2NavButton" onclick="QuestionSwitch(2)">2</button>
