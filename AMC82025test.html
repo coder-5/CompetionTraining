@@ -258,7 +258,7 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=cXBOnHlVV66aHWOL&amp;start=577" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     </div>
-        <div class="Question" id="Q9" hidden="true">
+    <div class="Question" id="Q9" hidden="true">
         <h2>Queston 9</h2>
         <p>Ningli looks at the $6$ pairs of numbers directly across from each other on a clock. She takes the average of each pair of numbers. What is the average of the resulting $6$ numbers?</p>
         <img src="Assets/Images/9Image.svg">
@@ -276,6 +276,21 @@
         <h3>Solution 3</h3>
         <p>The problem is asking for the average of all $12$ numbers. To find the average of all $12$ numbers, you find the sum of all the integers from $1$ to $12$ which is $78$, and divide it by $12$ because there are 12 terms. Therefore, the answer is $\frac{78}{12}=\boxed{\textbf{(B)}~6.5}$. You could also see that the average of, $2$ and $8$, is $5$, only one more that it's consecutive pair, $1$ and $7$ which is $4$. Assuming that this is the pattern, we can find the average $4$ to $9$ (6 consecutive integers starting with $4$), and we that find our answer is $\boxed{\textbf{(B)}~6.5}$.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/BRnILzqVwHk?si=vt1ES1YUw3Ma7Wgd&amp;start=399" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="Question" id="Q10" hidden="true">
+        <h2>Queston 10</h2>
+        <p>In the figure below, $ABCD$ is a rectangle with sides of length $AB = 5$ inches and $AD$ = 3 inches. Rectangle $ABCD$ is rotated $90^\circ$ clockwise around the midpoint of side $DC$ to give a second rectangle. What is the total area, in square inches, covered by the two overlapping rectangles?</p>
+        <img src="Assets/Images/10Image.svg">
+        <button id="10a" onclick="wrong(10, 'a')" class="Q10Button a">A. $21$</button>
+        <button id="10b" onclick="wrong(10, 'b')" class="Q10Button b">B. $22.25$</button>
+        <button id="10c" onclick="wrong(10, 'c')" class="Q10Button c">C. $23$</button>
+        <button id="10d" onclick="right(10, 'd')" class="Q10Button d right">D. $23.75$</button>
+        <button id="10e" onclick="wrong(10, 'e')" class="Q10Button e">E. $25$</button>
+    </div>
+    <div class="solution" id="Q10Sol" hidden="true">
+        <h3>Solution 1</h3>
+        <p>The area of each rectangle is $5 \cdot 3 = 15$. Then the sum of the areas of the two regions is the sum of the areas of the two rectangles, minus the area of their overlap. To find the area of the overlap, we note that the region of overlap is a square, each of whose sides have length $2.5$ (as they are formed by the midpoint of one of the long sides, the vertex, and also, since it is rotated 90 degrees). Then the answer is $15+15-2.5^2=\boxed{\textbf{(D)}~23.75}$.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BRnILzqVwHk?si=WVYhX87UZlI5F65n&amp;start=560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
