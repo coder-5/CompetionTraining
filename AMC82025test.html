@@ -223,6 +223,26 @@
         <p>Let the side length of the cube shown be equal to $s$ centimeters. The surface area of this cube is equal to the area of the net of the cube, which is equal to $18$ square centimeters. The surface area of this cube is also $6s^2$ square centimeters, so we have\[6s^2 = 18 \implies s^2 = \frac{18}{6} = 3 \implies s = \sqrt{3}.\]However, we aren't done. We have found that the side length of the cube is $\sqrt{3} cm$, but the question asks for the volume of the cube, which is equal to $s^3 = \sqrt{3}^3 = \boxed{\textbf{(A)}3\sqrt{3}}$ cubic centimeters.</p>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=cXBOnHlVV66aHWOL&amp;start=577" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+    </div>
+        <div class="Question" id="Q9" hidden="true">
+        <h2>Queston 9</h2>
+        <p>Ningli looks at the $6$ pairs of numbers directly across from each other on a clock. She takes the average of each pair of numbers. What is the average of the resulting $6$ numbers?</p>
+        <img src="Assets/Images/9Image.svg">
+        <button id="9a" onclick="right(8, 'a')" class="Q9Button a right">A. $5$</button>
+        <button id="8b" onclick="wrong(9, 'b')" class="Q9Button b">B. $6.5$</button>
+        <button id="9c" onclick="wrong(9, 'c')" class="Q9Button c">C. $8$</button>
+        <button id="9d" onclick="wrong(9, 'd')" class="Q9Button d">D. $9.5$</button>
+        <button id="9e" onclick="wrong(9, 'e')" class="Q9Button e">E. $12$</button>
+    </div>
+    <div class="solution" id="Q9Sol" hidden="true">
+        <h3>Solution 1</h3>
+        <p>Our answer is\[\frac{\frac{1+7}{2} + \frac{2+8}{2} + \cdots + \frac{6+12}{2}}{6} = \frac{\frac{1}{2}((1+7)+(2+8)+\cdots+(6+12))}{6} = \frac{1+2+3+4+5+6+7+8+9+10+11+12}{2 \cdot 6} = \frac{\frac{12 \cdot 13}{2}}{2 \cdot 6} = \frac{78}{12} =\boxed{\textbf{(B)}~6.5}\]</p>
+        <h3>Solution 2</h3>
+        <p>We proceed with brute force. All of the pairs of opposite numbers on the clock are $(12,6)$, $(1,7)$, $(2,8)$, $(3,9)$, $(4,10)$, $(5,11)$, where order doesn't matter. The averages of each of these pairs are $9, 4, 5, 6, 7,$ and $8$ respectively, and the average these numbers is $\frac{9+4+5+6+7+8}{6}=\boxed{\textbf{(B)}~6.5}$</p>
+        <h3>Solution 3</h3>
+        <p>The problem is asking for the average of all $12$ numbers. To find the average of all $12$ numbers, you find the sum of all the integers from $1$ to $12$ which is $78$, and divide it by $12$ because there are 12 terms. Therefore, the answer is $\frac{78}{12}=\boxed{\textbf{(B)}~6.5}$. You could also see that the average of, $2$ and $8$, is $5$, only one more that it's consecutive pair, $1$ and $7$ which is $4$. Assuming that this is the pattern, we can find the average $4$ to $9$ (6 consecutive integers starting with $4$), and we that find our answer is $\boxed{\textbf{(B)}~6.5}$.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BRnILzqVwHk?si=vt1ES1YUw3Ma7Wgd&amp;start=399" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
         <button class="questionNavButton" id="Q2NavButton" onclick="QuestionSwitch(2)">2</button>
