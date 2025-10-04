@@ -32,6 +32,11 @@
             top: 50px;
             right: 150px;
         }
+        .Q5Button {
+            position: relative;
+            top: 50px;
+            right: 150px;
+        }
         button {
             border-radius: 25px;
             padding: 10px 20px;
@@ -88,7 +93,7 @@
         <p>Focus on the top-left quarter. Consider moving a single triangle. The shaded area in the problem is exactly the same as the shaded area in this diagram (and the top-left quarter is outlined in bold):</p>
         <img src="Assets/Images/1-sol.svg">
         <p>But then it is obvious that exactly half of the top-left quarter is shaded, and so the answer is 50% which is choice <b>B.</b></p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rGEGn7U4uHk?si=1k5HXTgkr_SUKJB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rGEGn7U4uHk?si=1k5HXTgkr_SUKJB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen allow></iframe>
     </div>
     <div class="Question" id="Q2" hidden="true">
         <h2>Queston 2</h2>
@@ -111,7 +116,7 @@
         <p>There are 2 glyphs worth 10 each.</p>
         <p>There are 3 glyphs worth 1 each.</p>
         <p>So, the answer is 10,423, which is choice <b>B.</b></p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/j20JsyEXKcs?si=qw2QDc4UfsO4uPgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/j20JsyEXKcs?si=qw2QDc4UfsO4uPgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="Question" id="Q3" hidden="true">
         <h2>Queston 3</h2>
@@ -124,7 +129,7 @@
     </div>
         <div class="solution" id="Q3Sol" hidden="true">
         <p>We start with Annika and $3$ of her friends playing, meaning that there are $4$ players. This must mean that there is a total of $4 \cdot 15 = 60$ cards. If $2$ more players joined, there would be $6$ players, and since the cards need to be split evenly, this would mean that each player gets $\frac{60}{6}=\boxed{\text{(C) 10}}$ Buffalo Shuffle-O cards each meaning that the final answer is 10.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TbwqZy5_Q18?si=FOUkOBb3Ha0sMPCO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/TbwqZy5_Q18?si=FOUkOBb3Ha0sMPCO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="Question" id="Q4" hidden="true">
         <h2>Queston 4</h2>
@@ -136,15 +141,29 @@
         <button id="4e" onclick="wrong(4, 'e')" class="Q4Button e">E. $47$</button>
     </div>
     <div class="solution" id="Q4Sol" hidden="true">
+        <p>We plug $a=100, d=-7$ and $n=10$ into the formula $a+d(n-1)$ for the $n$th term of an arithmetic sequence whose first term is $a$ and common difference is $d$ to get $100-7(10-1) = \boxed{\text{(B) 37}}$.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rf5c9ulMA2I?si=Pr_FBj8VARSyJI6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="Question" id="Q5" hidden="true">
+        <h2>Queston 5</h2>
+        <p>Betty drives a truck to deliver packages in a neighborhood whose street map is shown below. Betty starts at the factory (labled $F$) and drives to location $A$, then $B$, then $C$, before returning to $F$. What is the shortest distance, in blocks, she can drive to complete the route?</p>
+        <img src="./Assets/Images/5Image.svg">
+        <button id="5a" onclick="wrong(5, 'a')" class="Q5Button a">A. $20$</button>
+        <button id="5b" onclick="wrong(5, 'b')" class="Q5Button b">B. $22$</button>
+        <button id="5c" onclick="right(5, 'c')" class="Q5Button c right">C. $24$</button>
+        <button id="5d" onclick="wrong(5, 'd')" class="Q5Button d">D. $26$</button>
+        <button id="5e" onclick="wrong(5, 'e')" class="Q5Button e">E. $28$</button>
+    </div>
+    <div class="solution" id="Q5Sol" hidden="true">
         <p>We plug $a=100, d=-7$ and $n=10$ into the formula $a+d(n-1)$ for the $n$th term of an arithmetic sequence whose first term is $a$ and common difference is $d$ to get $100-7(10-1) = \boxed{\text{(B)\ 37}}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rf5c9ulMA2I?si=Pr_FBj8VARSyJI6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/rf5c9ulMA2I?si=Pr_FBj8VARSyJI6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
         <button class="questionNavButton" id="Q2NavButton" onclick="QuestionSwitch(2)">2</button>
         <button class="questionNavButton" id="Q3NavButton" onclick="QuestionSwitch(3)">3</button>
         <button class="questionNavButton" id="Q4NavButton" onclick="QuestionSwitch(4)">4</button>
-        <button class="questionNavButton" id="Q5NavButton" onclick="QuestionSwitch(4)">5</button>
+        <button class="questionNavButton" id="Q5NavButton" onclick="QuestionSwitch(5)">5</button>
         <button class="questionNavButton" id="Q6NavButton" onclick="QuestionSwitch(6)">6</button>
         <button class="questionNavButton" id="Q7NavButton" onclick="QuestionSwitch(7)">7</button>
         <button class="questionNavButton" id="Q8NavButton" onclick="QuestionSwitch(8)">8</button>
