@@ -1556,7 +1556,7 @@
         pods $C, E$, and $F$?
       </p>
       <img src="./Assets/Images/Q21Image.png" />
-      <button id="21a" onclick="wrong(21, 'a')" class="Q21Button a">
+      <button id="21a" onclick="right(21, 'a')" class="Q21Button a right">
         A. 12
       </button>
       <br />
@@ -1564,7 +1564,7 @@
         B. 13
       </button>
       <br />
-      <button id="21c" onclick="right(21, 'c')" class="Q21Button c right">
+      <button id="21c" onclick="wrong(21, 'c')" class="Q21Button c">
         C. 14
       </button>
       <br />
@@ -1643,11 +1643,11 @@
         B. 4
       </button>
       <br />
-      <button id="22c" onclick="right(22, 'c')" class="Q22Button c right">
+      <button id="22c" onclick="wrong(22, 'c')" class="Q22Button c">
         C. 5
       </button>
       <br />
-      <button id="22d" onclick="wrong(22, 'd')" class="Q22Button d">
+      <button id="22d" onclick="right(22, 'd')" class="Q22Button d right">
         D. 7
       </button>
       <br />
@@ -1723,28 +1723,6 @@
         $9-2=\boxed{\textbf{(D)}~7}$.
       </p>
       <h3>Video Solution</h3>
-    </div>
-    <div class="Question" id="Q23" hidden="true">
-      <h2>Queston 23</h2>
-      <p></p>
-      <button id="23a" onclick="wrong(23, 'a')" class="Q23Button a">A.</button>
-      <br />
-      <button id="23b" onclick="wrong(23, 'b')" class="Q23Button b">B.</button>
-      <br />
-      <button id="23c" onclick="right(23, 'c')" class="Q23Button c right">
-        C.
-      </button>
-      <br />
-      <button id="23d" onclick="wrong(23, 'd')" class="Q23Button d">D.</button>
-      <br />
-      <button id="23e" onclick="wrong(23, 'e')" class="Q23Button e">E.</button>
-    </div>
-    <div class="solution" id="Q23Sol" hidden="true">
-      <h3>Solution 1</h3>
-      <p></p>
-      <h3>Solution 2</h3>
-      <p></p>
-      <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
@@ -1756,49 +1734,358 @@
         allowfullscreen
       ></iframe>
     </div>
-    <div class="Question" id="Q24" hidden="true">
-      <h2>Queston 24</h2>
-      <p></p>
-      <button id="24a" onclick="wrong(24, 'a')" class="Q24Button a">A.</button>
-      <br />
-      <button id="24b" onclick="wrong(24, 'b')" class="Q24Button b">B.</button>
-      <br />
-      <button id="24c" onclick="right(24, 'c')" class="Q24Button c right">
-        C.
+    <div class="Question" id="Q23" hidden="true">
+      <h2>Queston 23</h2>
+      <p>
+        How many four-digit numbers have all three of the following properties?
+      </p>
+      <ol type="I">
+        <li>The tens and ones digit are both 9.</li>
+        <li>The number is 1 less than a perfect square.</li>
+        <li>The number is the product of exactly two prime numbers.</li>
+      </ol>
+      <button id="23a" onclick="wrong(23, 'a')" class="Q23Button a">
+        A. 0
       </button>
       <br />
-      <button id="24d" onclick="wrong(24, 'd')" class="Q24Button d">D.</button>
+      <button id="23b" onclick="right(23, 'b')" class="Q23Button b right">
+        B. 1
+      </button>
       <br />
-      <button id="24e" onclick="wrong(24, 'e')" class="Q24Button e">E.</button>
+      <button id="23c" onclick="wrong(23, 'c')" class="Q23Button c">
+        C. 2
+      </button>
+      <br />
+      <button id="23d" onclick="wrong(23, 'd')" class="Q23Button d">
+        D. 3
+      </button>
+      <br />
+      <button id="23e" onclick="wrong(23, 'e')" class="Q23Button e">
+        E. 4
+      </button>
+    </div>
+    <div class="solution" id="Q23Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        The Condition (II) perfect square must end in "$00$" because
+        $...99+1=...00$ Condition (I). Four-digit perfect squares ending in
+        "$00$" are ${40, 50, 60, 70, 80, 90}$.<br />
+
+        Condition (II) also says the number is in the form $n^2-1$. By the
+        Difference of Squares, $n^2-1 = (n+1)(n-1)$. Hence:
+      </p>
+      <ul>
+        <li>$40^2-1 = (39)(41)$</li>
+        <li>$50^2-1 = (49)(51)$</li>
+        <li>$60^2-1 = (59)(61)$</li>
+        <li>$70^2-1 = (69)(71)$</li>
+        <li>$80^2-1 = (79)(81)$</li>
+        <li>$90^2-1 = (89)(91)$</li>
+      </ul>
+      <p>
+        On this list, the only number that is the product of $2$ prime numbers
+        (condition $3$) is $60^2-1 = (59)(61)$, so the answer is
+        $\boxed{\text{(B)\ 1}}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jn-qIwv57nQ?si=OrJ0a9dqRKsytlRJ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q24" hidden="true">
+      <h2>Queston 24</h2>
+      <p>
+        In trapezoid $ABCD$, angles $B$ and $C$ measure $60^\circ$ and $AB =
+        DC$. The side lengths are all positive integers, and the perimeter of
+        $ABCD$ is 30 units. How many non-congruent trapezoids satisfy all of
+        these conditions?
+      </p>
+      <img src="./Assets/Images/Q24Image.png" />
+      <button id="24a" onclick="wrong(24, 'a')" class="Q24Button a">
+        A. 0
+      </button>
+      <br />
+      <button id="24b" onclick="wrong(24, 'b')" class="Q24Button b">
+        B. 1
+      </button>
+      <br />
+      <button id="24c" onclick="wrong(24, 'c')" class="Q24Button c">
+        C. 2
+      </button>
+      <br />
+      <button id="24d" onclick="wrong(24, 'd')" class="Q24Button d">
+        D. 3
+      </button>
+      <br />
+      <button id="24e" onclick="right(24, 'e')" class="Q24Button e right">
+        E. 3
+      </button>
     </div>
     <div class="solution" id="Q24Sol" hidden="true">
       <h3>Solution 1</h3>
-      <p></p>
+      <p>
+        Let $a$ be the length of the shorter base, and let $b$ be the length of
+        the longer one. Note that these two parameters, along with the angle
+        measures and the fact that the trapezoid is isosceles, uniquely
+        determine a trapezoid. We drop perpendiculars down from the endpoints of
+        the top base. Then the length from the foot of this perpendicular to
+        either vertex will be half the difference between the lengths of the two
+        bases, or $\frac{b-a}{2}$. Now, since we have a 30-60-90 triangle and
+        this side length corresponds to the "30" part, the length of the
+        hypotenuse (one of the legs) is $2 \cdot \frac{b-a}{2} = b-a$. Then the
+        perimeter of the trapezoid is $2(b-a)+a+b=3b-a=30$. The only other
+        stipulation for this trapezoid to be valid is that $b>a$ (which was our
+        assumption). We can now easily count the valid pairs $(a,b)$, yielding
+        $(3,11),(6,12),(9,13),(12,14)$. It is clear that proceeding further
+        would cause $a \geq b$, so we have $\boxed{\textbf{(E)}~4}$ valid
+        trapezoids.
+      </p>
       <h3>Solution 2</h3>
-      <p></p>
+      <p>
+        Let $x$ be the length of $AB$ and $DC$, and let $b$ be the length of the
+        shorter base. Because $\angle B$ and $\angle C = 60^{\circ}$, the length
+        of the longer base is $b + \frac{x}{2} + \frac{x}{2} = b + x$.
+        Therefore, the perimeter is $3x + 2b = 30$. The number of positive
+        integer pairs $(x, b)$ is $(2,12), (4,9), (6,6), (8,3)$, meaning the
+        answer is $\boxed{\textbf{(E)}~4}$.<br />
+
+        way where you don't have to test pairs:<br />
+
+        We can rearrange $3x + 2b = 30$ to $\frac{30-3x}{2} = b$. We want
+        $\frac{30-3x}{2}$ to be a positive integer so b is a positive integer.
+        30 is a multiple of 3 and $-3x$ is just subtracting multiples of 3's
+        from 30 so every number on the numerator of $\frac{30-3x}{2}$ is a
+        multiple of 3 under 30 ($x$ is also a positive integer so it can't be
+        larger than 30 or not be a multiple of 3). For $30-3x$ to be divisible
+        by 2 it must be even, so we are finding even multiples of 3 under 30
+        which are 24, 18, 12, and 6. Each number will give us a valid $x$ and a
+        valid $b$ pair giving us 4 solutions.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Let $x$ be the length of the legs of the trapezoid. Draw the angle
+        bisectors of the 120 degree angles. Now you have 2 equilateral
+        triangles, and another figure in between them. Let $x+a$ be the length
+        of the shorter base of the trapezoid, and let $2x+a$ be the length of
+        the longer base. Since the perimeter of the trapezoid is 30, $5x+2a =
+        30$. Since $x>$0, and $a$ can be negative as long as $x+a>0$, you get 4
+        solutions for $(x,a)$, namely $(2,10), (4,5), (6,0), (8,-5)$. Any
+        solution with $x\ge10$ would lead to $x+a\le0$. Hence, the answer is
+        $\boxed{\textbf{(E)}~4}$
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        Drop altitudes from angle $A$ and angle $D$. Then, two $30-60-90$
+        triangles and a rectangle are created. Let the hypotenuse of both of the
+        triangles equal $x$ and let side $AD$ equal $y$. Then, the distance from
+        $B$ and $C$ to the feet of the altitudes that are closest to them is
+        $\frac{x}{2}$, and the distance between the feet of the two altitudes
+        would be $y$. The rest is similar to Solution 2
+      </p>
+      <h3>Solution 5</h3>
+      <p>
+        We give lengths to the base of the $30-60-90$ triangles on both sides as
+        the trapezoid as variable $x$. We give lengths of Line $AB$ and the
+        other side as variable $y$. When we add them, we have $6x+2y=30$ from
+        the sides. If we lext $x=5$, the other sides won't work so it has to be
+        integers less than $5$ which is $4$ which is the answer.
+      </p>
+      <h3>Solution 6</h3>
+      <p>
+        Explanations and Reasoning to Similar Solutions<br />
+
+        Note that trapezoid $ABCD$ is isosceles with $B$ and $C$ being the
+        bottom 2 vertices. The shape can be dissected into 3 shapes with 2
+        congruent right triangles separated by a rectangle. This is done by
+        dropping an altitude, a perpendicular point on the base from each of the
+        2 top vertices, named $E$ and $F$, respectively below $A$ and $D$. The
+        property that angles $\angle$$B$ and $\angle$$C$ measure $60^\circ$ is
+        significant here, forming $30-60-90$ triangles ($\triangle$$ABE$ and
+        $\triangle$$DCF$). Now the assumed larger $^a$ side $BC$ is separated
+        into 3 sections by the 3 shapes. Or $BC = BE + EF + CF$. $^b$ Recall
+        that $\triangle$$ABE$ and $\triangle$$DCF$ are $30-60-90$ triangles, the
+        side length ratios are $1:\sqrt3:2$. Naming the length of the shorter
+        side of the right triangles as $a$, and the length of side $AD$ as $b$,
+        then the trapezoid's side lengths can be expressed in only 2 variables.
+        Now knowing $AD = b$, $DC = 2a$ $^c$, $BC = a + b + a = 2a + b$, and $AC
+        = 2a$, the perimeter is $b + 2a + 2a + b + 2a = 2b + 6a = 30$.
+        Simplifying, $3a + b = 15$, only 4 pairs of values satisfy this
+        condition, namely $(1,12)$, $(2,9)$, $(3,6)$, $(4,3)$.<br />
+
+        Thus there $\boxed{\textbf{(E)}~4}$ possible non-congruent
+        trapezoids.<br />
+
+        $^a$ The question asks for non-congruent trapezoids, and rotation
+        preserves congruence so the assumption is always true WLOG.<br />
+
+        $^b$ The shortest side of $\triangle$ABE, the length of AD (shape ADFE
+        is a rectangle so FE = AD), and the shortest side of $\triangle$DCF.<br />
+
+        $^c$ $AB = DC = 2a$, $AB$ and $DC$ are the hypotenuse of triangles
+        $\triangle$ABE and $\triangle$DCF.
+      </p>
+      <h3>Solution 7</h3>
+      <p>
+        Let $a = AD$ and $s = AB = DC$. Draw a segment from $A$ to
+        $\overline{BC}$ parallel to $\overline{DC}$, meeting $\overline{BC}$ at
+        point $P$, forming parallelogram $ADCP$. It follows that $AP = DC = s$
+        and $PC = AD = a$. Isosceles $\triangle ABP$ has base angles measuring
+        $60^\circ$, so it is equilateral and $BP = s$.<br />
+
+        [asy] size(8cm); draw((-6, 0)--(6, 0)--(3, 3sqrt(3))--(-3,
+        3sqrt(3))--cycle); draw((0, 0)--(-3, 3sqrt(3))--cycle); label("$P$", (0,
+        0), S); label("$B$", (-6, 0), SW); label("$C$", (6, 0), SE);
+        label("$A$", (-3, 3sqrt(3)), NW); label("$D$", (3, 3sqrt(3)), NE);
+        label("$a$", (0, 3sqrt(3)), N); label("$a$", (3, 0), S); label("$s$",
+        (-3, 0), S); label("$s$", (-4.5, 3sqrt(3)/2), W); label("$s$", (-1.5,
+        3sqrt(3)/2), E); label("$s$", (4.5, 3sqrt(3)/2), E);
+        label("$60^{\circ}$", (-5.75, 0), NE); label("$60^{\circ}$", (-0.25, 0),
+        NW); label("$60^{\circ}$", (5.75, 0), NW); [/asy]<br />
+
+        Then the perimeter of $ABCD$ is $L = 2a + 3s = 30$. To satisfy this
+        equation with positive integer values, the number $a$ must be divisible
+        by $3$ because $2a = 3(10 - s)$. The only possible values for $a$ are
+        $3, 6, 9,$ and $12$, each value corresponding to a different trapezoid.
+        Greater multiples of $3$ will not lead to a positive integer value for
+        $s$. Therefore there are $\boxed{4}$ different trapezoids that satisfy
+        the conditions.<br />
+
+        The table below lists the side lengths $a$, $s$, and $a + s$ for these
+        $4$ trapezoids, along with their perimeters.<br />
+        $\begin{array}{c|c|c|c} a & s & a + s & L = 2a + 3s \\ \hline 3 & 8 & 11
+        & 2 \cdot 3 + 3 \cdot 8 = 30 \\ 6 & 6 & 12 & 2 \cdot 6 + 3 \cdot 6 = 30
+        \\ 9 & 4 & 13 & 2 \cdot 9 + 3 \cdot 4 = 30 \\ 12 & 2 & 14 & 2 \cdot 12 +
+        3 \cdot 2 = 30 \\ \end{array}$
+      </p>
+      <h3>Solution 8</h3>
+      <p>
+        We can draw altitudes from A and B and create a rectangle and $2$
+        $30-60-90$ triangles. Two sides of each triangle are on the trapezoid.
+        We can label each of the hypotenuses of the small $30-60-90$ triangles
+        as $2a$ and each of the short sides of the triangles as $a$. Then, the
+        perimeter of the trapezoid becomes $2(2a + a) +$ a positive integer
+        (we'll call this integer $n$) $= 30$. Simplifying, we get $6a + n = 30$,
+        and since $n$ is not 0, $a$ must be a positive integer less than $5$,
+        which yields $\boxed{4}$ options: $1$, $2$, $3$, and $4$.
+      </p>
       <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/BbaifFoDeCk?si=9ZCHUWzBfC4IsdOR"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q25" hidden="true">
       <h2>Queston 25</h2>
-      <p></p>
-      <button id="25a" onclick="wrong(25, 'a')" class="Q25Button a">A.</button>
+      <p>
+        Makayla finds all the possible ways to draw a path in a $5 \times 5$
+        diamond-shaped grid. Each path starts at the bottom of the grid and ends
+        at the top, always moving one unit northeast or northwest. She computes
+        the area of the region between each path and the right side of the grid.
+        Two examples are shown in the figures below. What is the sum of the
+        areas determined by all possible paths?
+      </p>
+      <img src="./Assets/Images/Q25Image.png" />
       <br />
-      <button id="25b" onclick="wrong(25, 'b')" class="Q25Button b">B.</button>
-      <br />
-      <button id="25c" onclick="right(25, 'c')" class="Q25Button c right">
-        C.
+      <button id="25a" onclick="wrong(25, 'a')" class="Q25Button a">
+        A. 2520
       </button>
       <br />
-      <button id="25d" onclick="wrong(25, 'd')" class="Q25Button d">D.</button>
+      <button id="25b" onclick="right(25, 'b')" class="Q25Button b right">
+        B. 3150
+      </button>
       <br />
-      <button id="25e" onclick="wrong(25, 'e')" class="Q25Button e">E.</button>
+      <button id="25c" onclick="wrong(25, 'c')" class="Q25Button c">
+        C. 3840
+      </button>
+      <br />
+      <button id="25d" onclick="wrong(25, 'd')" class="Q25Button d">
+        D. 4730
+      </button>
+      <br />
+      <button id="25e" onclick="wrong(25, 'e')" class="Q25Button e">
+        E. 5050
+      </button>
     </div>
     <div class="solution" id="Q25Sol" hidden="true">
       <h3>Solution 1</h3>
-      <p></p>
+      <p>
+        If we test this problem on a smaller $2 \times 2$ diamond, we have $6$
+        ways to go from $A$ to $B$, and the total area is $0 + 1 + 2 + 2 + 3 + 4
+        = 12$, so the average area is $\frac{12}{6} = 2$, which is also the area
+        of the diamond $2 \times 2 = 4$ divided by 2. If we assume this is true
+        for a $5 \times 5$ diamond, then the average area is $\frac{25}{2}$. The
+        number of paths from $A$ to $B$ is $\binom{10}{5} = 252$, and $252 \cdot
+        \frac{25}{2} = \boxed{\textbf{(B)}~3150}$.
+      </p>
       <h3>Solution 2</h3>
-      <p></p>
+      <p>
+        Most other solutions don't explain how they got all the cases, as well
+        as require an insight that's somewhat hard to think of, so I'll explain
+        another in detail.<br />
+        If we rotate the grid $45$ degrees clockwise we can have a 5x5 grid
+        where we can move up and right. There can only be one horizontal line
+        segment in each column at a certain y coordinate. We'll denote the y
+        coordinates as $0,1,2,3,4,5$. Once we choose the y coordinates for each
+        column, we have a unique path. However, we can't move down which means
+        that columns cannot have a higher y coordinate than the ones to the
+        right. This is the same as distributing 5 balls in six boxes labeled
+        $0,1,2,3,4,5$. For example, if we get 2 in 0, 2 in 1, and 1 in 4, then
+        the order would be $0,0,1,1,4$. This is one unique path, and the total
+        number of paths is represented by 6+5-1 choose 6-1 = 252. Also, the sum
+        of the y-coordinates represents the area, which means we want the
+        average sum of the y-coordinates. This is $5*(0+5)/2 = 25/2$, and $25/2
+        * 252 = \fbox{3150}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        As found, there are $252$ total paths. However, we can take advantage of
+        symmetry here. We consider the total area of the left side of the grid
+        in each of the $252$ paths. Since the total area of the left side of the
+        grid in each of the $252$ paths is equal to the total area of the right
+        side of the grid in each of the $252$ paths, and the two total areas sum
+        to $(252)(25) = 6300$, then the total area of the right side of the grid
+        is $6300/2 = \fbox{3150}$.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        q-analog basic definitions are for $k\in\mathbb{N}$, then<br />\[[k]_q=1+q+\cdots+q^{k-1}\]with\[[0]_q=1\]<br />The
+        q-factorial of $n\in\mathbb{N}$ is defined as<br />\[[n]!_q=[n]_q\cdot[n-1]_q\cdots[0]_q\]<br />The
+        q-binomial theorem states<br />\[\binom{n}{k}_q=\frac{[n]!_q}{[k]!_q[n-k]!_q}\]<br />and
+        finally for q-analog of lattice paths aka q-lattice path, we have the
+        q-lattice path theorem which states for any $a, b\in\mathbb{N}$,<br />\[\sum_{P\in
+        L(a,b)}q^{\text{area}(P)}=\binom{a+b}{a}_q\]<br />To get the sum of the
+        areas we have to differentiate the q-Lattice Path and evaluate at $q=1$.
+        For this problem our lattice path is $L(5,5)$ and we calculate the
+        $q$-binomial as
+        $q^{25}+q^{24}+2q^{23}+3q^{22}+5q^{21}+7q^{20}+9q^{19}+\cdots$ and take
+        the derivative $\left.\frac{d}{dq}\binom{10}{5}_q\right|_{q=1}$ to get
+        $25q^{24}+24q^{23}+46q^{22}+66q^{21}+105q^{20}+140q^{19}+171q^{18}+\cdots$
+        and then plug in the 1 to finally get $\fbox{3150}$
+      </p>
       <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Z54kAp8ez5M?si=LxPvEWUmB_vPCeN1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div id="QuestionNavigator">
       <button
