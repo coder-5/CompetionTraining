@@ -350,8 +350,28 @@
         <h3>Solution 1</h3>
         <p>Let's take the numbers 2 through 14 (evens). The remainders will be 2, 4, 6, 1, 3, 5, and 0. This sequence keeps repeating itself over and over. We can take $\left\lfloor\frac{50}{14}\right\rfloor$, so after the number 42, every remainder has been achieved 3 times. However, since 44, 46, 48, and 50 are left, the remainders of those will be 2, 4, 6, and 1 respectively. The only histogram in which those 4 numbers are set at 4 is histogram $\boxed{\textbf{(A)}}$.</p>
         <h3>Solution 2</h3>
-        <p>Writing down all the remainders gives us $2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1.$ In this list, there are $3$ numbers with remainder $0$, $4$ numbers with remainder $1$, $4$ numbers with remainder $2$, $3$ numbers with remainder $3$, $4$ numbers with remainder $4$, $3$ numbers with remainder $5$, and $4$ numbers with remainder $6$. Manually computation of every single term can be avoided by recognizing the pattern alternates from $0, 2, 4, 6$ to $1, 3, 5$ and there are $25$ terms. The only histogram that matches this is $\boxed{\textbf{(A)}}$.</p>
-        
+        <p>Writing down all the remainders gives us $2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1.$ In this list, there are $3$ numbers with remainder $0$, $4$ numbers with remainder $1$, $4$ numbers with remainder $2$, $3$ numbers with remainder $3$, $4$ numbers with remainder $4$, $3$ numbers with remainder $5$, and $4$ numbers with remainder $6$. Manually computation of every single term can be avoided by recognizing the pattern alternates from $0, 2, 4, 6$ to $1, 3, 5$ and there are $25$ terms. The only histogram that matches this is $\boxed{\textbf{(A)}}$.</p>    
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=__rcMMLj2_c32K3K&amp;start=1269" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="Question" id="Q14" hidden="true">
+        <h2>Queston 14</h2>
+        <p>A number $N$ is inserted into the list $2$, $6$, $7$, $7$, $28$. The mean is now twice as great as the median. What is $N$?</p>
+        <button id="14a" onclick="wrong(14, 'a')" class="Q14Button a">A. 7</button>
+        <button id="14b" onclick="wrong(14, 'b')" class="Q14Button b">B. 14</button>
+        <button id="14c" onclick="wrong(14, 'c')" class="Q14Button c">C. 20</button>
+        <button id="14d" onclick="wrong(14, 'd')" class="Q14Button d">D. 28</button>
+        <button id="14e" onclick="right(14, 'e')" class="Q14Button e right">E. 34</button>
+    </div>
+    <div class="solution" id="Q14Sol" hidden="true">
+        <h3>Solution 1</h3>
+        <p>The median of the list is $7$, so the mean of the new list will be $7 \cdot 2 = 14$. Since there are $6$ numbers in the new list, the sum of the $6$ numbers will be $14 \cdot 6 = 84$. Therefore, $2+6+7+7+28+N = 84 \implies N = \boxed{\text{(E)\ 34}}$</p>
+        <h3>Solution 2</h3>
+        <p>Since the average right now is $10$, and the median is $7$, we see that $N$ must be larger than $10$, which means that the median of the 6 resulting numbers should be $7$, making the mean of these $14$. We can do $2 + 6 + 7 + 7 + 28 + N = 14 * 6 = 84$. $50 + N = 84$, so $N$ = $\boxed{\text{(E)\ 34}}$</p>
+        <h3>Solution 3</h3>
+        <p>We try out every option by inserting each number into the list. After trying out each number, we get $\boxed{\text{(E)\ 34}}$</p>
+        <p>Note that this is very time-consuming and it is not the most practical solution.</p>
+        <h3>Solution 4</h3>
+        <p>We could use answer choices to solve this problem. The sum of the $5$ numbers is $50$. If you add $7$ to the list, $57$ is not divisible by $6$, therefore it will not work. Same thing applies to $14$ and $20$. The only possible choices left are $28$ and $34$. Now you check $28$. You see that $28$ doesn't work because $(28+50) \div 6 = 13$ and $13$ is not twice of the median, which is still $7$. Therefore, only choice left is $\boxed{\text{(E)\ 34}}$</p>
     </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
