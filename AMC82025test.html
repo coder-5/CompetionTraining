@@ -1533,50 +1533,195 @@
         $\frac{4}{7}$.
       </p>
       <h3>Video Solution</h3>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/VUR5VYabbrc?si=B1-zHthx6N7qYSgd&amp;start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VUR5VYabbrc?si=B1-zHthx6N7qYSgd&amp;start=11"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q21" hidden="true">
       <h2>Queston 21</h2>
-      <p></p>
-      <button id="21a" onclick="wrong(21, 'a')" class="Q21Button a">A.</button>
-      <br />
-      <button id="21b" onclick="wrong(21, 'b')" class="Q21Button b">B.</button>
-      <br />
-      <button id="21c" onclick="right(21, 'c')" class="Q21Button c right">
-        C.
+      <p>
+        The Konigsberg School has assigned grades 1 through 7 to pods $A$
+        through $G$, one grade per pod. Some of the pods are connected by
+        walkways, as shown in the figure below. The school noticed that each
+        pair of connected pods has been assigned grades differing by 2 or more
+        grade levels. (For example, grades 1 and 2 will not be in pods directly
+        connected by a walkway.) What is the sum of the grade levels assigned to
+        pods $C, E$, and $F$?
+      </p>
+      <img src="./Assets/Images/Q21Image.png" />
+      <button id="21a" onclick="wrong(21, 'a')" class="Q21Button a">
+        A. 12
       </button>
       <br />
-      <button id="21d" onclick="wrong(21, 'd')" class="Q21Button d">D.</button>
+      <button id="21b" onclick="wrong(21, 'b')" class="Q21Button b">
+        B. 13
+      </button>
       <br />
-      <button id="21e" onclick="wrong(21, 'e')" class="Q21Button e">E.</button>
+      <button id="21c" onclick="right(21, 'c')" class="Q21Button c right">
+        C. 14
+      </button>
+      <br />
+      <button id="21d" onclick="wrong(21, 'd')" class="Q21Button d">
+        D. 15
+      </button>
+      <br />
+      <button id="21e" onclick="wrong(21, 'e')" class="Q21Button e">
+        E. 16
+      </button>
     </div>
     <div class="solution" id="Q21Sol" hidden="true">
       <h3>Solution 1</h3>
-      <p></p>
+      <p>
+        The key observation for this solution is to observe that pods $C$ and
+        $F$ both have degree 5; that is, they are connected to five other pods.
+        This implies that $C$ and $F$ must contain grades 1 and 7 in either
+        order (if $C$ or $F$ contained any of grades 2, 3, 4, 5, or 6, then
+        there would only be four possible grades for five pods, a
+        contradiction). It does not matter which grade $C$ and $F$ gets (see
+        Solution 2 below), so we will assume that pod $C$ is assigned grade 1,
+        and pod $F$ is assigned grade 7.<br />
+
+        Next, pod $D$ is the only pod which is not adjacent to pod $F$, so pod
+        $D$ must be assigned grade 6. Similarly, pod $G$ must be assigned grade
+        2.<br />
+
+        Lastly, we need to assign grades 3, 4, and 5 to pods $A$, $B$, and $E$.
+        Note that $A$ and $B$ are adjacent; therefore, pods $A$ and $B$ must
+        contain grades 3 and 5. We conclude that $E$ must be assigned grade 4.
+        The requested sum is $1+4+7 = \mathbf{(A)\,} 12$.
+      </p>
       <h3>Solution 2</h3>
-      <p></p>
+      <p>
+        Suppose that we replaced each label $x$ with $8-x$. That is, we replaced
+        the grade $a$ assigned to $A$ with the grade $8-a$, the grade $b$
+        assigned to $B$ with $8-b$, and so on. We claim that if the initial
+        labeling is valid (i.e., each pair of connected pods has grades
+        differing by 2 or more), then so will the new labeling. This follows as
+        if $|x-y| \ge 2$, then $|(8-x)-(8-y)|=|-x+y| = |x-y| \ge 2$. This shows
+        that if there is an assignment $(a,b,c,d,e,f,g)$ of grades to the pods,
+        where $\{a,b,\ldots,g\} = \{1,2,\ldots,7\}$, then there is a second,
+        valid assignment.<br />
+
+        But because this is an AMC 8 problem and there is only one correct
+        answer, we can conclude that $c+e+f = (8-c)+(8-e)+(8-f)$. Simplifying
+        and solving for $c+e+f$ gives $c+e+f = \mathbf{(A)\,} 12$.
+      </p>
       <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/rx9kwqXeTbM?si=MBZOOYQE__v9JGOt"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q22" hidden="true">
       <h2>Queston 22</h2>
-      <p></p>
-      <button id="22a" onclick="wrong(22, 'a')" class="Q22Button a">A.</button>
-      <br />
-      <button id="22b" onclick="wrong(22, 'b')" class="Q22Button b">B.</button>
-      <br />
-      <button id="22c" onclick="right(22, 'c')" class="Q22Button c right">
-        C.
+      <p>
+        A classroom has a row of 35 coat hooks. Paulina likes coats to be
+        equally spaced, so that there is the same number of empty hooks before
+        the first coat, after the last coat, and between every coat and the next
+        one. Suppose there is at least 1 coat and at least 1 empty hook. How
+        many different numbers of coats can satisfy Paulina's pattern?
+      </p>
+      <img src="./Assets/Images/Q22Image.png" />
+      <button id="22a" onclick="wrong(22, 'a')" class="Q22Button a">
+        A. 2
       </button>
       <br />
-      <button id="22d" onclick="wrong(22, 'd')" class="Q22Button d">D.</button>
+      <button id="22b" onclick="wrong(22, 'b')" class="Q22Button b">
+        B. 4
+      </button>
       <br />
-      <button id="22e" onclick="wrong(22, 'e')" class="Q22Button e">E.</button>
+      <button id="22c" onclick="right(22, 'c')" class="Q22Button c right">
+        C. 5
+      </button>
+      <br />
+      <button id="22d" onclick="wrong(22, 'd')" class="Q22Button d">
+        D. 7
+      </button>
+      <br />
+      <button id="22e" onclick="wrong(22, 'e')" class="Q22Button e">
+        E. 9
+      </button>
     </div>
     <div class="solution" id="Q22Sol" hidden="true">
       <h3>Solution 1</h3>
-      <p></p>
+      <p>
+        Suppose there are $c$ coats on the rack. Notice that there are $c+1$
+        "gaps" formed by these coats, each of which must have the same number of
+        empty spaces (say, $k$). Then the values $k$ and $c$ must satisfy
+        $(c+k)(c+1)=35 \implies kc+k+c=35$. We now use Simon's Favorite
+        Factoring Trick as follows:\[kc+k+c=35\]\<br />[\implies
+        kc+k+c+1=36\]\<br />[\implies (k+1)(c+1)=36\]<br />Our only restrictions
+        now are that $k>0 \implies k+1 > 1$ and $c>0 \implies c+1>1$. Other than
+        that, each factor pair of $36$ produces a valid solution $(k,c)$, which
+        in turn uniquely determines an arrangement. Since $36$ has $9$ factors,
+        our answer is $9-2=\boxed{\textbf{(D)}~7}$.
+      </p>
       <h3>Solution 2</h3>
-      <p></p>
+      <p>
+        Say Paulina placed $n$ coats. That will divide the 35 hooks into $n+1$
+        spaces and $35-n$ empty hooks. Therefore,<br />\[n+1|35-n.\]<br />The
+        values of $n$ that satisfy this are\[n\in{1,2,3,5,8,11,17}\]<br />The
+        answer is $\boxed{\text{(D) }7}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Let the number of empty hooks before the first coat be denoted as
+        $n$.<br />
+
+        This means that there are $n$ empty hooks between all the coats. In
+        every situation, there are $n + 1$ gaps, since $n$ cannot be zero.<br />
+
+        To solve the problem, subtract $2n$ from 35 (accounting for the $n$
+        empty hooks at the beginning and $n$ empty hooks at the end). Then
+        subtract 1 (for the first occupied hook). After that, divide the
+        remaining number of hooks by $n + 1$ (the number of hooks between
+        coats). We do this because the first occupied hook is always after $n$
+        hooks; we just need to check if the remaining hooks can be evenly
+        divided by the number of gaps.<br />
+
+        To clarify:<br />
+
+        If $n = 1$: \begin{align*} 35 - 2n &= 33 \\ 33 - 1 &= 32 \\ \frac{32}{n
+        + 1} &= 16 \end{align*}<br />
+        Since 16 is an integer, this situation satisfies the conditions.<br />
+
+        If $n = 2$:<br />
+        We can skip the the third step, as each time you add 1 to $n$, it
+        decreases by 2 from the previous situation.<br />
+
+        \[\frac{30}{n + 1} = 16\]<br />
+
+        This situation also satisfies the conditions.<br />
+
+        Continue this process until the difference exceeds $35 - (2n + 1)$. We
+        find that 7 situations satisfy the conditions. Therefore, the answer is
+        7.<br />
+
+        Note: This method is slow but easy to check and understand.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        Suppose there are $n$ occupied hooks on the rack. Observe that there are
+        $n+1$ intervals, each of which must have the same number of empty hooks.
+        Let's suppose $m$ is the number of empty hooks plus the occupied hook to
+        its right. Then, we have the equation<br />\[(n+1)m-1=35\]\<br />[\implies
+        (n+1)m=36\]<br />Our restrictions are n > 0 and m > 1. 36 has 9 factors,
+        and two pairs do not meet the restriction. Our answer is then
+        $9-2=\boxed{\textbf{(D)}~7}$.
+      </p>
       <h3>Video Solution</h3>
     </div>
     <div class="Question" id="Q23" hidden="true">
@@ -1600,6 +1745,16 @@
       <h3>Solution 2</h3>
       <p></p>
       <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ZIBTG4XzETI?si=cVfdPuDdt6wzfl5q"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q24" hidden="true">
       <h2>Queston 24</h2>
