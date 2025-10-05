@@ -58,6 +58,11 @@
         top: 50px;
         right: 170px;
       }
+      .Q18Button {
+        position: relative;
+        top: 50px;
+        right: 350px;
+      }
       button {
         border-radius: 25px;
         padding: 10px 20px;
@@ -101,6 +106,10 @@
       }
       #Q13 {
         height: 800px;
+      }
+      #Q18Image {
+        width: 350px;
+        height: 200px;
       }
     </style>
   </head>
@@ -294,7 +303,7 @@
       </button>
     </div>
     <div class="solution" id="Q3Sol" hidden="true">
-      <h3>Solution 1</h3>
+      <h3>Solution</h3>
       <p>
         We start with Annika and $3$ of her friends playing, meaning that there
         are $4$ players. This must mean that there is a total of $4 \cdot 15 =
@@ -357,19 +366,19 @@
       <p>
         Since we want to find the $9$th number Lucius says after he says $100$,
         $7$ is subtracted from his number $9$ times, so our answer is $100-(9
-        \cdot 7) = \boxed{\text{(B)\ 37}}$
+        \cdot 7) = \boxed{\text{(B) 37}}$
       </p>
       <h3>Solution 3</h3>
       <p>
         Using brute force and counting backward by $7$s, we have $100, 93, 86,
-        79, 72, 65, 58, 51, 44, \boxed{\text{(B)\ 37}}$.
+        79, 72, 65, 58, 51, 44, \boxed{\text{(B) 37}}$.
       </p>
       <p>Note that this solution is not practical and very time-consuming.</p>
       <h3>Solution 4</h3>
       <p>
         This can be thought of as an arithmetic sequence. Knowing that our first
         term is $100$, we have to add $7$ to get to our 0th term, $107$. Our
-        answer is then $107 - 10 \cdot 7 = \boxed{\text{(B)\ 37}}$.
+        answer is then $107 - 10 \cdot 7 = \boxed{\text{(B) 37}}$.
       </p>
     </div>
     <div class="Question" id="Q5" hidden="true">
@@ -1131,7 +1140,7 @@
         the same area. What is the radius $R$, in units, of the circle on the
         right?
       </p>
-      <img src="./Assets/Images/Q18Image.png" />
+      <img src="./Assets/Images/Q18Image.png" id="Q18Image" />
       <button id="18a" onclick="wrong(18, 'a')" class="Q18Button a">
         A. $\sqrt{2}$
       </button>

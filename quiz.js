@@ -25,7 +25,9 @@ let answered = [
   false,
   false,
 ];
-let wrongCountMCQ = 0;
+let wrongCountMCQ = [
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+];
 function QuestionSwitch(number) {
   questions = document.getElementsByClassName("Question");
   solutions = document.getElementsByClassName("solution");
@@ -46,12 +48,12 @@ function QuestionSwitch(number) {
   }
 }
 function wrong(questionNumber, letter) {
-  wrongCountMCQ++;
+  wrongCountMCQ[questionNumber - 1]++;
   buttons = document.getElementsByClassName(`Q${questionNumber}Button`);
   document.getElementById(`${questionNumber}${letter}`).style.backgroundColor =
     "red";
   document.getElementById(`${questionNumber}${letter}`).disabled = "true";
-  if (wrongCountMCQ == 2) {
+  if (wrongCountMCQ[questionNumber - 1] == 2) {
     for (let i = 0; i < buttons.length; i++) {
       buttons[i].disabled = "true";
     }
@@ -59,7 +61,7 @@ function wrong(questionNumber, letter) {
       questionNumber - 1
     ].style.backgroundColor = "#00fa04";
     document.getElementById(`Q${questionNumber}Sol`).removeAttribute("hidden");
-    wrongCountMCQ = 0;
+    wrongCountMCQ[questionNumber - 1] = 0;
     answered[questionNumber - 1] = true;
   }
 }
