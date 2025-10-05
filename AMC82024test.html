@@ -1,0 +1,2235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ], // Inline math delimiters
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ], // Display math delimiters
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script src="./quiz.js"></script>
+    <link href="./AMC8Quiz.css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>AMC 8 2024 Test</h1>
+    <div class="Question" id="Q1">
+      <h2>Queston 1</h2>
+      <p>What is the unit digit of:\[222{,}222-22{,}222-2{,}222-222-22-2?\]</p>
+      <br />
+      <button id="1a" onclick="wrong(1, 'a')" class="Q1Button a">A. 0</button>
+      <br />
+      <button id="1b" onclick="right(1, 'b')" class="Q1Button b right">
+        B. 2
+      </button>
+      <br />
+      <button id="1c" onclick="wrong(1, 'c')" class="Q1Button c">C. 4</button>
+      <br />
+      <button id="1d" onclick="wrong(1, 'd')" class="Q1Button d">D. 8</button>
+      <br />
+      <button id="1e" onclick="wrong(1, 'e')" class="Q1Button e">E. 10</button>
+    </div>
+    <div class="solution" id="Q1Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        We can rewrite the expression as $222,222-(22,222+2,222+222+22+2)$. We
+        note that the units digit of $22,222+2,222+222+22+2$ is $0$ because all
+        the units digits of the five numbers are $2$ and $5\cdot2=10$, which has
+        a units digit of $0$. Now, we have something with a units digit of $0$
+        subtracted from $222,222$, and so the units digit of this expression is
+        $\boxed{\textbf{(B) } 2}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        \[222,222-22,222 = 200,000\]\[200,000 - 2,222 = 197778\]\[197778 - 222 =
+        197556\]\[197556 - 22 = 197534\]\[197534 - 2 = 197532\]So our answer is
+        $\boxed{\textbf{(B) } 2}$. (Note that brute forcing takes lots of time
+        and the AMC8 is a timed test)
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        We only care about the units digits. Thus, $2-2$ ends in $0$, $0-2$
+        after regrouping(10-2) ends in $8$, $8-2$ ends in $6$, $6-2$ ends in
+        $4$, and $4-2$ ends in $\boxed{\textbf{(B) } 2}$.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        We just take the units digit of each and subtract, adding an extra ten
+        to the first number so we don't get a negative
+        number:\[(12-2)-(2+2+2+2)=10-8=\boxed{\textbf{(B) } 2}\]
+      </p>
+      <h3>Solution 5</h3>
+      <p>
+        \[222{,}222-22{,}222-2{,}222-222-22-2\equiv2-2-2-2-2\equiv-8\equiv\boxed{\textbf{(B)
+        } 2}\pmod{10}\]
+      </p>
+      <h3>Solution 6</h3>
+      <p>
+        We can ignore the other digits and just do $22-2-2-2-2-2$. Because you
+        are subtracting five $2s$ and $2\cdot5 = 10$, you subtract $10$ from
+        $22$. This gives us 12, so the last digit is $\boxed{\textbf{(B) } 2}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jqsbMWhTYRg?si=1mtDaZSc3cOmDLO4"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q2" hidden="true">
+      <h2>Queston 2</h2>
+      <p>
+        What is the value of this expression in decimal form?\[\frac{44}{11} +
+        \frac{110}{44} + \frac{44}{1100}\]
+      </p>
+      <button id="2a" onclick="wrong(2, 'a')" class="Q2Button a">A. 6.4</button>
+      <br />
+      <button id="2b" onclick="right(2, 'b')" class="Q2Button b right">
+        B. 6.504
+      </button>
+      <br />
+      <button id="2c" onclick="wrong(2, 'c')" class="Q2Button c">
+        C. 6.54
+      </button>
+      <br />
+      <button id="2d" onclick="wrong(2, 'd')" class="Q2Button d">D. 6.9</button>
+      <br />
+      <button id="2e" onclick="wrong(2, 'e')" class="Q2Button e">
+        E. 6.94
+      </button>
+    </div>
+    <div class="solution" id="Q2Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        We see that $\frac{44}{11}$ is $4$; $\frac{110}{44}$ simplifies to
+        $\frac{5}{2}$, which is $2.5$;<br />
+
+        and $\frac{44}{1100}$ simplifies to $\frac{1}{25}$, which is $0.04$;<br />
+
+        $4+2.5+0.04$ reveals\[\frac{44}{11} + \frac{110}{44} +
+        \frac{44}{1100}\]is $\boxed{\text{(C) 6.54}}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/LoRrSfYvM9g?si=PgBGaif2OOaB_sUD"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q3" hidden="true">
+      <h2>Queston 3</h2>
+      <p>
+        Four squares of side length $4, 7, 9,$ and $10$ are arranged in
+        increasing size order so that their left edges and bottom edges align.
+        The squares alternate in color white-gray-white-gray, respectively, as
+        shown in the figure. What is the area of the visible gray region in
+        square units?
+      </p>
+      <img src="./Assets/Images/Q3Image2024.png" />
+      <br />
+      <button id="3a" onclick="wrong(3, 'a')" class="Q3Button a">A. 42</button>
+      <br />
+      <button id="3b" onclick="wrong(3, 'b')" class="Q3Button b">B. 45</button>
+      <br />
+      <button id="3c" onclick="wrong(3, 'c')" class="Q3Button c">C. 49</button>
+      <br />
+      <button id="3d" onclick="wrong(3, 'd')" class="Q3Button d">D. 50</button>
+      <br />
+      <button id="3e" onclick="right(3, 'e')" class="Q3Button e right">
+        E. 52
+      </button>
+      <br />
+    </div>
+    <div class="solution" id="Q3Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        We work inwards. The area of the outer shaded square is the area of the
+        whole square minus the area of the second largest square. The area of
+        the inner shaded region is the area of the third largest square minus
+        the area of the smallest square. The sum of these areas is<br />\[10^2 -
+        9^2 + 7^2 - 4^2 = 100 - 81 + 49 - 16 = 19 + 33 = \boxed{\textbf{(E)}\
+        52}\]<br />
+
+        This problem appears multiple times in various math competitions
+        including the AMC and MATHCOUNTS.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        In solution 1, we can use Difference of squares to get the answer,
+        rather than calculating the squares of the numbers:<br />\[10^2 - 9^2 +
+        7^2 - 4^2 = (10 - 9)(10 + 9) - (7 - 4)(7 + 4) = 1\cdot19 + 3\cdot11 = 19
+        + 33 = \boxed{\textbf{(E)}\ 52}\]
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Solve for the areas for each square inside the larger one , and then
+        subtract the areas of the white regions from the areas of each
+        square:<br />\[(10^2 + 7^2) - (9^2 + 4^2) = 149 - 97 =
+        \boxed{\textbf{(E)}\ 52}\]
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        We can calculate it as the sum of the areas of $2$ smaller trapezoids
+        and $2$ larger trapezoids.<br />\[2\left(\cfrac{(7+4)(7-4)}{2}\right)+2\left(\cfrac{(10+9)(10-9)}{2}\right)=10^2
+        - 9^2 + 7^2 - 4^2 = 19 + 33 = \boxed{\textbf{(E)}\ 52}\]
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ZNAm6x17gro?si=JXw6kE6XjqiksFJS"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q4" hidden="true">
+      <h2>Queston 4</h2>
+      <p>
+        Lucius is counting backward by $7$s. His first three numbers are $100$,
+        $93$, and $86$. What is his $10$th number?
+      </p>
+      <button id="4a" onclick="wrong(4, 'a')" class="Q4Button a">
+        A. $30$
+      </button>
+      <br />
+      <button id="4b" onclick="right(4, 'b')" class="Q4Button b right">
+        B. $37$
+      </button>
+      <br />
+      <button id="4c" onclick="wrong(4, 'c')" class="Q4Button c">
+        C. $42$
+      </button>
+      <br />
+      <button id="4d" onclick="wrong(4, 'd')" class="Q4Button d">
+        D. $44$
+      </button>
+      <br />
+      <button id="4e" onclick="wrong(4, 'e')" class="Q4Button e">
+        E. $47$
+      </button>
+    </div>
+    <div class="solution" id="Q4Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        We work inwards. The area of the outer shaded square is the area of the
+        whole square minus the area of the second largest square. The area of
+        the inner shaded region is the area of the third largest square minus
+        the area of the smallest square. The sum of these areas is<br />\[10^2 -
+        9^2 + 7^2 - 4^2 = 100 - 81 + 49 - 16 = 19 + 33 = \boxed{\textbf{(E)}\
+        52}\]<br />
+
+        This problem appears multiple times in various math competitions
+        including the AMC and MATHCOUNTS.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        In solution 1, we can use Difference of squares to get the answer,
+        rather than calculating the squares of the numbers:<br />\[10^2 - 9^2 +
+        7^2 - 4^2 = (10 - 9)(10 + 9) - (7 - 4)(7 + 4) = 1\cdot19 + 3\cdot11 = 19
+        + 33 = \boxed{\textbf{(E)}\ 52}\]
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Solve for the areas for each square inside the larger one , and then
+        subtract the areas of the white regions from the areas of each
+        square:<br />\[(10^2 + 7^2) - (9^2 + 4^2) = 149 - 97 =
+        \boxed{\textbf{(E)}\ 52}\]
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        We can calculate it as the sum of the areas of $2$ smaller trapezoids
+        and $2$ larger trapezoids.<br />\[2\left(\cfrac{(7+4)(7-4)}{2}\right)+2\left(\cfrac{(10+9)(10-9)}{2}\right)=10^2
+        - 9^2 + 7^2 - 4^2 = 19 + 33 = \boxed{\textbf{(E)}\ 52}\]
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ZNAm6x17gro?si=JXw6kE6XjqiksFJS"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q5" hidden="true">
+      <h2>Queston 5</h2>
+      <p>
+        Betty drives a truck to deliver packages in a neighborhood whose street
+        map is shown below. Betty starts at the factory (labled $F$) and drives
+        to location $A$, then $B$, then $C$, before returning to $F$. What is
+        the shortest distance, in blocks, she can drive to complete the route?
+      </p>
+      <img src="./Assets/Images/5Image.svg" />
+      <br />
+      <button id="5a" onclick="wrong(5, 'a')" class="Q5Button a">
+        A. $20$
+      </button>
+      <br />
+      <button id="5b" onclick="wrong(5, 'b')" class="Q5Button b">
+        B. $22$
+      </button>
+      <br />
+      <button id="5c" onclick="right(5, 'c')" class="Q5Button c right">
+        C. $24$
+      </button>
+      <br />
+      <button id="5d" onclick="wrong(5, 'd')" class="Q5Button d">
+        D. $26$
+      </button>
+      <br />
+      <button id="5e" onclick="wrong(5, 'e')" class="Q5Button e">
+        E. $28$
+      </button>
+    </div>
+    <div class="solution" id="Q5Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        Each shortest possible path from $A$ to $B$ follows the edges of the
+        rectangle. The following path outlines a path of $\boxed{\textbf{(C)}\
+        24}$ units:
+      </p>
+      <img src="./Assets/Images/Q5SolImage.png" />
+      <h3>Solution 2</h3>
+      <p>
+        We can find the shortest distance using a line diagonally from one point
+        to the other, creating a sort of slope, then find the sum of rise and
+        run of the slope, which happens to be the shortest distance, repeat this
+        process until you get back to Point $F$, and you should get $2 + 1 + 3 +
+        7 + 4 + 2 + 1 + 4$, which is equal to $\boxed{\textbf{(C)}\ 24}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/n6M3y_1dsOk?si=JrQdVHiRiIwAA6Ns"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q6" hidden="true">
+      <h2>Queston 6</h2>
+      <p>
+        Sekou writes the numbers $15, 16, 17, 18, 19.$ After he erases one of
+        his numbers, the sum of the remaining four numbers is a multiple of $4.$
+        Which number did he erase?
+      </p>
+      <button id="6a" onclick="wrong(6, 'a')" class="Q6Button a">
+        A. $15$
+      </button>
+      <br />
+      <button id="6b" onclick="wrong(6, 'b')" class="Q6Button b">
+        B. $16$
+      </button>
+      <br />
+      <button id="6c" onclick="right(6, 'c')" class="Q6Button c right">
+        C. $17$
+      </button>
+      <br />
+      <button id="6d" onclick="wrong(6, 'd')" class="Q6Button d">
+        D. $18$
+      </button>
+      <br />
+      <button id="6e" onclick="wrong(6, 'e')" class="Q6Button e">
+        E. $19$
+      </button>
+    </div>
+    <div class="solution" id="Q6Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        The sum of all five numbers is $85$. Since $85$ is $1$ more than a
+        multiple of $4$, the number being subtracted must be $1$ more than a
+        multiple of $4$. Thus, the answer is $\boxed{\textbf{(C)}~17}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        The sum of the residues of these numbers modulo $4$ is $-1+0+1+2+3=5
+        \equiv 1 \pmod 4$. Hence, the number being subtracted must be congruent
+        to $1$ modulo $4$. The only such answer is $\boxed{\textbf{(C)}~17}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/nkpdskFVgdM?si=n-Dpzv5sn-R1ffdt"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q7" hidden="true">
+      <h2>Queston 7</h2>
+      <p>On the most recent exam on Prof. Xochi's class,</p>
+      <ul style="list-style-type: square">
+        <li>$5$ students earned a score of at least $95\%$,</li>
+        <li>$13$ students earned a score of at least $90\%$,</li>
+        <li>$27$ students earned a score of at least $85\%$,</li>
+        <li>$50$ students earned a score of at least $80\%$,</li>
+      </ul>
+      <p>
+        How many students earned a score of at least $80\%$ and less than
+        $90\%$?
+      </p>
+      <button id="7a" onclick="wrong(7, 'a')" class="Q7Button a">A. $8$</button>
+      <br />
+      <button id="7b" onclick="wrong(7, 'b')" class="Q7Button b">
+        B. $14$
+      </button>
+      <br />
+      <button id="7c" onclick="wrong(7, 'c')" class="Q7Button c">
+        C. $22$
+      </button>
+      <br />
+      <button id="7d" onclick="right(7, 'd')" class="Q7Button d right">
+        D. $37$
+      </button>
+      <br />
+      <button id="7e" onclick="wrong(7, 'e')" class="Q7Button e">
+        E. $45$
+      </button>
+    </div>
+    <div class="solution" id="Q7Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        $50$ people scored at least $80\%$, and out of these $50$ people, $13$
+        of them earned a score that was not less than $90\%$, so the number of
+        people that scored in between at least $80\%$ and less than $90\%$ is
+        $50-13 = \boxed{\text{(D) 37}}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Let $a$ denote the number of people who had a score of at least $85$,
+        but less than $90$, and let $b$ denote the number of people who had a
+        score of at least $80$ but less than $85$. Our answer is equal to $a+b$.
+        We find $a = 27 - 13 = 14$, while $b = 50 - 27 = 23$. Thus, the answer
+        is $23 + 14 = \boxed{\text{(D) 37}}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/nkpdskFVgdM?si=9h2a26OHBRK27drU&amp;start=245"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q8" hidden="true">
+      <h2>Queston 8</h2>
+      <p>
+        Isaiah cuts open a cardboard cube along some of its edges to form the
+        flat shape shown on the right, which has an area of $18$ square
+        centimeters. What is the volume of the cube in cubic centimeters?
+      </p>
+      <img src="Assets/Images/Amc8_2025_prob8.png" />
+      <br />
+      <button id="8a" onclick="right(8, 'a')" class="Q8Button a right">
+        A. $3\sqrt{3}$
+      </button>
+      <br />
+      <button id="8b" onclick="wrong(8, 'b')" class="Q8Button b">B. $6$</button>
+      <br />
+      <button id="8c" onclick="wrong(8, 'c')" class="Q8Button c">C. $9$</button>
+      <br />
+      <button id="8d" onclick="wrong(8, 'd')" class="Q8Button d">
+        D. $6\sqrt{3}$
+      </button>
+      <br />
+      <button id="8e" onclick="wrong(8, 'e')" class="Q8Button e">
+        E. $9\sqrt{3}$
+      </button>
+    </div>
+    <div class="solution" id="Q8Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        Each of the $6$ faces of the cube have equal area, so the area of each
+        face is equal to $\frac{18}{6} = 3$, making the side length $\sqrt3$.
+        From this, we can see that the volume of the cube is $\sqrt{3}^3 =
+        \boxed{\textbf{(A)}3\sqrt{3}}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Let the side length of the cube shown be equal to $s$ centimeters. The
+        surface area of this cube is equal to the area of the net of the cube,
+        which is equal to $18$ square centimeters. The surface area of this cube
+        is also $6s^2$ square centimeters, so we have\[6s^2 = 18 \implies s^2 =
+        \frac{18}{6} = 3 \implies s = \sqrt{3}.\]However, we aren't done. We
+        have found that the side length of the cube is $\sqrt{3} cm$, but the
+        question asks for the volume of the cube, which is equal to $s^3 =
+        \sqrt{3}^3 = \boxed{\textbf{(A)}3\sqrt{3}}$ cubic centimeters.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=cXBOnHlVV66aHWOL&amp;start=577"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q9" hidden="true">
+      <h2>Queston 9</h2>
+      <p>
+        Ningli looks at the $6$ pairs of numbers directly across from each other
+        on a clock. She takes the average of each pair of numbers. What is the
+        average of the resulting $6$ numbers?
+      </p>
+      <img src="Assets/Images/9Image.svg" />
+      <br />
+      <button id="9a" onclick="wrong(8, 'a')" class="Q9Button a">A. $5$</button>
+      <br />
+      <button id="8b" onclick="right(9, 'b')" class="Q9Button b right">
+        B. $6.5$
+      </button>
+      <br />
+      <button id="9c" onclick="wrong(9, 'c')" class="Q9Button c">C. $8$</button>
+      <br />
+      <button id="9d" onclick="wrong(9, 'd')" class="Q9Button d">
+        D. $9.5$
+      </button>
+      <br />
+      <button id="9e" onclick="wrong(9, 'e')" class="Q9Button e">
+        E. $12$
+      </button>
+    </div>
+    <div class="solution" id="Q9Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        Our answer is\[\frac{\frac{1+7}{2} + \frac{2+8}{2} + \cdots +
+        \frac{6+12}{2}}{6} = \frac{\frac{1}{2}((1+7)+(2+8)+\cdots+(6+12))}{6} =
+        \frac{1+2+3+4+5+6+7+8+9+10+11+12}{2 \cdot 6} = \frac{\frac{12 \cdot
+        13}{2}}{2 \cdot 6} = \frac{78}{12} =\boxed{\textbf{(B)}~6.5}\]
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        We proceed with brute force. All of the pairs of opposite numbers on the
+        clock are $(12,6)$, $(1,7)$, $(2,8)$, $(3,9)$, $(4,10)$, $(5,11)$, where
+        order doesn't matter. The averages of each of these pairs are $9, 4, 5,
+        6, 7,$ and $8$ respectively, and the average these numbers is
+        $\frac{9+4+5+6+7+8}{6}=\boxed{\textbf{(B)}~6.5}$
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        The problem is asking for the average of all $12$ numbers. To find the
+        average of all $12$ numbers, you find the sum of all the integers from
+        $1$ to $12$ which is $78$, and divide it by $12$ because there are 12
+        terms. Therefore, the answer is
+        $\frac{78}{12}=\boxed{\textbf{(B)}~6.5}$. You could also see that the
+        average of, $2$ and $8$, is $5$, only one more that it's consecutive
+        pair, $1$ and $7$ which is $4$. Assuming that this is the pattern, we
+        can find the average $4$ to $9$ (6 consecutive integers starting with
+        $4$), and we that find our answer is $\boxed{\textbf{(B)}~6.5}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/BRnILzqVwHk?si=vt1ES1YUw3Ma7Wgd&amp;start=399"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q10" hidden="true">
+      <h2>Queston 10</h2>
+      <p>
+        In the figure below, $ABCD$ is a rectangle with sides of length $AB = 5$
+        inches and $AD$ = 3 inches. Rectangle $ABCD$ is rotated $90^\circ$
+        clockwise around the midpoint of side $DC$ to give a second rectangle.
+        What is the total area, in square inches, covered by the two overlapping
+        rectangles?
+      </p>
+      <img src="Assets/Images/10Image.svg" />
+      <br />
+      <button id="10a" onclick="wrong(10, 'a')" class="Q10Button a">
+        A. $21$
+      </button>
+      <br />
+      <button id="10b" onclick="wrong(10, 'b')" class="Q10Button b">
+        B. $22.25$
+      </button>
+      <br />
+      <button id="10c" onclick="wrong(10, 'c')" class="Q10Button c">
+        C. $23$
+      </button>
+      <br />
+      <button id="10d" onclick="right(10, 'd')" class="Q10Button d right">
+        D. $23.75$
+      </button>
+      <br />
+      <button id="10e" onclick="wrong(10, 'e')" class="Q10Button e">
+        E. $25$
+      </button>
+      <br />
+    </div>
+    <div class="solution" id="Q10Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        The area of each rectangle is $5 \cdot 3 = 15$. Then the sum of the
+        areas of the two regions is the sum of the areas of the two rectangles,
+        minus the area of their overlap. To find the area of the overlap, we
+        note that the region of overlap is a square, each of whose sides have
+        length $2.5$ (as they are formed by the midpoint of one of the long
+        sides, the vertex, and also, since it is rotated 90 degrees). Then the
+        answer is $15+15-2.5^2=\boxed{\textbf{(D)}~23.75}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/BRnILzqVwHk?si=WVYhX87UZlI5F65n&amp;start=560"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q11" hidden="true">
+      <h2>Queston 11</h2>
+      <p>
+        A $\textit{tetromino}$ consists of four squares connected along their
+        edges. There are five possible tetromino shapes, $I$, $O$, $L$, $T$, and
+        $S$, shown below, which can be rotated or flipped over. Three
+        tetrominoes are used to completely cover a $3\times4$ rectangle. At
+        least one of the tiles is an $S$ tile. What are the other two tiles?
+      </p>
+      <img src="Assets/Images/Q11Image.png" id="Q11Image" />
+      <br />
+      <button id="11a" onclick="wrong(11, 'a')" class="Q11Button a">
+        A. $I$ and $L$
+      </button>
+      <br />
+      <button id="11b" onclick="wrong(11, 'b')" class="Q11Button b">
+        B. $I$ and $T$
+      </button>
+      <br />
+      <button id="11c" onclick="right(11, 'c')" class="Q11Button c right">
+        C. $L$ and $L$
+      </button>
+      <br />
+      <button id="11d" onclick="wrong(11, 'd')" class="Q11Button d">
+        D. $L$ and $S$
+      </button>
+      <br />
+      <button id="11e" onclick="wrong(11, 'e')" class="Q11Button e">
+        E. $O$ and $T$
+      </button>
+      <br />
+    </div>
+    <div class="solution" id="Q11Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        The $3\times4$ rectangle allows for $7$ possible places to put the S
+        piece, with each possible placement having an inverted version. One of
+        the cases looks like this:
+      </p>
+      <img src="./Assets/Images/Q11Sol1.png" class="Q11SolImage" />
+      <p>
+        As you can see, there is a hole in the top left corner of the board,
+        which would be impossible to fill using the tetrominos. There are three
+        cases in which a hole isn't created; the S lies flat in the bottom left
+        corner, it lies flat in the top right corner, or it stands upright in
+        the center. All three tilings are shown below.
+      </p>
+      <img src="./Assets/Images/Q11Sol2.png" class="Q11SolImage" />
+      <img src="./Assets/Images/Q11Sol3.png" class="Q11SolImage" />
+      <img src="./Assets/Images/Q11Sol4.png" class="Q11SolImage" />
+      <p>
+        For each of the inverted cases, the L pieces can be inverted along with
+        the S piece. Because the only cases that fill the rectangle after the S
+        is placed are the ones that use two L pieces, the answer must be
+        $\boxed{\textbf{(C)}~L \ and \ L}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=eZopaGBiLpRg0lhi&amp;start=965"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q12" hidden="true">
+      <h2>Queston 12</h2>
+      <p>
+        The region shown below consists of 24 squares, each with side length 1
+        centimeter. What is the area, in square centimeters, of the largest
+        circle that can fit inside the region, possibly touching the boundaries?
+      </p>
+      <img src="Assets/Images/12Image.svg" />
+      <br />
+      <button id="12a" onclick="wrong(12, 'a')" class="Q12Button a">
+        A. $3\pi$
+      </button>
+      <br />
+      <button id="12b" onclick="wrong(12, 'b')" class="Q12Button b">
+        B. $4\pi$
+      </button>
+      <br />
+      <button id="12c" onclick="right(12, 'c')" class="Q12Button c right">
+        C. $5\pi$
+      </button>
+      <br />
+      <button id="12d" onclick="wrong(12, 'd')" class="Q12Button d">
+        D. $6\pi$
+      </button>
+      <br />
+      <button id="12e" onclick="wrong(12, 'e')" class="Q12Button e">
+        E. $8\pi$
+      </button>
+    </div>
+    <div class="solution" id="Q12Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        The largest circle that can fit inside the figure has its center in the
+        middle of the figure and will be tangent to the figure in $8$ points. By
+        the Pythagorean Theorem, the distance from the center to one of these
+        $8$ points is $\sqrt{2^2 + 1^2} = \sqrt5$, so the area of this circle is
+        $\pi \sqrt{5}^2 = \boxed{\textbf{(C) } 5\pi}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Draw the circle in the grid and analyze the radius. Its radius is a
+        little more than 2 but a lot less than 2.5, so the area is a little more
+        than 4π. So, the area of the circle is $\boxed{\textbf{(C) } 5\pi}$ with
+        a radius of approximately 2.23.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=uXsoJaMCWGXKT0c7&amp;start=1096"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q13" hidden="true">
+      <h2>Queston 13</h2>
+      <p>
+        Each of the even numbers $2, 4, 6, \ldots, 50$ is divided by $7$. The
+        remainders are recorded. Which histogram displays the number of times
+        each remainder occurs?
+      </p>
+      <button id="13a" onclick="right(13, 'a')" class="Q13Button a right">
+        A. <img src="./Assets/Images/13a.png" class="I13Image" />
+      </button>
+      <br />
+      <button id="13b" onclick="wrong(13, 'b')" class="Q13Button b">
+        B. <img src="./Assets/Images/13b.png" class="I13Image" />
+      </button>
+      <br />
+      <button id="13c" onclick="wrong(13, 'c')" class="Q13Button c">
+        C. <img src="./Assets/Images/13c.png" class="I13Image" />
+      </button>
+      <br />
+      <button id="13d" onclick="wrong(13, 'd')" class="Q13Button d">
+        D. <img src="./Assets/Images/13d.png" class="I13Image" />
+      </button>
+      <br />
+      <button id="13e" onclick="wrong(13, 'e')" class="Q13Button e">
+        E. <img src="./Assets/Images/13e.png" class="I13Image" />
+      </button>
+      <br />
+    </div>
+    <div class="solution" id="Q13Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        Let's take the numbers 2 through 14 (evens). The remainders will be 2,
+        4, 6, 1, 3, 5, and 0. This sequence keeps repeating itself over and
+        over. We can take $\left\lfloor\frac{50}{14}\right\rfloor$, so after the
+        number 42, every remainder has been achieved 3 times. However, since 44,
+        46, 48, and 50 are left, the remainders of those will be 2, 4, 6, and 1
+        respectively. The only histogram in which those 4 numbers are set at 4
+        is histogram $\boxed{\textbf{(A)}}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Writing down all the remainders gives us $2, 4, 6, 1, 3, 5, 0, 2, 4, 6,
+        1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1.$ In this list, there are
+        $3$ numbers with remainder $0$, $4$ numbers with remainder $1$, $4$
+        numbers with remainder $2$, $3$ numbers with remainder $3$, $4$ numbers
+        with remainder $4$, $3$ numbers with remainder $5$, and $4$ numbers with
+        remainder $6$. Manually computation of every single term can be avoided
+        by recognizing the pattern alternates from $0, 2, 4, 6$ to $1, 3, 5$ and
+        there are $25$ terms. The only histogram that matches this is
+        $\boxed{\textbf{(A)}}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=__rcMMLj2_c32K3K&amp;start=1269"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q14" hidden="true">
+      <h2>Queston 14</h2>
+      <p>
+        A number $N$ is inserted into the list $2$, $6$, $7$, $7$, $28$. The
+        mean is now twice as great as the median. What is $N$?
+      </p>
+      <button id="14a" onclick="wrong(14, 'a')" class="Q14Button a">
+        A. 7
+      </button>
+      <br />
+      <button id="14b" onclick="wrong(14, 'b')" class="Q14Button b">
+        B. 14
+      </button>
+      <br />
+      <button id="14c" onclick="wrong(14, 'c')" class="Q14Button c">
+        C. 20
+      </button>
+      <br />
+      <button id="14d" onclick="wrong(14, 'd')" class="Q14Button d">
+        D. 28
+      </button>
+      <br />
+      <button id="14e" onclick="right(14, 'e')" class="Q14Button e right">
+        E. 34
+      </button>
+    </div>
+    <div class="solution" id="Q14Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        The median of the list is $7$, so the mean of the new list will be $7
+        \cdot 2 = 14$. Since there are $6$ numbers in the new list, the sum of
+        the $6$ numbers will be $14 \cdot 6 = 84$. Therefore, $2+6+7+7+28+N = 84
+        \implies N = \boxed{\text{(E) 34}}$
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Since the average right now is $10$, and the median is $7$, we see that
+        $N$ must be larger than $10$, which means that the median of the 6
+        resulting numbers should be $7$, making the mean of these $14$. We can
+        do $2 + 6 + 7 + 7 + 28 + N = 14 * 6 = 84$. $50 + N = 84$, so $N$ =
+        $\boxed{\text{(E) 34}}$
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        We try out every option by inserting each number into the list. After
+        trying out each number, we get $\boxed{\text{(E) 34}}$
+      </p>
+      <p>
+        Note that this is very time-consuming and it is not the most practical
+        solution.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        We could use answer choices to solve this problem. The sum of the $5$
+        numbers is $50$. If you add $7$ to the list, $57$ is not divisible by
+        $6$, therefore it will not work. Same thing applies to $14$ and $20$.
+        The only possible choices left are $28$ and $34$. Now you check $28$.
+        You see that $28$ doesn't work because $(28+50) \div 6 = 13$ and $13$ is
+        not twice of the median, which is still $7$. Therefore, only choice left
+        is $\boxed{\text{(E) 34}}$
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=IhK-svSsk60XCh2C&amp;start=1442"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q15" hidden="true">
+      <h2>Queston 15</h2>
+      <p>
+        Kei draws a $6$-by-$6$ grid. He colors $13$ of the unit squares silver
+        and the remaining squares gold. Kei then folds the grid in half
+        vertically, forming pairs of overlapping unit squares. Let $m$ and $M$
+        equal the least and greatest possible number of gold-on-gold pairs,
+        respectively. What is the value of $m+M$?
+      </p>
+      <img src="./Assets/Images/Q15Image.png" id="Q15Image" />
+      <br />
+      <button id="15a" onclick="wrong(15, 'a')" class="Q15Button a">
+        A. 12
+      </button>
+      <br />
+      <button id="15b" onclick="wrong(15, 'b')" class="Q15Button b">
+        B. 14
+      </button>
+      <br />
+      <button id="15c" onclick="right(15, 'c')" class="Q15Button c right">
+        C. 16
+      </button>
+      <br />
+      <button id="15d" onclick="wrong(15, 'd')" class="Q15Button d">
+        D. 18
+      </button>
+      <br />
+      <button id="15e" onclick="wrong(15, 'e')" class="Q15Button e">
+        E. 20
+      </button>
+    </div>
+    <div class="solution" id="Q15Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        First, we note that there are $18$ "pairs" of squares folded on top of
+        each other after the folding. The minimum number of gold pairs occurs
+        when silver squares occupy the maximum number of pairs, and the maximum
+        number of gold pairs occurs when silver squares occupy the minimum
+        number of pairs. The latter case occurs when all $13$ silver squares are
+        placed in different pairs, resulting in $18-13=5$ gold pairs. The former
+        case occurs when the silver squares are paired up as much as possible,
+        resulting in $6$ complete pairs and another square occupying another
+        pair slot. Then there are $18-7=11$ gold pairs. Our answer is
+        $11+5=\boxed{\textbf{(C) }16}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        We can see that the least number of gold-on-gold pairs will be obtained
+        when the $13$ silver squares are placed on the two sides so that they
+        don't overlap when folded over (because then it will minimize the number
+        of gold-on-golds). We can see that if we split them up $6$ and $7$ on
+        both sides, and then fold it, the number of gold-on-golds will be $18-13
+        = 5$.
+      </p>
+      <p>
+        The maximum number of gold-on-golds will be achieved when the silver
+        squares overlap when folded over, which will increase the number of
+        gold-on-golds. If we align 6 silver squares with each other on each
+        side, and put the last one somewhere else, we get the maximum is $18 - 7
+        = 11$. Therefore, the answer is $11+5=\boxed{\textbf{(C)}~16}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=XJ7kSYCcWDqflyls&amp;start=1572"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q16" hidden="true">
+      <h2>Queston 16</h2>
+      <p>
+        Five distinct integers from $1$ to $10$ are chosen, and five distinct
+        integers from $11$ to $20$ are chosen. No two numbers differ by exactly
+        $10$. What is the sum of the ten chosen numbers?
+      </p>
+      <button id="16a" onclick="wrong(16, 'a')" class="Q16Button a">
+        A. 95
+      </button>
+      <br />
+      <button id="16b" onclick="wrong(16, 'b')" class="Q16Button b">
+        B. 100
+      </button>
+      <br />
+      <button id="16c" onclick="right(16, 'c')" class="Q16Button c right">
+        C. 105
+      </button>
+      <br />
+      <button id="16d" onclick="wrong(16, 'd')" class="Q16Button d">
+        D. 110
+      </button>
+      <br />
+      <button id="16e" onclick="wrong(16, 'e')" class="Q16Button e">
+        E. 115
+      </button>
+    </div>
+    <div class="solution" id="Q16Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        Note that for no two numbers to differ by $10$, every number chosen must
+        have a different units digit. To make computations easier, we can choose
+        $(1, 2, 3, 4, 5)$ from the first group and $(16, 17, 18, 19, 20)$ from
+        the second group. Then the sum evaluates to $1+2+3+4+5+16+17+18+19+20 =
+        \boxed{\text{(C)\ 105}}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        For $1+2+3+4+5+16+17+18+19+20$, we can add the first term and the last
+        term, which is $21$. If we add the second term and the second-to-last
+        term it is also $21$. There are $5$ pairs that sum to $21$, so the
+        answer is $21 \times 5$ which equals $\boxed{\text{(C)\ 105}}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        One efficient method is to quickly add $(1, 2, 3, 4, 5, 6, 7, 8, 9,
+        10)$, which is $55$. Then because you took $50$ in total away from $(16,
+        17, 18, 19, 20)$, you add $50$. $55+50= \boxed{\text{(C)\ 105}}$.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        To solve this problem, I started with the easiest/smallest case
+        possible. In my opinion, that was
+        <br />$1+2+3+4+5+16+17+18+19+20$.<br />
+        I then solved this equation quickly using Little Gauss's method,
+        rearranging that into <br />$1+19+2+18+3+17+4+16+5+20$.<br />
+        I simplified this into <br />$20+20+20+20+25$.<br />
+        Solving this simple equation gives us the answer, which is
+        $\boxed{\text{(C)\ 105}}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=liWHn2m6L6DBRrR3&amp;start=1815"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q17" hidden="true">
+      <h2>Queston 17</h2>
+      <p>
+        In the land of Markovia, there are three cities: $A$, $B$, and $C$.
+        There are 100 people who live in $A$, 120 who live in $B$, and 160 who
+        live in $C$. Everyone works in one of the three cities, and a person may
+        work in the same city where they live. In the figure below, an arrow
+        pointing from one city to another is labeled with the fraction of people
+        living in the first city who work in the second city. (For example,
+        $\frac{1}{4}$ of the people who live in $A$ work in $B$.) How many
+        people work in $A$?
+      </p>
+      <img src="./Assets/Images/Q17Image.png" id="Q17Image" />
+      <br />
+      <button id="17a" onclick="wrong(17, 'a')" class="Q17Button a">
+        A. 55
+      </button>
+      <br />
+      <button id="17b" onclick="wrong(17, 'b')" class="Q17Button b">
+        B. 60
+      </button>
+      <br />
+      <button id="17c" onclick="wrong(17, 'c')" class="Q17Button c">
+        C. 85
+      </button>
+      <br />
+      <button id="17d" onclick="right(17, 'd')" class="Q17Button d right">
+        D. 115
+      </button>
+      <br />
+      <button id="17e" onclick="wrong(17, 'e')" class="Q17Button e">
+        E. 160
+      </button>
+    </div>
+    <div class="solution" id="Q17Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        There are $100 \cdot (\frac{1}{4} + \frac{1}{5}) = 100 \cdot
+        \frac{9}{20} = 45$ people who do not work in city $A$ that live in city
+        $A$, meaning that $100 - 45 = 55$ people who live in city $A$ work in
+        city $A$. There are $\frac{1}{3} \cdot 120 = 40$ people who live in city
+        $B$ and work in $A$, as well as $\frac{1}{8} \cdot 160 = 20$ people who
+        live in city $C$ that work in city $A$. Therefore, the answer is $55 +
+        40 + 20 = \boxed{\textbf{(D)}\ 115}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        We could also make an equation. Let's denote the number of people that
+        live in city $A$ as $a$, $B$ as $b$, and $C$ as $c$. If $x$ denotes the
+        number of people working in city $A$, then $x = \frac{1}{8}c +
+        \frac{1}{3}b + a - \frac{1}{4}a - \frac{1}{5}a$. This is because
+        $\frac{1}{8}$ of the people from City $C$ and $\frac{1}{3}$ of the
+        people from City $B$ work in city $A$ as shown in the image. We also
+        know that $\frac{9}{20}$ of the people living in $A$ work in other
+        cities. We are already given the values of variables $a$, $b$, and $c$
+        as $100$, $120$, and $160$ respectively. Plug the values it into the
+        main equation like this:<br />
+        $x = 160 \cdot \frac{1}{8} + 120 \cdot \frac{1}{3} + 100 - 100 \cdot
+        \frac{1}{4} - 100 \cdot \frac{1}{5}$. We solve for it and get our answer
+        $\boxed{\textbf{(D)}\ 115}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=_Zef1Mn7o9dxzmtb&amp;start=2020"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q18" hidden="true">
+      <h2>Queston 18</h2>
+      <p>
+        The circle shown below on the left has a radius of 1 unit. The region
+        between the circle and the inscribed square is shaded. In the circle
+        shown on the right, one quarter of the region between the circle and the
+        inscribed square is shaded. The shaded regions in the two circles have
+        the same area. What is the radius $R$, in units, of the circle on the
+        right?
+      </p>
+      <img src="./Assets/Images/Q18Image.png" id="Q18Image" />
+      <br />
+      <button id="18a" onclick="wrong(18, 'a')" class="Q18Button a">
+        A. $\sqrt{2}$
+      </button>
+      <br />
+      <button id="18b" onclick="right(18, 'b')" class="Q18Button b right">
+        B. 2
+      </button>
+      <br />
+      <button id="18c" onclick="wrong(18, 'c')" class="Q18Button c">
+        C. $2 \sqrt{2}$
+      </button>
+      <br />
+      <button id="18d" onclick="wrong(18, 'd')" class="Q18Button d">
+        D. 4
+      </button>
+      <br />
+      <button id="18e" onclick="wrong(18, 'e')" class="Q18Button e">
+        E. $4 \sqrt{2}$
+      </button>
+    </div>
+    <div class="solution" id="Q18Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        The area of the shaded region in the circle on the left is the area of
+        the circle minus the area of the square, or $\big(\pi-2)$. The shaded
+        area in the circle on the right is $\dfrac{1}{4}$ of the area of the
+        circle minus the area of the square, or $\dfrac{\pi R^2-2R^2}{4}$, which
+        can be factored as $\dfrac{R^2(\pi-2)}{4}$. Since the shaded areas are
+        equal to each other, we have $\pi-2=\dfrac{R^2(\pi-2)}{4}$, which
+        simplifies to $R^2=4$. Taking the square root, we have
+        $R=\boxed{\text{(B)\ 2}}$
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        The side length of the smaller square is $\sqrt{2}$, which follows from
+        the Pythagorean Theorem since the square is inscribed in a circle of
+        radius $1$, making the diagonal equal to $2$. Thus, the area of the
+        square is $(\sqrt{2})^2 = 2$. The circle in which the square is
+        inscribed has radius $1$, so its area is $\pi \cdot 1^2 = \pi$.
+        Therefore, the area of the shaded region (the part of the circle not
+        covered by the square) is $\pi - 2$.<br />
+
+        Now, consider the larger square, which is inscribed in a circle of
+        radius $R$. This square can be divided into four congruent right
+        triangles by drawing lines from the center of the circle to the vertices
+        of the square. Each triangle has legs of length $R$ and includes a
+        $90^\circ$ angle at the center. Using the triangle area formula
+        $\frac{1}{2}ab\sin(C)$ with $a = b = R$ and $C = 90^\circ$, each
+        triangle has area $\frac{1}{2}R^2$. Since there are four such triangles,
+        the area of the square is $4 \cdot \frac{1}{2}R^2 = 2R^2$. The area of
+        the circle is $\pi R^2$, so the area of the shaded region (the part of
+        the circle outside the square) is $\frac{1}{4}(\pi R^2 - 2R^2) =
+        \frac{1}{4}R^2(\pi - 2)$.<br />
+
+        We are told that this shaded region also has area equal to $\pi - 2$, so
+        we set up the equation $\frac{1}{4}R^2(\pi - 2) = \pi - 2$. Assuming
+        $\pi - 2 \neq 0$, we divide both sides by $\pi - 2$, giving
+        $\frac{1}{4}R^2 = 1$, which leads to $R^2 = 4$, and finally $R = 2$.
+        Thus, the answer is $\boxed{\text{(B) } 2}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        We start with the first area. Since the square is inscribed, its
+        diagonal is $2\implies$ its side length is $\sqrt{2}\implies$ its area
+        is $2$, therefore the first area is $\pi-2$. The second area is
+        $\dfrac{R^2\pi-2R^2}{4}$, found in a similar manner. Writing and solving
+        the equation, we
+        have\[\pi-2=\dfrac{R^2\pi-2R^2}{4}\implies4(\pi-2)=R^2(\pi-2)\implies
+        R=2.\]The answer is $\boxed{\text{(B) }2}$
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        Since the two figures are similar, and the 4 regions in the first circle
+        are equal in area to one of the four regions in the second circle, the
+        second figure's area is $4$ times the first figure's area. Therefore,
+        the side lengths are multiplied by a factor of $\sqrt{4} = 2$, so the
+        answer is $1 \cdot 2 = \boxed{\textbf{(B)} 2}$.
+      </p>
+      <h3>Solution 5</h3>
+      <p>
+        First find the area of the smaller circle with the known radius. Since
+        the radius is $1$, the area of the circle is $\pi$, and finding the side
+        length of the square would equal to $\sqrt{2}$. Squaring that gives us
+        the area of the square which is $2$, and the shaded area of the first
+        one is equal to $\pi - 2$. The second area can be shortened to
+        $\frac{R^2\pi}{4} - \frac{\left(\sqrt{2R^2}\right)^2}{4}$, since we only
+        need $\frac{1}{4}$th of the sections. We then make them equal, which
+        makes this equation:<br />
+
+        $\pi - 2 = \frac{R^2\pi}{4} - \frac{\left(\sqrt{2R^2}\right)^2}{4}$<br />
+
+        Simplifying this equation would be $4\pi - 8 = R^2\pi - 2R^2$. We can
+        factor out the $R^2$ which makes $4\pi - 8 = R^2\left(\pi - 2\right)$.
+        Dividing out the $\pi - 2$ would give us $4$ on the left side. $4 = R^2$
+        which leaves us to choice $\boxed{\text{(B) }2}$.
+      </p>
+      <h3>Solution 6</h3>
+      <p>
+        We are given two circles, each with an inscribed square. In the first
+        circle, the radius is 1 unit, and the region between the circle and the
+        inscribed square is shaded. In the second circle, one quarter of the
+        region between the circle and the inscribed square is shaded. The shaded
+        areas in both circles are the same. Our goal is to determine the radius
+        $R$ of the second circle.<br />
+
+        Step 1: Set up a ratio for the areas of the shaded regions We know that
+        the shaded region in the first circle (with radius 1) and the shaded
+        region in the second circle (with radius $R$) are proportional in terms
+        of the total area between the circle and the inscribed square. The
+        shaded area in the second circle is one quarter of the total area
+        between the circle and the square, while the shaded area in the first
+        circle is the entire region.<br />
+
+        Step 2: Relate the areas to the radius<br />
+
+        Let’s recall that the area between the circle and the inscribed square
+        is proportional to the square of the radius of the circle because the
+        square's side length scales with the radius of the circle.<br />
+
+        So, in the first circle with radius 1:\[\text{Area between circle and
+        square} \propto 1^2 = 1\]and the shaded area is proportional to the
+        entire area between the circle and the square, i.e., 1.<br />
+
+        In the second circle with radius $R$:\[\text{Area between circle and
+        square} \propto R^2\]and the shaded area is one-quarter of this total
+        area, so it is proportional to $\frac{1}{4} R^2$.<br />
+
+        Step 3: Set up the ratio of shaded areas<br />
+
+        We are told that the shaded areas in both circles are the same, so we
+        set up the following equation:\[1 = \frac{1}{4} R^2\]<br />
+
+        Step 4: Solve for $R$<br />
+
+        Multiply both sides of the equation by 4:\[4 = R^2\]Taking the square
+        root of both sides:\[R = 2\]<br />
+
+        Thus, the radius of the second circle is $\boxed{\text{(B) 2}}$.<br />
+      </p>
+      <h3>Solution 7</h3>
+      <p>
+        Notice that if you shaded the rest of the region between the square and
+        the circle, then the area would be $4$ times the area of the shaded
+        region in the smaller circle. Since the radius changes by a factor of
+        $k^2$, $k^2 = 4$, solving for gets you $2$. Hence, the answer is
+        $\fbox{\textbf{(B)}\ 2}$
+      </p>
+      <h3>Solution 8</h3>
+      <p>
+        We want to find a quick and easy formula that can be applied to this
+        (not necessarily a formula, but a rule). We take the area of the circle
+        and subtract it from the area of the square and you will find the area
+        of the $4$ outer shaded regions. This rule is basically $\pi
+        r^2-2r^2=r^2(\pi-2)$. We plug in the radius from the first figure and
+        compute the answer to be $\pi-2$. Since this represents the area of ONE
+        region in the second figure, we have to multiply our result by four
+        which gets us $4\pi-8$ or to make it easier, you can factor the four and
+        make it $4(\pi-2)$. Using our rule, we can set both equations equal to
+        each other.<br />
+
+        $R^2(\pi-2)=4(\pi-2)$<br />
+
+        $R^2=4$<br />
+
+        $R=\boxed{\textbf{(B)}2}$
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=6nQYa1rxfqaa8zCN&amp;start=2146"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q19" hidden="true">
+      <h2>Queston 19</h2>
+      <p>
+        Two towns, $A$ and $B$, are connected by a straight road, $15$ miles
+        long. Traveling from town $A$ to town $B$, the speed limit changes every
+        $5$ miles: from $25$ to $40$ to $20$ miles per hour (mph). Two cars, one
+        at town $A$ and one at town $B$, start moving toward each other at the
+        same time. They drive at exactly the speed limit in each portion of the
+        road. How far from town $A$, in miles, will the two cars meet?
+      </p>
+      <img src="./Assets/Images/Q19Image.png" />
+      <button id="19a" onclick="wrong(19, 'a')" class="Q19Button a">
+        A. 7.75
+      </button>
+      <br />
+      <button id="19b" onclick="wrong(19, 'b')" class="Q19Button b">
+        B. 8
+      </button>
+      <br />
+      <button id="19c" onclick="wrong(19, 'c')" class="Q19Button c">
+        C. 8.25
+      </button>
+      <br />
+      <button id="19d" onclick="right(19, 'd')" class="Q19Button d">
+        D. 8.5
+      </button>
+      <br />
+      <button id="19e" onclick="wrong(19, 'e')" class="Q19Button e">
+        E. 8.75
+      </button>
+    </div>
+    <div class="solution" id="Q19Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        From the answer choices, the cars will meet somewhere along the $40$ mph
+        stretch. Car $A$ travels $25$mph for $5$ miles, so we can use
+        dimensional analysis to see that it will be $\frac{1\ \text{hr}}{25\
+        \text{mi}}\cdot 5\ \text{mi} = \frac{1}{5}$ of an hour for this portion.
+        Similarly, car $B$ spends $\frac{1}{4}$ of an hour on the $20$ mph
+        portion.<br />
+
+        Suppose that car $A$ travels $x$ miles along the $40$ mph portion-- then
+        car $B$ travels $5-x$ miles along the $40$ mph portion. By identical
+        methods, car $A$ travels for $\frac{1}{40}\cdot x = \frac{x}{40}$ hours,
+        and car $B$ travels for $\frac{5-x}{40}$ hours.<br />
+
+        At their meeting point, cars $A$ and $B$ will have traveled for the same
+        amount of time, so we have\begin{align*} \frac{1}{5} + \frac{x}{40} &=
+        \frac{1}{4} + \frac{5-x}{40}\\ 8 + x &= 10 + 5-x, \end{align*}so $2x =
+        7$, and $x = 3.5$ miles. This means that car $A$ will have traveled $5 +
+        3.5= \boxed{\textbf{(D)\ 8.5}}$ miles.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        The first car, moving from town $A$ at $25$ miles per hour, takes
+        $\frac{5}{25} = \frac{1}{5} \text{hours} = 12$ minutes. The second car,
+        traveling another $5$ miles from town $B$, takes $\frac{5}{20} =
+        \frac{1}{4} \text{hours} = 15$ minutes. The first car has traveled for 3
+        minutes or $\frac{1}{20}$th of an hour at $40$ miles per hour when the
+        second car has traveled 5 miles. The first car has traveled $40 \cdot
+        \frac{1}{20} = 2$ miles from the previous $5$ miles it traveled at $25$
+        miles per hour. They have $3$ miles left, and they travel at the same
+        speed, so they meet $1.5$ miles through, so they are $5 + 2 + 1.5 =
+        \boxed{\textbf{(D) }8.5}$ miles from town $A$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Instead of using algebra, we can visualize how far each car has traveled
+        every hour. Let us divide each portion of the road into distances
+        traveled each hour: For the $25$ mph portion, we divide it up into 5
+        sections, because $\frac{25\ \text{mph}}{5\ \text{mi}} = 5\ \text{hr}$.
+        Similarly, we divide the $40$ mph portion into 8 sections ($\frac{40\
+        \text{mph}}{5\ \text{mi}} = 8\ \text{hr}$) and the $20$ mph portion into
+        4 sections ($\frac{20\ \text{mph}}{5\ \text{mi}} = 4\ \text{hr}$). Thus,
+        we have the following diagram.
+      </p>
+      <br />
+      <img src="./Assets/Images/Q19SolImage1.png" />
+      <br />
+      <p>
+        After four hours, car A has reached the end of the $20$ mph portion,
+        while car B has traveled $\frac{4}{5}$ of the $25$ mph portion. We can
+        plot the amount of distance traveled, with the red dot representing car
+        A and the blue dot representing car B.
+      </p>
+      <br />
+      <img src="./Assets/Images/Q19SolImage2.png" />
+      <br />
+      <p>
+        If we keep moving the dots, they will eventually meet at segment 3.5 of
+        the $40$ mph portion of the road (note that each segment represents 1
+        hour of time traveled):
+      </p>
+      <br />
+      <img src="./Assets/Images/Q19SolImage3.png" />
+      <br />
+      <p>
+        Now, we must account for the $5$ miles in the $25$ mph portion. Since
+        the two cars meet at segment 3.5 of the $40$ mph portion, we add the $5$
+        miles traveled in the $25$ mph section:<br />
+
+        \[5\ \text{mi} + 3.5\ \text{mi} = \boxed{\textbf{(D) 8.5}}\]miles
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=ORV7QEFfhR3LmCPN&amp;start=2394"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q20" hidden="true">
+      <h2>Queston 20</h2>
+      <p>
+        Sarika, Dev, and Rajiv are sharing a large block of cheese. They take
+        turns cutting off half of what remains and eating it: first Sarika eats
+        half of the cheese, then Dev eats half of the remaining half, then Rajiv
+        eats half of what remains, then back to Sarika, and so on. They stop
+        when the cheese is too small to see. About what fraction of the original
+        block of cheese does Sarika eat in total?
+      </p>
+      <button id="20a" onclick="right(20, 'a')" class="Q20Button a right">
+        A. $\frac{4}{7}$
+      </button>
+      <br />
+      <button id="20b" onclick="wrong(20, 'b')" class="Q20Button b">
+        B. $\frac{3}{5}$
+      </button>
+      <br />
+      <button id="20c" onclick="wrong(20, 'c')" class="Q20Button c">
+        C. $\frac{2}{3}$
+      </button>
+      <br />
+      <button id="20d" onclick="wrong(20, 'd')" class="Q20Button d">
+        D. $\frac{3}{4}$
+      </button>
+      <br />
+      <button id="20e" onclick="wrong(20, 'e')" class="Q20Button e">
+        E. $\frac{7}{8}$
+      </button>
+    </div>
+    <div class="solution" id="Q20Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        Let the total amount of cheese be $1$. We will track the amount of
+        cheese Sarika eats throughout the process.<br />
+
+        First Round: Sarika eats half of the total cheese, so she
+        eats:\[\frac{1}{2}.\]Second Round: Dev eats half of what remains after
+        Sarika's turn, which is:\[\frac{1}{4}.\]Third Round: Rajiv eats half of
+        the remaining cheese after Dev’s turn, which is:\[\frac{1}{8}.\]<br />
+
+        At the end of the first round, the total cheese eaten is:\[\frac{1}{2} +
+        \frac{1}{4} + \frac{1}{8} = \frac{7}{8}.\]<br />
+
+        We observe that Sarika’s consumption follows a geometric sequence. In
+        the first round, she eats $\frac{1}{2}$, and in subsequent rounds, she
+        eats half of what remains from the previous round. This gives the
+        following series for Sarika’s total consumption:<br />
+
+        \[\frac{1}{2} + \frac{1}{16} + \frac{1}{128} + \cdots\]<br />
+
+        This is a geometric series with first term $\frac{1}{2}$ and common
+        ratio $\frac{1}{8}$. The sum $S$ of this infinite geometric series is
+        given by the formula:<br />
+
+        \[S = \frac{a}{1 - r},\]where $a$ is the first term and $r$ is the
+        common ratio. Substituting $a = \frac{1}{2}$ and $r = \frac{1}{8}$:<br />
+
+        \[S = \frac{\frac{1}{2}}{1 - \frac{1}{8}} =
+        \frac{\frac{1}{2}}{\frac{7}{8}} = \frac{1}{2} \times \frac{8}{7} =
+        \frac{4}{7}.\]<br />
+
+        Thus, Sarika eats $\frac{4}{7}$ of the original block of cheese. The
+        correct answer is:\[\boxed{\textbf{(A) } \frac{4}{7}}.\]<br />
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Sarika eats $1/2$ of the original cheese, and then because the others
+        eat $1/4$ and $1/8$, she eats $1/16$ next, and then $1/128$, and then so
+        on. Since the values later are going to be too small to make a huge
+        difference, we can use these $3$ values. She ate $(64 + 8 + 1)/128 =
+        73/128$. We can replace the $73$ with a $72$ for now, so $72/128 =
+        9/16$, which simplifies to around $56.25$. Since there is a little bit
+        more of the cheese to be accounted for, the amount that she eats will be
+        around $\boxed{\textbf{(A) }\frac{4}{7}}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Her first $2$ bites will be $\frac{1}{2}$ and $\frac{1}{16}$. Everything
+        else won't matter, so the answer will be closest to $\frac{9}{16}$,
+        $\frac{4}{7}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VUR5VYabbrc?si=B1-zHthx6N7qYSgd&amp;start=11"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q21" hidden="true">
+      <h2>Queston 21</h2>
+      <p>
+        The Konigsberg School has assigned grades 1 through 7 to pods $A$
+        through $G$, one grade per pod. Some of the pods are connected by
+        walkways, as shown in the figure below. The school noticed that each
+        pair of connected pods has been assigned grades differing by 2 or more
+        grade levels. (For example, grades 1 and 2 will not be in pods directly
+        connected by a walkway.) What is the sum of the grade levels assigned to
+        pods $C, E$, and $F$?
+      </p>
+      <img src="./Assets/Images/Q21Image.png" />
+      <br />
+      <button id="21a" onclick="right(21, 'a')" class="Q21Button a right">
+        A. 12
+      </button>
+      <br />
+      <button id="21b" onclick="wrong(21, 'b')" class="Q21Button b">
+        B. 13
+      </button>
+      <br />
+      <button id="21c" onclick="wrong(21, 'c')" class="Q21Button c">
+        C. 14
+      </button>
+      <br />
+      <button id="21d" onclick="wrong(21, 'd')" class="Q21Button d">
+        D. 15
+      </button>
+      <br />
+      <button id="21e" onclick="wrong(21, 'e')" class="Q21Button e">
+        E. 16
+      </button>
+    </div>
+    <div class="solution" id="Q21Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        The key observation for this solution is to observe that pods $C$ and
+        $F$ both have degree 5; that is, they are connected to five other pods.
+        This implies that $C$ and $F$ must contain grades 1 and 7 in either
+        order (if $C$ or $F$ contained any of grades 2, 3, 4, 5, or 6, then
+        there would only be four possible grades for five pods, a
+        contradiction). It does not matter which grade $C$ and $F$ gets (see
+        Solution 2 below), so we will assume that pod $C$ is assigned grade 1,
+        and pod $F$ is assigned grade 7.<br />
+
+        Next, pod $D$ is the only pod which is not adjacent to pod $F$, so pod
+        $D$ must be assigned grade 6. Similarly, pod $G$ must be assigned grade
+        2.<br />
+
+        Lastly, we need to assign grades 3, 4, and 5 to pods $A$, $B$, and $E$.
+        Note that $A$ and $B$ are adjacent; therefore, pods $A$ and $B$ must
+        contain grades 3 and 5. We conclude that $E$ must be assigned grade 4.
+        The requested sum is $1+4+7 = \mathbf{(A)\,} 12$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Suppose that we replaced each label $x$ with $8-x$. That is, we replaced
+        the grade $a$ assigned to $A$ with the grade $8-a$, the grade $b$
+        assigned to $B$ with $8-b$, and so on. We claim that if the initial
+        labeling is valid (i.e., each pair of connected pods has grades
+        differing by 2 or more), then so will the new labeling. This follows as
+        if $|x-y| \ge 2$, then $|(8-x)-(8-y)|=|-x+y| = |x-y| \ge 2$. This shows
+        that if there is an assignment $(a,b,c,d,e,f,g)$ of grades to the pods,
+        where $\{a,b,\ldots,g\} = \{1,2,\ldots,7\}$, then there is a second,
+        valid assignment.<br />
+
+        But because this is an AMC 8 problem and there is only one correct
+        answer, we can conclude that $c+e+f = (8-c)+(8-e)+(8-f)$. Simplifying
+        and solving for $c+e+f$ gives $c+e+f = \mathbf{(A)\,} 12$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/rx9kwqXeTbM?si=MBZOOYQE__v9JGOt"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q22" hidden="true">
+      <h2>Queston 22</h2>
+      <p>
+        A classroom has a row of 35 coat hooks. Paulina likes coats to be
+        equally spaced, so that there is the same number of empty hooks before
+        the first coat, after the last coat, and between every coat and the next
+        one. Suppose there is at least 1 coat and at least 1 empty hook. How
+        many different numbers of coats can satisfy Paulina's pattern?
+      </p>
+      <img src="./Assets/Images/Q22Image.png" />
+      <br />
+      <button id="22a" onclick="wrong(22, 'a')" class="Q22Button a">
+        A. 2
+      </button>
+      <br />
+      <button id="22b" onclick="wrong(22, 'b')" class="Q22Button b">
+        B. 4
+      </button>
+      <br />
+      <button id="22c" onclick="wrong(22, 'c')" class="Q22Button c">
+        C. 5
+      </button>
+      <br />
+      <button id="22d" onclick="right(22, 'd')" class="Q22Button d right">
+        D. 7
+      </button>
+      <br />
+      <button id="22e" onclick="wrong(22, 'e')" class="Q22Button e">
+        E. 9
+      </button>
+    </div>
+    <div class="solution" id="Q22Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        Suppose there are $c$ coats on the rack. Notice that there are $c+1$
+        "gaps" formed by these coats, each of which must have the same number of
+        empty spaces (say, $k$). Then the values $k$ and $c$ must satisfy
+        $(c+k)(c+1)=35 \implies kc+k+c=35$. We now use Simon's Favorite
+        Factoring Trick as follows:\[kc+k+c=35\]\<br />[\implies
+        kc+k+c+1=36\]\<br />[\implies (k+1)(c+1)=36\]<br />Our only restrictions
+        now are that $k>0 \implies k+1 > 1$ and $c>0 \implies c+1>1$. Other than
+        that, each factor pair of $36$ produces a valid solution $(k,c)$, which
+        in turn uniquely determines an arrangement. Since $36$ has $9$ factors,
+        our answer is $9-2=\boxed{\textbf{(D)}~7}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Say Paulina placed $n$ coats. That will divide the 35 hooks into $n+1$
+        spaces and $35-n$ empty hooks. Therefore,<br />\[n+1|35-n.\]<br />The
+        values of $n$ that satisfy this are\[n\in{1,2,3,5,8,11,17}\]<br />The
+        answer is $\boxed{\text{(D) }7}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Let the number of empty hooks before the first coat be denoted as
+        $n$.<br />
+
+        This means that there are $n$ empty hooks between all the coats. In
+        every situation, there are $n + 1$ gaps, since $n$ cannot be zero.<br />
+
+        To solve the problem, subtract $2n$ from 35 (accounting for the $n$
+        empty hooks at the beginning and $n$ empty hooks at the end). Then
+        subtract 1 (for the first occupied hook). After that, divide the
+        remaining number of hooks by $n + 1$ (the number of hooks between
+        coats). We do this because the first occupied hook is always after $n$
+        hooks; we just need to check if the remaining hooks can be evenly
+        divided by the number of gaps.<br />
+
+        To clarify:<br />
+
+        If $n = 1$: \begin{align*} 35 - 2n &= 33 \\ 33 - 1 &= 32 \\ \frac{32}{n
+        + 1} &= 16 \end{align*}<br />
+        Since 16 is an integer, this situation satisfies the conditions.<br />
+
+        If $n = 2$:<br />
+        We can skip the the third step, as each time you add 1 to $n$, it
+        decreases by 2 from the previous situation.<br />
+
+        \[\frac{30}{n + 1} = 16\]<br />
+
+        This situation also satisfies the conditions.<br />
+
+        Continue this process until the difference exceeds $35 - (2n + 1)$. We
+        find that 7 situations satisfy the conditions. Therefore, the answer is
+        7.<br />
+
+        Note: This method is slow but easy to check and understand.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        Suppose there are $n$ occupied hooks on the rack. Observe that there are
+        $n+1$ intervals, each of which must have the same number of empty hooks.
+        Let's suppose $m$ is the number of empty hooks plus the occupied hook to
+        its right. Then, we have the equation<br />\[(n+1)m-1=35\]\<br />[\implies
+        (n+1)m=36\]<br />Our restrictions are n > 0 and m > 1. 36 has 9 factors,
+        and two pairs do not meet the restriction. Our answer is then
+        $9-2=\boxed{\textbf{(D)}~7}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/ZIBTG4XzETI?si=cVfdPuDdt6wzfl5q"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q23" hidden="true">
+      <h2>Queston 23</h2>
+      <p>
+        How many four-digit numbers have all three of the following properties?
+      </p>
+      <ol type="I">
+        <li>The tens and ones digit are both 9.</li>
+        <li>The number is 1 less than a perfect square.</li>
+        <li>The number is the product of exactly two prime numbers.</li>
+      </ol>
+      <button id="23a" onclick="wrong(23, 'a')" class="Q23Button a">
+        A. 0
+      </button>
+      <br />
+      <button id="23b" onclick="right(23, 'b')" class="Q23Button b right">
+        B. 1
+      </button>
+      <br />
+      <button id="23c" onclick="wrong(23, 'c')" class="Q23Button c">
+        C. 2
+      </button>
+      <br />
+      <button id="23d" onclick="wrong(23, 'd')" class="Q23Button d">
+        D. 3
+      </button>
+      <br />
+      <button id="23e" onclick="wrong(23, 'e')" class="Q23Button e">
+        E. 4
+      </button>
+    </div>
+    <div class="solution" id="Q23Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        The Condition (II) perfect square must end in "$00$" because
+        $...99+1=...00$ Condition (I). Four-digit perfect squares ending in
+        "$00$" are ${40, 50, 60, 70, 80, 90}$.<br />
+
+        Condition (II) also says the number is in the form $n^2-1$. By the
+        Difference of Squares, $n^2-1 = (n+1)(n-1)$. Hence:
+      </p>
+      <ul>
+        <li>$40^2-1 = (39)(41)$</li>
+        <li>$50^2-1 = (49)(51)$</li>
+        <li>$60^2-1 = (59)(61)$</li>
+        <li>$70^2-1 = (69)(71)$</li>
+        <li>$80^2-1 = (79)(81)$</li>
+        <li>$90^2-1 = (89)(91)$</li>
+      </ul>
+      <p>
+        On this list, the only number that is the product of $2$ prime numbers
+        (condition $3$) is $60^2-1 = (59)(61)$, so the answer is
+        $\boxed{\text{(B)\ 1}}$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jn-qIwv57nQ?si=OrJ0a9dqRKsytlRJ"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q24" hidden="true">
+      <h2>Queston 24</h2>
+      <p>
+        In trapezoid $ABCD$, angles $B$ and $C$ measure $60^\circ$ and $AB =
+        DC$. The side lengths are all positive integers, and the perimeter of
+        $ABCD$ is 30 units. How many non-congruent trapezoids satisfy all of
+        these conditions?
+      </p>
+      <img src="./Assets/Images/Q24Image.png" />
+      <br />
+      <button id="24a" onclick="wrong(24, 'a')" class="Q24Button a">
+        A. 0
+      </button>
+      <br />
+      <button id="24b" onclick="wrong(24, 'b')" class="Q24Button b">
+        B. 1
+      </button>
+      <br />
+      <button id="24c" onclick="wrong(24, 'c')" class="Q24Button c">
+        C. 2
+      </button>
+      <br />
+      <button id="24d" onclick="wrong(24, 'd')" class="Q24Button d">
+        D. 3
+      </button>
+      <br />
+      <button id="24e" onclick="right(24, 'e')" class="Q24Button e right">
+        E. 3
+      </button>
+    </div>
+    <div class="solution" id="Q24Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        Let $a$ be the length of the shorter base, and let $b$ be the length of
+        the longer one. Note that these two parameters, along with the angle
+        measures and the fact that the trapezoid is isosceles, uniquely
+        determine a trapezoid. We drop perpendiculars down from the endpoints of
+        the top base. Then the length from the foot of this perpendicular to
+        either vertex will be half the difference between the lengths of the two
+        bases, or $\frac{b-a}{2}$. Now, since we have a 30-60-90 triangle and
+        this side length corresponds to the "30" part, the length of the
+        hypotenuse (one of the legs) is $2 \cdot \frac{b-a}{2} = b-a$. Then the
+        perimeter of the trapezoid is $2(b-a)+a+b=3b-a=30$. The only other
+        stipulation for this trapezoid to be valid is that $b>a$ (which was our
+        assumption). We can now easily count the valid pairs $(a,b)$, yielding
+        $(3,11),(6,12),(9,13),(12,14)$. It is clear that proceeding further
+        would cause $a \geq b$, so we have $\boxed{\textbf{(E)}~4}$ valid
+        trapezoids.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Let $x$ be the length of $AB$ and $DC$, and let $b$ be the length of the
+        shorter base. Because $\angle B$ and $\angle C = 60^{\circ}$, the length
+        of the longer base is $b + \frac{x}{2} + \frac{x}{2} = b + x$.
+        Therefore, the perimeter is $3x + 2b = 30$. The number of positive
+        integer pairs $(x, b)$ is $(2,12), (4,9), (6,6), (8,3)$, meaning the
+        answer is $\boxed{\textbf{(E)}~4}$.<br />
+
+        way where you don't have to test pairs:<br />
+
+        We can rearrange $3x + 2b = 30$ to $\frac{30-3x}{2} = b$. We want
+        $\frac{30-3x}{2}$ to be a positive integer so b is a positive integer.
+        30 is a multiple of 3 and $-3x$ is just subtracting multiples of 3's
+        from 30 so every number on the numerator of $\frac{30-3x}{2}$ is a
+        multiple of 3 under 30 ($x$ is also a positive integer so it can't be
+        larger than 30 or not be a multiple of 3). For $30-3x$ to be divisible
+        by 2 it must be even, so we are finding even multiples of 3 under 30
+        which are 24, 18, 12, and 6. Each number will give us a valid $x$ and a
+        valid $b$ pair giving us 4 solutions.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Let $x$ be the length of the legs of the trapezoid. Draw the angle
+        bisectors of the 120 degree angles. Now you have 2 equilateral
+        triangles, and another figure in between them. Let $x+a$ be the length
+        of the shorter base of the trapezoid, and let $2x+a$ be the length of
+        the longer base. Since the perimeter of the trapezoid is 30, $5x+2a =
+        30$. Since $x>$0, and $a$ can be negative as long as $x+a>0$, you get 4
+        solutions for $(x,a)$, namely $(2,10), (4,5), (6,0), (8,-5)$. Any
+        solution with $x\ge10$ would lead to $x+a\le0$. Hence, the answer is
+        $\boxed{\textbf{(E)}~4}$
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        Drop altitudes from angle $A$ and angle $D$. Then, two $30-60-90$
+        triangles and a rectangle are created. Let the hypotenuse of both of the
+        triangles equal $x$ and let side $AD$ equal $y$. Then, the distance from
+        $B$ and $C$ to the feet of the altitudes that are closest to them is
+        $\frac{x}{2}$, and the distance between the feet of the two altitudes
+        would be $y$. The rest is similar to Solution 2
+      </p>
+      <h3>Solution 5</h3>
+      <p>
+        We give lengths to the base of the $30-60-90$ triangles on both sides as
+        the trapezoid as variable $x$. We give lengths of Line $AB$ and the
+        other side as variable $y$. When we add them, we have $6x+2y=30$ from
+        the sides. If we lext $x=5$, the other sides won't work so it has to be
+        integers less than $5$ which is $4$ which is the answer.
+      </p>
+      <h3>Solution 6</h3>
+      <p>
+        Explanations and Reasoning to Similar Solutions<br />
+
+        Note that trapezoid $ABCD$ is isosceles with $B$ and $C$ being the
+        bottom 2 vertices. The shape can be dissected into 3 shapes with 2
+        congruent right triangles separated by a rectangle. This is done by
+        dropping an altitude, a perpendicular point on the base from each of the
+        2 top vertices, named $E$ and $F$, respectively below $A$ and $D$. The
+        property that angles $\angle$$B$ and $\angle$$C$ measure $60^\circ$ is
+        significant here, forming $30-60-90$ triangles ($\triangle$$ABE$ and
+        $\triangle$$DCF$). Now the assumed larger $^a$ side $BC$ is separated
+        into 3 sections by the 3 shapes. Or $BC = BE + EF + CF$. $^b$ Recall
+        that $\triangle$$ABE$ and $\triangle$$DCF$ are $30-60-90$ triangles, the
+        side length ratios are $1:\sqrt3:2$. Naming the length of the shorter
+        side of the right triangles as $a$, and the length of side $AD$ as $b$,
+        then the trapezoid's side lengths can be expressed in only 2 variables.
+        Now knowing $AD = b$, $DC = 2a$ $^c$, $BC = a + b + a = 2a + b$, and $AC
+        = 2a$, the perimeter is $b + 2a + 2a + b + 2a = 2b + 6a = 30$.
+        Simplifying, $3a + b = 15$, only 4 pairs of values satisfy this
+        condition, namely $(1,12)$, $(2,9)$, $(3,6)$, $(4,3)$.<br />
+
+        Thus there $\boxed{\textbf{(E)}~4}$ possible non-congruent
+        trapezoids.<br />
+
+        $^a$ The question asks for non-congruent trapezoids, and rotation
+        preserves congruence so the assumption is always true WLOG.<br />
+
+        $^b$ The shortest side of $\triangle$ABE, the length of AD (shape ADFE
+        is a rectangle so FE = AD), and the shortest side of $\triangle$DCF.<br />
+
+        $^c$ $AB = DC = 2a$, $AB$ and $DC$ are the hypotenuse of triangles
+        $\triangle$ABE and $\triangle$DCF.
+      </p>
+      <h3>Solution 7</h3>
+      <p>
+        Let $a = AD$ and $s = AB = DC$. Draw a segment from $A$ to
+        $\overline{BC}$ parallel to $\overline{DC}$, meeting $\overline{BC}$ at
+        point $P$, forming parallelogram $ADCP$. It follows that $AP = DC = s$
+        and $PC = AD = a$. Isosceles $\triangle ABP$ has base angles measuring
+        $60^\circ$, so it is equilateral and $BP = s$.<br />
+
+        [asy] size(8cm); draw((-6, 0)--(6, 0)--(3, 3sqrt(3))--(-3,
+        3sqrt(3))--cycle); draw((0, 0)--(-3, 3sqrt(3))--cycle); label("$P$", (0,
+        0), S); label("$B$", (-6, 0), SW); label("$C$", (6, 0), SE);
+        label("$A$", (-3, 3sqrt(3)), NW); label("$D$", (3, 3sqrt(3)), NE);
+        label("$a$", (0, 3sqrt(3)), N); label("$a$", (3, 0), S); label("$s$",
+        (-3, 0), S); label("$s$", (-4.5, 3sqrt(3)/2), W); label("$s$", (-1.5,
+        3sqrt(3)/2), E); label("$s$", (4.5, 3sqrt(3)/2), E);
+        label("$60^{\circ}$", (-5.75, 0), NE); label("$60^{\circ}$", (-0.25, 0),
+        NW); label("$60^{\circ}$", (5.75, 0), NW); [/asy]<br />
+
+        Then the perimeter of $ABCD$ is $L = 2a + 3s = 30$. To satisfy this
+        equation with positive integer values, the number $a$ must be divisible
+        by $3$ because $2a = 3(10 - s)$. The only possible values for $a$ are
+        $3, 6, 9,$ and $12$, each value corresponding to a different trapezoid.
+        Greater multiples of $3$ will not lead to a positive integer value for
+        $s$. Therefore there are $\boxed{4}$ different trapezoids that satisfy
+        the conditions.<br />
+
+        The table below lists the side lengths $a$, $s$, and $a + s$ for these
+        $4$ trapezoids, along with their perimeters.<br />
+        $\begin{array}{c|c|c|c} a & s & a + s & L = 2a + 3s \\ \hline 3 & 8 & 11
+        & 2 \cdot 3 + 3 \cdot 8 = 30 \\ 6 & 6 & 12 & 2 \cdot 6 + 3 \cdot 6 = 30
+        \\ 9 & 4 & 13 & 2 \cdot 9 + 3 \cdot 4 = 30 \\ 12 & 2 & 14 & 2 \cdot 12 +
+        3 \cdot 2 = 30 \\ \end{array}$
+      </p>
+      <h3>Solution 8</h3>
+      <p>
+        We can draw altitudes from A and B and create a rectangle and $2$
+        $30-60-90$ triangles. Two sides of each triangle are on the trapezoid.
+        We can label each of the hypotenuses of the small $30-60-90$ triangles
+        as $2a$ and each of the short sides of the triangles as $a$. Then, the
+        perimeter of the trapezoid becomes $2(2a + a) +$ a positive integer
+        (we'll call this integer $n$) $= 30$. Simplifying, we get $6a + n = 30$,
+        and since $n$ is not 0, $a$ must be a positive integer less than $5$,
+        which yields $\boxed{4}$ options: $1$, $2$, $3$, and $4$.
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/BbaifFoDeCk?si=9ZCHUWzBfC4IsdOR"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q25" hidden="true">
+      <h2>Queston 25</h2>
+      <p>
+        Makayla finds all the possible ways to draw a path in a $5 \times 5$
+        diamond-shaped grid. Each path starts at the bottom of the grid and ends
+        at the top, always moving one unit northeast or northwest. She computes
+        the area of the region between each path and the right side of the grid.
+        Two examples are shown in the figures below. What is the sum of the
+        areas determined by all possible paths?
+      </p>
+      <img src="./Assets/Images/Q25Image.png" />
+      <br />
+      <button id="25a" onclick="wrong(25, 'a')" class="Q25Button a">
+        A. 2520
+      </button>
+      <br />
+      <button id="25b" onclick="right(25, 'b')" class="Q25Button b right">
+        B. 3150
+      </button>
+      <br />
+      <button id="25c" onclick="wrong(25, 'c')" class="Q25Button c">
+        C. 3840
+      </button>
+      <br />
+      <button id="25d" onclick="wrong(25, 'd')" class="Q25Button d">
+        D. 4730
+      </button>
+      <br />
+      <button id="25e" onclick="wrong(25, 'e')" class="Q25Button e">
+        E. 5050
+      </button>
+    </div>
+    <div class="solution" id="Q25Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        If we test this problem on a smaller $2 \times 2$ diamond, we have $6$
+        ways to go from $A$ to $B$, and the total area is $0 + 1 + 2 + 2 + 3 + 4
+        = 12$, so the average area is $\frac{12}{6} = 2$, which is also the area
+        of the diamond $2 \times 2 = 4$ divided by 2. If we assume this is true
+        for a $5 \times 5$ diamond, then the average area is $\frac{25}{2}$. The
+        number of paths from $A$ to $B$ is $\binom{10}{5} = 252$, and $252 \cdot
+        \frac{25}{2} = \boxed{\textbf{(B)}~3150}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Most other solutions don't explain how they got all the cases, as well
+        as require an insight that's somewhat hard to think of, so I'll explain
+        another in detail.<br />
+        If we rotate the grid $45$ degrees clockwise we can have a 5x5 grid
+        where we can move up and right. There can only be one horizontal line
+        segment in each column at a certain y coordinate. We'll denote the y
+        coordinates as $0,1,2,3,4,5$. Once we choose the y coordinates for each
+        column, we have a unique path. However, we can't move down which means
+        that columns cannot have a higher y coordinate than the ones to the
+        right. This is the same as distributing 5 balls in six boxes labeled
+        $0,1,2,3,4,5$. For example, if we get 2 in 0, 2 in 1, and 1 in 4, then
+        the order would be $0,0,1,1,4$. This is one unique path, and the total
+        number of paths is represented by 6+5-1 choose 6-1 = 252. Also, the sum
+        of the y-coordinates represents the area, which means we want the
+        average sum of the y-coordinates. This is $5*(0+5)/2 = 25/2$, and $25/2
+        * 252 = \fbox{3150}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        As found, there are $252$ total paths. However, we can take advantage of
+        symmetry here. We consider the total area of the left side of the grid
+        in each of the $252$ paths. Since the total area of the left side of the
+        grid in each of the $252$ paths is equal to the total area of the right
+        side of the grid in each of the $252$ paths, and the two total areas sum
+        to $(252)(25) = 6300$, then the total area of the right side of the grid
+        is $6300/2 = \fbox{3150}$.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        q-analog basic definitions are for $k\in\mathbb{N}$, then<br />\[[k]_q=1+q+\cdots+q^{k-1}\]with\[[0]_q=1\]<br />The
+        q-factorial of $n\in\mathbb{N}$ is defined as<br />\[[n]!_q=[n]_q\cdot[n-1]_q\cdots[0]_q\]<br />The
+        q-binomial theorem states<br />\[\binom{n}{k}_q=\frac{[n]!_q}{[k]!_q[n-k]!_q}\]<br />and
+        finally for q-analog of lattice paths aka q-lattice path, we have the
+        q-lattice path theorem which states for any $a, b\in\mathbb{N}$,<br />\[\sum_{P\in
+        L(a,b)}q^{\text{area}(P)}=\binom{a+b}{a}_q\]<br />To get the sum of the
+        areas we have to differentiate the q-Lattice Path and evaluate at $q=1$.
+        For this problem our lattice path is $L(5,5)$ and we calculate the
+        $q$-binomial as
+        $q^{25}+q^{24}+2q^{23}+3q^{22}+5q^{21}+7q^{20}+9q^{19}+\cdots$ and take
+        the derivative $\left.\frac{d}{dq}\binom{10}{5}_q\right|_{q=1}$ to get
+        $25q^{24}+24q^{23}+46q^{22}+66q^{21}+105q^{20}+140q^{19}+171q^{18}+\cdots$
+        and then plug in the 1 to finally get $\fbox{3150}$
+      </p>
+      <h3>Video Solution</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/Z54kAp8ez5M?si=LxPvEWUmB_vPCeN1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div id="QuestionNavigator">
+      <button
+        class="questionNavButton"
+        id="Q1NavButton"
+        onclick="QuestionSwitch(1)"
+      >
+        1
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q2NavButton"
+        onclick="QuestionSwitch(2)"
+      >
+        2
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q3NavButton"
+        onclick="QuestionSwitch(3)"
+      >
+        3
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q4NavButton"
+        onclick="QuestionSwitch(4)"
+      >
+        4
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q5NavButton"
+        onclick="QuestionSwitch(5)"
+      >
+        5
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q6NavButton"
+        onclick="QuestionSwitch(6)"
+      >
+        6
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q7NavButton"
+        onclick="QuestionSwitch(7)"
+      >
+        7
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q8NavButton"
+        onclick="QuestionSwitch(8)"
+      >
+        8
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q9NavButton"
+        onclick="QuestionSwitch(9)"
+      >
+        9
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q10NavButton"
+        onclick="QuestionSwitch(10)"
+      >
+        10
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q11NavButton"
+        onclick="QuestionSwitch(11)"
+      >
+        11
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q12NavButton"
+        onclick="QuestionSwitch(12)"
+      >
+        12
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q13NavButton"
+        onclick="QuestionSwitch(13)"
+      >
+        13
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q14NavButton"
+        onclick="QuestionSwitch(14)"
+      >
+        14
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q15NavButton"
+        onclick="QuestionSwitch(15)"
+      >
+        15
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q16NavButton"
+        onclick="QuestionSwitch(16)"
+      >
+        16
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q17NavButton"
+        onclick="QuestionSwitch(17)"
+      >
+        17
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q18NavButton"
+        onclick="QuestionSwitch(18)"
+      >
+        18
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q19NavButton"
+        onclick="QuestionSwitch(19)"
+      >
+        19
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q20NavButton"
+        onclick="QuestionSwitch(20)"
+      >
+        20
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q21NavButton"
+        onclick="QuestionSwitch(21)"
+      >
+        21
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q22NavButton"
+        onclick="QuestionSwitch(22)"
+      >
+        22
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q23NavButton"
+        onclick="QuestionSwitch(23)"
+      >
+        23
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q24NavButton"
+        onclick="QuestionSwitch(24)"
+      >
+        24
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q25NavButton"
+        onclick="QuestionSwitch(25)"
+      >
+        25
+      </button>
+    </div>
+  </body>
+</html>
