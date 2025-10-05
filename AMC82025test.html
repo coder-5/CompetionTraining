@@ -1,424 +1,1320 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test</title>
-        <script>
+    <script>
       MathJax = {
         tex: {
-          inlineMath: [['$', '$'], ['\\(', '\\)']], // Inline math delimiters
-          displayMath: [['$$', '$$'], ['\\[', '\\]']] // Display math delimiters
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ], // Inline math delimiters
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"],
+          ], // Display math delimiters
         },
         svg: {
-          fontCache: 'global'
-        }
+          fontCache: "global",
+        },
       };
     </script>
-    <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
     <script src="./quiz.js"></script>
     <style>
-        #Q1Image {
-            width: 200px;
-            height: 200px;
-        }
-        .Q1Button {
-            position: relative;
-            top: 50px;
-            right: 200px;
-        }
-        .Q2Button {
-            position: relative;
-            top: 50px;
-            right: 150px;
-        }
-        .Q5Button {
-            position: relative;
-            top: 50px;
-            right: 300px;
-        }
-        .Q8Button {
-            position: relative;
-            top: 50px;
-            right: 420px;
-        }
-        .Q9Button {
-            position: relative;
-            top: 50px;
-            right: 170px;
-        }
-        button {
-            border-radius: 25px;
-            padding: 10px 20px;
-            background-color: aquamarine;
-        }
-        div {
-            background-color: rgb(233, 233, 233);
-            border-radius: 25px;
-            margin: 10px;
-            padding: 20px;
-        }
-        .Question {
-            width: 1000px;
-            height: 600px;
-        }
-        #QuestionNavigator {
-            position: absolute;
-            left: 1100px;
-            bottom: 600px;
-            Width: 600px;
-            height: 200px;
-        }
-        button {
-            margin: 0px;
-        }
-        .questionNavButton {
-            background-color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            margin: 5px;
-            text-align: center;
-            vertical-align: middle;
-        }
-        .solution {
-            width: 1000px;
-        }
-        .I13Image {
-            width: 300px;
-            height: 150px;
-        }
-        #Q13 {
-            height: 800px;
-        }
+      #Q1Image {
+        width: 200px;
+        height: 200px;
+      }
+      .Q1Button {
+        position: relative;
+        top: 50px;
+        right: 200px;
+      }
+      .Q2Button {
+        position: relative;
+        top: 50px;
+        right: 150px;
+      }
+      .Q5Button {
+        position: relative;
+        top: 50px;
+        right: 300px;
+      }
+      .Q8Button {
+        position: relative;
+        top: 50px;
+        right: 420px;
+      }
+      .Q9Button {
+        position: relative;
+        top: 50px;
+        right: 170px;
+      }
+      button {
+        border-radius: 25px;
+        padding: 10px 20px;
+        background-color: aquamarine;
+      }
+      div {
+        background-color: rgb(233, 233, 233);
+        border-radius: 25px;
+        margin: 10px;
+        padding: 20px;
+      }
+      .Question {
+        width: 1000px;
+        height: 600px;
+      }
+      #QuestionNavigator {
+        position: absolute;
+        left: 1100px;
+        bottom: 600px;
+        width: 600px;
+        height: 200px;
+      }
+      button {
+        margin: 0px;
+      }
+      .questionNavButton {
+        background-color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin: 5px;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .solution {
+        width: 1000px;
+      }
+      .I13Image {
+        width: 300px;
+        height: 150px;
+      }
+      #Q13 {
+        height: 800px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h1>AMC 8 2025 Test</h1>
     <div class="Question" id="Q1">
-        <h2>Queston 1</h2>
-        <p>The eight-pointed star, shown in the figure below, is a popular quilting pattern. What percent of the entire $4\times4$ grid is covered by the star?</p>
-        <img src="./Assets/Images/Q1Image.png" id="Q1Image">
-        <button id="1a" onclick="wrong(1, 'a')" class="Q1Button a">A. $40$</button>
-        <button id="1b" onclick="right(1, 'b')" class="Q1Button b right">B. $50$</button>
-        <button id="1c" onclick="wrong(1, 'c')" class="Q1Button c">C. $60$</button>
-        <button id="1d" onclick="wrong(1, 'd')" class="Q1Button d">D. $75$</button>
-        <button id="1e" onclick="wrong(1, 'e')" class="Q1Button e">E. $80$</button>
+      <h2>Queston 1</h2>
+      <p>
+        The eight-pointed star, shown in the figure below, is a popular quilting
+        pattern. What percent of the entire $4\times4$ grid is covered by the
+        star?
+      </p>
+      <img src="./Assets/Images/Q1Image.png" id="Q1Image" />
+      <button id="1a" onclick="wrong(1, 'a')" class="Q1Button a">
+        A. $40$
+      </button>
+      <button id="1b" onclick="right(1, 'b')" class="Q1Button b right">
+        B. $50$
+      </button>
+      <button id="1c" onclick="wrong(1, 'c')" class="Q1Button c">
+        C. $60$
+      </button>
+      <button id="1d" onclick="wrong(1, 'd')" class="Q1Button d">
+        D. $75$
+      </button>
+      <button id="1e" onclick="wrong(1, 'e')" class="Q1Button e">
+        E. $80$
+      </button>
     </div>
     <div class="solution" id="Q1Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>There is symmetry, and so whatever fraction of the top-left quarter is shaded, is the same as the fraction of the entire square that is shaded.</p>
-        <p>Focus on the top-left quarter. Consider moving a single triangle. The shaded area in the problem is exactly the same as the shaded area in this diagram (and the top-left quarter is outlined in bold):</p>
-        <img src="Assets/Images/1-sol.svg">
-        <p>But then it is obvious that exactly half of the top-left quarter is shaded, and so the answer is 50% which is choice <b>B.</b></p>
-        <h3>Solution 2</h3>
-        <p>Each of the unshaded triangles has base length $2$ and height $1$, so they all have area $\frac{2 \cdot 1}{2} = 1$. Each of the unshaded unit squares has area $1$. The area of the shaded region is equal to the area of the entire grid minus the area of the unshaded region, or $4^2 - 4 \cdot 1 - 4 \cdot 1 = 8$. The star is then $\frac{8}{16} = \frac{1}{2} = \frac{50}{100}$, or $\boxed{\textbf{(B)}~50}$ percent of the entire grid. </p>
-        <h3>Solution 3</h3>
-        <p>There are $16$ total squares in the diagram and each square has $2$ triangles whose areas are half the area of a unit square. Thus, the total number of triangles in the diagram is $4^2 \cdot 2 = 32$ triangles. There are $16$ shaded triangles in the diagram, so the area of the star is $\dfrac{16}{32} = \frac{1}{2} = \frac{50}{100}$, or $\boxed{\textbf{(B)}~50}$ percent.</p>
-        <h3>Solution 4</h3>
-        <p>There are $4$ squares that are entirely shaded and $4$ squares that have no shading. This cancels them out. The rest of the squares are half-half. Therefore the shaded region is $\boxed{\textbf{(B)}~50}$ percent of the grid.</p>
-        <h3>Solution 5</h3>
-        <p>Note that we can move one triangle from each of the four cells in the middle to each of the four corners. This will leave every cell in the grid with one triangle each, and each triangle has an area of half the area of each cell. Thus, our answer must equal to $\frac{1}{2}$, and so our answer is $\boxed{\textbf{(B)}~50}.$</p>
-        <h3>Solution 6</h3>
-        <p>The shaded area is a $2 \times 2$ square in the middle of the figure combined with $8$ small triangles. Since each small triangle is $\frac{1}{2}$ of a unit square, the star's area is equal to the area of $4 + 8 \cdot \frac{1}{2} = 8$ unit squares, which $\boxed{\textbf{(B)}~50}$ percent of the grid.</p>
-        <h3>Solution 7</h3>
-        <p>You can move the extra half a squares and make 4 squares so there are 8/16. The answer is $\boxed{\textbf{(B)}~50}$ percent of 16.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rGEGn7U4uHk?si=1k5HXTgkr_SUKJB3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>
+        There is symmetry, and so whatever fraction of the top-left quarter is
+        shaded, is the same as the fraction of the entire square that is shaded.
+      </p>
+      <p>
+        Focus on the top-left quarter. Consider moving a single triangle. The
+        shaded area in the problem is exactly the same as the shaded area in
+        this diagram (and the top-left quarter is outlined in bold):
+      </p>
+      <img src="Assets/Images/1-sol.svg" />
+      <p>
+        But then it is obvious that exactly half of the top-left quarter is
+        shaded, and so the answer is 50% which is choice <b>B.</b>
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Each of the unshaded triangles has base length $2$ and height $1$, so
+        they all have area $\frac{2 \cdot 1}{2} = 1$. Each of the unshaded unit
+        squares has area $1$. The area of the shaded region is equal to the area
+        of the entire grid minus the area of the unshaded region, or $4^2 - 4
+        \cdot 1 - 4 \cdot 1 = 8$. The star is then $\frac{8}{16} = \frac{1}{2} =
+        \frac{50}{100}$, or $\boxed{\textbf{(B)}~50}$ percent of the entire
+        grid.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        There are $16$ total squares in the diagram and each square has $2$
+        triangles whose areas are half the area of a unit square. Thus, the
+        total number of triangles in the diagram is $4^2 \cdot 2 = 32$
+        triangles. There are $16$ shaded triangles in the diagram, so the area
+        of the star is $\dfrac{16}{32} = \frac{1}{2} = \frac{50}{100}$, or
+        $\boxed{\textbf{(B)}~50}$ percent.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        There are $4$ squares that are entirely shaded and $4$ squares that have
+        no shading. This cancels them out. The rest of the squares are
+        half-half. Therefore the shaded region is $\boxed{\textbf{(B)}~50}$
+        percent of the grid.
+      </p>
+      <h3>Solution 5</h3>
+      <p>
+        Note that we can move one triangle from each of the four cells in the
+        middle to each of the four corners. This will leave every cell in the
+        grid with one triangle each, and each triangle has an area of half the
+        area of each cell. Thus, our answer must equal to $\frac{1}{2}$, and so
+        our answer is $\boxed{\textbf{(B)}~50}.$
+      </p>
+      <h3>Solution 6</h3>
+      <p>
+        The shaded area is a $2 \times 2$ square in the middle of the figure
+        combined with $8$ small triangles. Since each small triangle is
+        $\frac{1}{2}$ of a unit square, the star's area is equal to the area of
+        $4 + 8 \cdot \frac{1}{2} = 8$ unit squares, which
+        $\boxed{\textbf{(B)}~50}$ percent of the grid.
+      </p>
+      <h3>Solution 7</h3>
+      <p>
+        You can move the extra half a squares and make 4 squares so there are
+        8/16. The answer is $\boxed{\textbf{(B)}~50}$ percent of 16.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/rGEGn7U4uHk?si=1k5HXTgkr_SUKJB3"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q2" hidden="true">
-        <h2>Queston 2</h2>
-        <p>The table below shows the ancient Egyptian heiroglyphs that were used to represent different numbers.</p>
-        <img src="./Assets/Images/Q2Image1.svg" id="Q2Image1">
-        <p>For example, the number  32 was represented by:</p>
-        <img src="./Assets/Images/Q2Image2.svg" id="Q2Image2">
-        <p>What number was represented by the following combination of heiroglyphs?</p>
-        <img src="./Assets/Images/Q2Image3.svg">
-        <button id="2a" onclick="wrong(2, 'a')" class="Q2Button a">A. $1,423$</button>
-        <button id="2b" onclick="right(2, 'b')" class="Q2Button b right">B. $10,423$</button>
-        <button id="2c" onclick="wrong(2, 'c')" class="Q2Button c">C. $14,023$</button>
-        <button id="2d" onclick="wrong(2, 'd')" class="Q2Button d">D. $14,203$</button>
-        <button id="2e" onclick="wrong(2, 'e')" class="Q2Button e">E. $14,230$</button>
+      <h2>Queston 2</h2>
+      <p>
+        The table below shows the ancient Egyptian heiroglyphs that were used to
+        represent different numbers.
+      </p>
+      <img src="./Assets/Images/Q2Image1.svg" id="Q2Image1" />
+      <p>For example, the number 32 was represented by:</p>
+      <img src="./Assets/Images/Q2Image2.svg" id="Q2Image2" />
+      <p>
+        What number was represented by the following combination of heiroglyphs?
+      </p>
+      <img src="./Assets/Images/Q2Image3.svg" />
+      <button id="2a" onclick="wrong(2, 'a')" class="Q2Button a">
+        A. $1,423$
+      </button>
+      <button id="2b" onclick="right(2, 'b')" class="Q2Button b right">
+        B. $10,423$
+      </button>
+      <button id="2c" onclick="wrong(2, 'c')" class="Q2Button c">
+        C. $14,023$
+      </button>
+      <button id="2d" onclick="wrong(2, 'd')" class="Q2Button d">
+        D. $14,203$
+      </button>
+      <button id="2e" onclick="wrong(2, 'e')" class="Q2Button e">
+        E. $14,230$
+      </button>
     </div>
     <div class="solution" id="Q2Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>We just need to count how many of each type of glyph there are.</p>
-        <p>There is 1 glyph worth 10,000.</p>
-        <p>There are 4 glyphs worth 100 each.</p>
-        <p>There are 2 glyphs worth 10 each.</p>
-        <p>There are 3 glyphs worth 1 each.</p>
-        <p>So, the answer is 10,423, which is choice <b>B.</b></p>
-        <h3>Solution 2</h3>
-        <p>The first hieroglyph is worth $10,000$, the next 4 are worth $100 \cdot 4 = 400$, the next $2$ are worth $10 \cdot 2 = 20$, and the last $3$ are worth $1 \cdot 3 = 3$. Therefore, the answer is $10,000 + 400 + 20 + 3 = \boxed{\textbf{(B)}\ 10,423}$</p>
-        <h3>Solution 3</h3>
-        <p>Simply notice that the first hieroglyph represents $10,000$, and the next ones represent $4$ hundreds. The only answer choice with a $1$ in the thousands place and a $4$ in the hundreds place is answer choice $\boxed{\textbf{(B)}\ 10,423}$</p>
-        <h3>Solution 4</h3>
-        <p>From a first inspection, you may notice that there is no thousands hieroglyph. The only option with zero in the thousands place is $\boxed{\textbf{(B)}\ 10,423}$</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/j20JsyEXKcs?si=qw2QDc4UfsO4uPgD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>We just need to count how many of each type of glyph there are.</p>
+      <p>There is 1 glyph worth 10,000.</p>
+      <p>There are 4 glyphs worth 100 each.</p>
+      <p>There are 2 glyphs worth 10 each.</p>
+      <p>There are 3 glyphs worth 1 each.</p>
+      <p>So, the answer is 10,423, which is choice <b>B.</b></p>
+      <h3>Solution 2</h3>
+      <p>
+        The first hieroglyph is worth $10,000$, the next 4 are worth $100 \cdot
+        4 = 400$, the next $2$ are worth $10 \cdot 2 = 20$, and the last $3$ are
+        worth $1 \cdot 3 = 3$. Therefore, the answer is $10,000 + 400 + 20 + 3 =
+        \boxed{\textbf{(B)}\ 10,423}$
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Simply notice that the first hieroglyph represents $10,000$, and the
+        next ones represent $4$ hundreds. The only answer choice with a $1$ in
+        the thousands place and a $4$ in the hundreds place is answer choice
+        $\boxed{\textbf{(B)}\ 10,423}$
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        From a first inspection, you may notice that there is no thousands
+        hieroglyph. The only option with zero in the thousands place is
+        $\boxed{\textbf{(B)}\ 10,423}$
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/j20JsyEXKcs?si=qw2QDc4UfsO4uPgD"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q3" hidden="true">
-        <h2>Queston 3</h2>
-        <p>Buffalo Shuffle-o is a card game in which all the cards are distributed evenly among all players at the start of the game. When Annika and 3 of her friends play Buffalo Shuffle-o, each player is dealt 15 cards. Suppose 2 more friends join the next game. How many cards will be dealt to each player?</p>
-        <button id="3a" onclick="wrong(3, 'a')" class="Q3Button a">A. $8$</button>
-        <button id="3b" onclick="wrong(3, 'b')" class="Q3Button b">B. $9$</button>
-        <button id="3c" onclick="right(3, 'c')" class="Q3Button c right">C. $10$</button>
-        <button id="3d" onclick="wrong(3, 'd')" class="Q3Button d">D. $11$</button>
-        <button id="3e" onclick="wrong(3, 'e')" class="Q3Button e">E. $12$</button>
+      <h2>Queston 3</h2>
+      <p>
+        Buffalo Shuffle-o is a card game in which all the cards are distributed
+        evenly among all players at the start of the game. When Annika and 3 of
+        her friends play Buffalo Shuffle-o, each player is dealt 15 cards.
+        Suppose 2 more friends join the next game. How many cards will be dealt
+        to each player?
+      </p>
+      <button id="3a" onclick="wrong(3, 'a')" class="Q3Button a">A. $8$</button>
+      <button id="3b" onclick="wrong(3, 'b')" class="Q3Button b">B. $9$</button>
+      <button id="3c" onclick="right(3, 'c')" class="Q3Button c right">
+        C. $10$
+      </button>
+      <button id="3d" onclick="wrong(3, 'd')" class="Q3Button d">
+        D. $11$
+      </button>
+      <button id="3e" onclick="wrong(3, 'e')" class="Q3Button e">
+        E. $12$
+      </button>
     </div>
-        <div class="solution" id="Q3Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>We start with Annika and $3$ of her friends playing, meaning that there are $4$ players. This must mean that there is a total of $4 \cdot 15 = 60$ cards. If $2$ more players joined, there would be $6$ players, and since the cards need to be split evenly, this would mean that each player gets $\frac{60}{6}=\boxed{\text{(C) 10}}$ Buffalo Shuffle-O cards each meaning that the final answer is 10.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/TbwqZy5_Q18?si=FOUkOBb3Ha0sMPCO" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <div class="solution" id="Q3Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        We start with Annika and $3$ of her friends playing, meaning that there
+        are $4$ players. This must mean that there is a total of $4 \cdot 15 =
+        60$ cards. If $2$ more players joined, there would be $6$ players, and
+        since the cards need to be split evenly, this would mean that each
+        player gets $\frac{60}{6}=\boxed{\text{(C) 10}}$ Buffalo Shuffle-O cards
+        each meaning that the final answer is 10.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/TbwqZy5_Q18?si=FOUkOBb3Ha0sMPCO"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q4" hidden="true">
-        <h2>Queston 4</h2>
-        <p>Lucius is counting backward by $7$s. His first three numbers are $100$, $93$, and $86$. What is his $10$th number?</p>
-        <button id="4a" onclick="wrong(4, 'a')" class="Q4Button a">A. $30$</button>
-        <button id="4b" onclick="right(4, 'b')" class="Q4Button b right">B. $37$</button>
-        <button id="4c" onclick="wrong(4, 'c')" class="Q4Button c">C. $42$</button>
-        <button id="4d" onclick="wrong(4, 'd')" class="Q4Button d">D. $44$</button>
-        <button id="4e" onclick="wrong(4, 'e')" class="Q4Button e">E. $47$</button>
+      <h2>Queston 4</h2>
+      <p>
+        Lucius is counting backward by $7$s. His first three numbers are $100$,
+        $93$, and $86$. What is his $10$th number?
+      </p>
+      <button id="4a" onclick="wrong(4, 'a')" class="Q4Button a">
+        A. $30$
+      </button>
+      <button id="4b" onclick="right(4, 'b')" class="Q4Button b right">
+        B. $37$
+      </button>
+      <button id="4c" onclick="wrong(4, 'c')" class="Q4Button c">
+        C. $42$
+      </button>
+      <button id="4d" onclick="wrong(4, 'd')" class="Q4Button d">
+        D. $44$
+      </button>
+      <button id="4e" onclick="wrong(4, 'e')" class="Q4Button e">
+        E. $47$
+      </button>
     </div>
     <div class="solution" id="Q4Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>We plug $a=100, d=-7$ and $n=10$ into the formula $a+d(n-1)$ for the $n$th term of an arithmetic sequence whose first term is $a$ and common difference is $d$ to get $100-7(10-1) = \boxed{\text{(B) 37}}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/rf5c9ulMA2I?si=Pr_FBj8VARSyJI6P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <h3>Solution 2</h3>
-        <p>Since we want to find the $9$th number Lucius says after he says $100$, $7$ is subtracted from his number $9$ times, so our answer is $100-(9 \cdot 7) = \boxed{\text{(B)\ 37}}$</p>
-        <h3>Solution 3</h3>
-        <p>Using brute force and counting backward by $7$s, we have $100, 93, 86, 79, 72, 65, 58, 51, 44, \boxed{\text{(B)\ 37}}$.</p>
-        <p>Note that this solution is not practical and very time-consuming.</p>
-        <h3>Solution 4</h3>
-        <p>This can be thought of as an arithmetic sequence. Knowing that our first term is $100$, we have to add $7$ to get to our 0th term, $107$. Our answer is then $107 - 10 \cdot 7 = \boxed{\text{(B)\ 37}}$.</p>
+      <h3>Solution 1</h3>
+      <p>
+        We plug $a=100, d=-7$ and $n=10$ into the formula $a+d(n-1)$ for the
+        $n$th term of an arithmetic sequence whose first term is $a$ and common
+        difference is $d$ to get $100-7(10-1) = \boxed{\text{(B) 37}}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/rf5c9ulMA2I?si=Pr_FBj8VARSyJI6P"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+      <h3>Solution 2</h3>
+      <p>
+        Since we want to find the $9$th number Lucius says after he says $100$,
+        $7$ is subtracted from his number $9$ times, so our answer is $100-(9
+        \cdot 7) = \boxed{\text{(B)\ 37}}$
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Using brute force and counting backward by $7$s, we have $100, 93, 86,
+        79, 72, 65, 58, 51, 44, \boxed{\text{(B)\ 37}}$.
+      </p>
+      <p>Note that this solution is not practical and very time-consuming.</p>
+      <h3>Solution 4</h3>
+      <p>
+        This can be thought of as an arithmetic sequence. Knowing that our first
+        term is $100$, we have to add $7$ to get to our 0th term, $107$. Our
+        answer is then $107 - 10 \cdot 7 = \boxed{\text{(B)\ 37}}$.
+      </p>
     </div>
     <div class="Question" id="Q5" hidden="true">
-        <h2>Queston 5</h2>
-        <p>Betty drives a truck to deliver packages in a neighborhood whose street map is shown below. Betty starts at the factory (labled $F$) and drives to location $A$, then $B$, then $C$, before returning to $F$. What is the shortest distance, in blocks, she can drive to complete the route?</p>
-        <img src="./Assets/Images/5Image.svg">
-        <button id="5a" onclick="wrong(5, 'a')" class="Q5Button a">A. $20$</button>
-        <button id="5b" onclick="wrong(5, 'b')" class="Q5Button b">B. $22$</button>
-        <button id="5c" onclick="right(5, 'c')" class="Q5Button c right">C. $24$</button>
-        <button id="5d" onclick="wrong(5, 'd')" class="Q5Button d">D. $26$</button>
-        <button id="5e" onclick="wrong(5, 'e')" class="Q5Button e">E. $28$</button>
+      <h2>Queston 5</h2>
+      <p>
+        Betty drives a truck to deliver packages in a neighborhood whose street
+        map is shown below. Betty starts at the factory (labled $F$) and drives
+        to location $A$, then $B$, then $C$, before returning to $F$. What is
+        the shortest distance, in blocks, she can drive to complete the route?
+      </p>
+      <img src="./Assets/Images/5Image.svg" />
+      <button id="5a" onclick="wrong(5, 'a')" class="Q5Button a">
+        A. $20$
+      </button>
+      <button id="5b" onclick="wrong(5, 'b')" class="Q5Button b">
+        B. $22$
+      </button>
+      <button id="5c" onclick="right(5, 'c')" class="Q5Button c right">
+        C. $24$
+      </button>
+      <button id="5d" onclick="wrong(5, 'd')" class="Q5Button d">
+        D. $26$
+      </button>
+      <button id="5e" onclick="wrong(5, 'e')" class="Q5Button e">
+        E. $28$
+      </button>
     </div>
     <div class="solution" id="Q5Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>Each shortest possible path from $A$ to $B$ follows the edges of the rectangle. The following path outlines a path of $\boxed{\textbf{(C)}\ 24}$ units:</p>
-        <img src="./Assets/Images/Q5SolImage.png">
-        <h3>Solution 2</h3>
-        <p>We can find the shortest distance using a line diagonally from one point to the other, creating a sort of slope, then find the sum of rise and run of the slope, which happens to be the shortest distance, repeat this process until you get back to Point $F$, and you should get $2 + 1 + 3 + 7 + 4 + 2 + 1 + 4$, which is equal to $\boxed{\textbf{(C)}\ 24}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/n6M3y_1dsOk?si=JrQdVHiRiIwAA6Ns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>
+        Each shortest possible path from $A$ to $B$ follows the edges of the
+        rectangle. The following path outlines a path of $\boxed{\textbf{(C)}\
+        24}$ units:
+      </p>
+      <img src="./Assets/Images/Q5SolImage.png" />
+      <h3>Solution 2</h3>
+      <p>
+        We can find the shortest distance using a line diagonally from one point
+        to the other, creating a sort of slope, then find the sum of rise and
+        run of the slope, which happens to be the shortest distance, repeat this
+        process until you get back to Point $F$, and you should get $2 + 1 + 3 +
+        7 + 4 + 2 + 1 + 4$, which is equal to $\boxed{\textbf{(C)}\ 24}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/n6M3y_1dsOk?si=JrQdVHiRiIwAA6Ns"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q6" hidden="true">
-        <h2>Queston 6</h2>
-        <p>Sekou writes the numbers $15, 16, 17, 18, 19.$ After he erases one of his numbers, the sum of the remaining four numbers is a multiple of $4.$ Which number did he erase?</p>
-        <button id="6a" onclick="wrong(6, 'a')" class="Q6Button a">A. $15$</button>
-        <button id="6b" onclick="wrong(6, 'b')" class="Q6Button b">B. $16$</button>
-        <button id="6c" onclick="right(6, 'c')" class="Q6Button c right">C. $17$</button>
-        <button id="6d" onclick="wrong(6, 'd')" class="Q6Button d">D. $18$</button>
-        <button id="6e" onclick="wrong(6, 'e')" class="Q6Button e">E. $19$</button>
+      <h2>Queston 6</h2>
+      <p>
+        Sekou writes the numbers $15, 16, 17, 18, 19.$ After he erases one of
+        his numbers, the sum of the remaining four numbers is a multiple of $4.$
+        Which number did he erase?
+      </p>
+      <button id="6a" onclick="wrong(6, 'a')" class="Q6Button a">
+        A. $15$
+      </button>
+      <button id="6b" onclick="wrong(6, 'b')" class="Q6Button b">
+        B. $16$
+      </button>
+      <button id="6c" onclick="right(6, 'c')" class="Q6Button c right">
+        C. $17$
+      </button>
+      <button id="6d" onclick="wrong(6, 'd')" class="Q6Button d">
+        D. $18$
+      </button>
+      <button id="6e" onclick="wrong(6, 'e')" class="Q6Button e">
+        E. $19$
+      </button>
     </div>
     <div class="solution" id="Q6Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>The sum of all five numbers is $85$. Since $85$ is $1$ more than a multiple of $4$, the number being subtracted must be $1$ more than a multiple of $4$. Thus, the answer is $\boxed{\textbf{(C)}~17}$.</p>
-        <h3>Solution 2</h3>
-        <p>The sum of the residues of these numbers modulo $4$ is $-1+0+1+2+3=5 \equiv 1 \pmod 4$. Hence, the number being subtracted must be congruent to $1$ modulo $4$. The only such answer is $\boxed{\textbf{(C)}~17}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/nkpdskFVgdM?si=n-Dpzv5sn-R1ffdt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>
+        The sum of all five numbers is $85$. Since $85$ is $1$ more than a
+        multiple of $4$, the number being subtracted must be $1$ more than a
+        multiple of $4$. Thus, the answer is $\boxed{\textbf{(C)}~17}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        The sum of the residues of these numbers modulo $4$ is $-1+0+1+2+3=5
+        \equiv 1 \pmod 4$. Hence, the number being subtracted must be congruent
+        to $1$ modulo $4$. The only such answer is $\boxed{\textbf{(C)}~17}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/nkpdskFVgdM?si=n-Dpzv5sn-R1ffdt"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q7" hidden="true">
-        <h2>Queston 7</h2>
-        <p>On the most recent exam on Prof. Xochi's class,</p>
-        <ul style="list-style-type: square;">
-            <li>$5$ students earned a score of at least $95\%$,</li>
-            <li>$13$ students earned a score of at least $90\%$,</li>
-            <li>$27$ students earned a score of at least $85\%$,</li>
-            <li>$50$ students earned a score of at least $80\%$,</li>
-        </ul>
-        <p>How many students earned a score of at least $80\%$ and less than $90\%$?</p>
-        <button id="7a" onclick="wrong(7, 'a')" class="Q7Button a">A. $8$</button>
-        <button id="7b" onclick="wrong(7, 'b')" class="Q7Button b">B. $14$</button>
-        <button id="7c" onclick="wrong(7, 'c')" class="Q7Button c">C. $22$</button>
-        <button id="7d" onclick="right(7, 'd')" class="Q7Button d right">D. $37$</button>
-        <button id="7e" onclick="wrong(7, 'e')" class="Q7Button e">E. $45$</button>
+      <h2>Queston 7</h2>
+      <p>On the most recent exam on Prof. Xochi's class,</p>
+      <ul style="list-style-type: square">
+        <li>$5$ students earned a score of at least $95\%$,</li>
+        <li>$13$ students earned a score of at least $90\%$,</li>
+        <li>$27$ students earned a score of at least $85\%$,</li>
+        <li>$50$ students earned a score of at least $80\%$,</li>
+      </ul>
+      <p>
+        How many students earned a score of at least $80\%$ and less than
+        $90\%$?
+      </p>
+      <button id="7a" onclick="wrong(7, 'a')" class="Q7Button a">A. $8$</button>
+      <button id="7b" onclick="wrong(7, 'b')" class="Q7Button b">
+        B. $14$
+      </button>
+      <button id="7c" onclick="wrong(7, 'c')" class="Q7Button c">
+        C. $22$
+      </button>
+      <button id="7d" onclick="right(7, 'd')" class="Q7Button d right">
+        D. $37$
+      </button>
+      <button id="7e" onclick="wrong(7, 'e')" class="Q7Button e">
+        E. $45$
+      </button>
     </div>
     <div class="solution" id="Q7Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>$50$ people scored at least $80\%$, and out of these $50$ people, $13$ of them earned a score that was not less than $90\%$, so the number of people that scored in between at least $80\%$ and less than $90\%$ is $50-13 = \boxed{\text{(D) 37}}$.</p>
-        <h3>Solution 2</h3>
-        <p>Let $a$ denote the number of people who had a score of at least $85$, but less than $90$, and let $b$ denote the number of people who had a score of at least $80$ but less than $85$. Our answer is equal to $a+b$. We find $a = 27 - 13 = 14$, while $b = 50 - 27 = 23$. Thus, the answer is $23 + 14 = \boxed{\text{(D) 37}}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/nkpdskFVgdM?si=9h2a26OHBRK27drU&amp;start=245" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>
+        $50$ people scored at least $80\%$, and out of these $50$ people, $13$
+        of them earned a score that was not less than $90\%$, so the number of
+        people that scored in between at least $80\%$ and less than $90\%$ is
+        $50-13 = \boxed{\text{(D) 37}}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Let $a$ denote the number of people who had a score of at least $85$,
+        but less than $90$, and let $b$ denote the number of people who had a
+        score of at least $80$ but less than $85$. Our answer is equal to $a+b$.
+        We find $a = 27 - 13 = 14$, while $b = 50 - 27 = 23$. Thus, the answer
+        is $23 + 14 = \boxed{\text{(D) 37}}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/nkpdskFVgdM?si=9h2a26OHBRK27drU&amp;start=245"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
-        <div class="Question" id="Q8" hidden="true">
-        <h2>Queston 8</h2>
-        <p>Isaiah cuts open a cardboard cube along some of its edges to form the flat shape shown on the right, which has an area of $18$ square centimeters. What is the volume of the cube in cubic centimeters?</p>
-        <img src="Assets/Images/Amc8_2025_prob8.png">
-        <button id="8a" onclick="right(8, 'a')" class="Q8Button a right">A. $3\sqrt{3}$</button>
-        <button id="8b" onclick="wrong(8, 'b')" class="Q8Button b">B. $6$</button>
-        <button id="8c" onclick="wrong(8, 'c')" class="Q8Button c">C. $9$</button>
-        <button id="8d" onclick="wrong(8, 'd')" class="Q8Button d">D. $6\sqrt{3}$</button>
-        <button id="8e" onclick="wrong(8, 'e')" class="Q8Button e">E. $9\sqrt{3}$</button>
+    <div class="Question" id="Q8" hidden="true">
+      <h2>Queston 8</h2>
+      <p>
+        Isaiah cuts open a cardboard cube along some of its edges to form the
+        flat shape shown on the right, which has an area of $18$ square
+        centimeters. What is the volume of the cube in cubic centimeters?
+      </p>
+      <img src="Assets/Images/Amc8_2025_prob8.png" />
+      <button id="8a" onclick="right(8, 'a')" class="Q8Button a right">
+        A. $3\sqrt{3}$
+      </button>
+      <button id="8b" onclick="wrong(8, 'b')" class="Q8Button b">B. $6$</button>
+      <button id="8c" onclick="wrong(8, 'c')" class="Q8Button c">C. $9$</button>
+      <button id="8d" onclick="wrong(8, 'd')" class="Q8Button d">
+        D. $6\sqrt{3}$
+      </button>
+      <button id="8e" onclick="wrong(8, 'e')" class="Q8Button e">
+        E. $9\sqrt{3}$
+      </button>
     </div>
     <div class="solution" id="Q8Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>Each of the $6$ faces of the cube have equal area, so the area of each face is equal to $\frac{18}{6} = 3$, making the side length $\sqrt3$. From this, we can see that the volume of the cube is $\sqrt{3}^3 = \boxed{\textbf{(A)}3\sqrt{3}}$.</p>
-        <h3>Solution 2</h3>
-        <p>Let the side length of the cube shown be equal to $s$ centimeters. The surface area of this cube is equal to the area of the net of the cube, which is equal to $18$ square centimeters. The surface area of this cube is also $6s^2$ square centimeters, so we have\[6s^2 = 18 \implies s^2 = \frac{18}{6} = 3 \implies s = \sqrt{3}.\]However, we aren't done. We have found that the side length of the cube is $\sqrt{3} cm$, but the question asks for the volume of the cube, which is equal to $s^3 = \sqrt{3}^3 = \boxed{\textbf{(A)}3\sqrt{3}}$ cubic centimeters.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=cXBOnHlVV66aHWOL&amp;start=577" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
+      <h3>Solution 1</h3>
+      <p>
+        Each of the $6$ faces of the cube have equal area, so the area of each
+        face is equal to $\frac{18}{6} = 3$, making the side length $\sqrt3$.
+        From this, we can see that the volume of the cube is $\sqrt{3}^3 =
+        \boxed{\textbf{(A)}3\sqrt{3}}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Let the side length of the cube shown be equal to $s$ centimeters. The
+        surface area of this cube is equal to the area of the net of the cube,
+        which is equal to $18$ square centimeters. The surface area of this cube
+        is also $6s^2$ square centimeters, so we have\[6s^2 = 18 \implies s^2 =
+        \frac{18}{6} = 3 \implies s = \sqrt{3}.\]However, we aren't done. We
+        have found that the side length of the cube is $\sqrt{3} cm$, but the
+        question asks for the volume of the cube, which is equal to $s^3 =
+        \sqrt{3}^3 = \boxed{\textbf{(A)}3\sqrt{3}}$ cubic centimeters.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=cXBOnHlVV66aHWOL&amp;start=577"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q9" hidden="true">
-        <h2>Queston 9</h2>
-        <p>Ningli looks at the $6$ pairs of numbers directly across from each other on a clock. She takes the average of each pair of numbers. What is the average of the resulting $6$ numbers?</p>
-        <img src="Assets/Images/9Image.svg">
-        <button id="9a" onclick="wrong(8, 'a')" class="Q9Button a">A. $5$</button>
-        <button id="8b" onclick="right(9, 'b')" class="Q9Button b right">B. $6.5$</button>
-        <button id="9c" onclick="wrong(9, 'c')" class="Q9Button c">C. $8$</button>
-        <button id="9d" onclick="wrong(9, 'd')" class="Q9Button d">D. $9.5$</button>
-        <button id="9e" onclick="wrong(9, 'e')" class="Q9Button e">E. $12$</button>
+      <h2>Queston 9</h2>
+      <p>
+        Ningli looks at the $6$ pairs of numbers directly across from each other
+        on a clock. She takes the average of each pair of numbers. What is the
+        average of the resulting $6$ numbers?
+      </p>
+      <img src="Assets/Images/9Image.svg" />
+      <button id="9a" onclick="wrong(8, 'a')" class="Q9Button a">A. $5$</button>
+      <button id="8b" onclick="right(9, 'b')" class="Q9Button b right">
+        B. $6.5$
+      </button>
+      <button id="9c" onclick="wrong(9, 'c')" class="Q9Button c">C. $8$</button>
+      <button id="9d" onclick="wrong(9, 'd')" class="Q9Button d">
+        D. $9.5$
+      </button>
+      <button id="9e" onclick="wrong(9, 'e')" class="Q9Button e">
+        E. $12$
+      </button>
     </div>
     <div class="solution" id="Q9Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>Our answer is\[\frac{\frac{1+7}{2} + \frac{2+8}{2} + \cdots + \frac{6+12}{2}}{6} = \frac{\frac{1}{2}((1+7)+(2+8)+\cdots+(6+12))}{6} = \frac{1+2+3+4+5+6+7+8+9+10+11+12}{2 \cdot 6} = \frac{\frac{12 \cdot 13}{2}}{2 \cdot 6} = \frac{78}{12} =\boxed{\textbf{(B)}~6.5}\]</p>
-        <h3>Solution 2</h3>
-        <p>We proceed with brute force. All of the pairs of opposite numbers on the clock are $(12,6)$, $(1,7)$, $(2,8)$, $(3,9)$, $(4,10)$, $(5,11)$, where order doesn't matter. The averages of each of these pairs are $9, 4, 5, 6, 7,$ and $8$ respectively, and the average these numbers is $\frac{9+4+5+6+7+8}{6}=\boxed{\textbf{(B)}~6.5}$</p>
-        <h3>Solution 3</h3>
-        <p>The problem is asking for the average of all $12$ numbers. To find the average of all $12$ numbers, you find the sum of all the integers from $1$ to $12$ which is $78$, and divide it by $12$ because there are 12 terms. Therefore, the answer is $\frac{78}{12}=\boxed{\textbf{(B)}~6.5}$. You could also see that the average of, $2$ and $8$, is $5$, only one more that it's consecutive pair, $1$ and $7$ which is $4$. Assuming that this is the pattern, we can find the average $4$ to $9$ (6 consecutive integers starting with $4$), and we that find our answer is $\boxed{\textbf{(B)}~6.5}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/BRnILzqVwHk?si=vt1ES1YUw3Ma7Wgd&amp;start=399" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>
+        Our answer is\[\frac{\frac{1+7}{2} + \frac{2+8}{2} + \cdots +
+        \frac{6+12}{2}}{6} = \frac{\frac{1}{2}((1+7)+(2+8)+\cdots+(6+12))}{6} =
+        \frac{1+2+3+4+5+6+7+8+9+10+11+12}{2 \cdot 6} = \frac{\frac{12 \cdot
+        13}{2}}{2 \cdot 6} = \frac{78}{12} =\boxed{\textbf{(B)}~6.5}\]
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        We proceed with brute force. All of the pairs of opposite numbers on the
+        clock are $(12,6)$, $(1,7)$, $(2,8)$, $(3,9)$, $(4,10)$, $(5,11)$, where
+        order doesn't matter. The averages of each of these pairs are $9, 4, 5,
+        6, 7,$ and $8$ respectively, and the average these numbers is
+        $\frac{9+4+5+6+7+8}{6}=\boxed{\textbf{(B)}~6.5}$
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        The problem is asking for the average of all $12$ numbers. To find the
+        average of all $12$ numbers, you find the sum of all the integers from
+        $1$ to $12$ which is $78$, and divide it by $12$ because there are 12
+        terms. Therefore, the answer is
+        $\frac{78}{12}=\boxed{\textbf{(B)}~6.5}$. You could also see that the
+        average of, $2$ and $8$, is $5$, only one more that it's consecutive
+        pair, $1$ and $7$ which is $4$. Assuming that this is the pattern, we
+        can find the average $4$ to $9$ (6 consecutive integers starting with
+        $4$), and we that find our answer is $\boxed{\textbf{(B)}~6.5}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/BRnILzqVwHk?si=vt1ES1YUw3Ma7Wgd&amp;start=399"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q10" hidden="true">
-        <h2>Queston 10</h2>
-        <p>In the figure below, $ABCD$ is a rectangle with sides of length $AB = 5$ inches and $AD$ = 3 inches. Rectangle $ABCD$ is rotated $90^\circ$ clockwise around the midpoint of side $DC$ to give a second rectangle. What is the total area, in square inches, covered by the two overlapping rectangles?</p>
-        <img src="Assets/Images/10Image.svg">
-        <button id="10a" onclick="wrong(10, 'a')" class="Q10Button a">A. $21$</button>
-        <button id="10b" onclick="wrong(10, 'b')" class="Q10Button b">B. $22.25$</button>
-        <button id="10c" onclick="wrong(10, 'c')" class="Q10Button c">C. $23$</button>
-        <button id="10d" onclick="right(10, 'd')" class="Q10Button d right">D. $23.75$</button>
-        <button id="10e" onclick="wrong(10, 'e')" class="Q10Button e">E. $25$</button>
+      <h2>Queston 10</h2>
+      <p>
+        In the figure below, $ABCD$ is a rectangle with sides of length $AB = 5$
+        inches and $AD$ = 3 inches. Rectangle $ABCD$ is rotated $90^\circ$
+        clockwise around the midpoint of side $DC$ to give a second rectangle.
+        What is the total area, in square inches, covered by the two overlapping
+        rectangles?
+      </p>
+      <img src="Assets/Images/10Image.svg" />
+      <button id="10a" onclick="wrong(10, 'a')" class="Q10Button a">
+        A. $21$
+      </button>
+      <button id="10b" onclick="wrong(10, 'b')" class="Q10Button b">
+        B. $22.25$
+      </button>
+      <button id="10c" onclick="wrong(10, 'c')" class="Q10Button c">
+        C. $23$
+      </button>
+      <button id="10d" onclick="right(10, 'd')" class="Q10Button d right">
+        D. $23.75$
+      </button>
+      <button id="10e" onclick="wrong(10, 'e')" class="Q10Button e">
+        E. $25$
+      </button>
     </div>
     <div class="solution" id="Q10Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>The area of each rectangle is $5 \cdot 3 = 15$. Then the sum of the areas of the two regions is the sum of the areas of the two rectangles, minus the area of their overlap. To find the area of the overlap, we note that the region of overlap is a square, each of whose sides have length $2.5$ (as they are formed by the midpoint of one of the long sides, the vertex, and also, since it is rotated 90 degrees). Then the answer is $15+15-2.5^2=\boxed{\textbf{(D)}~23.75}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/BRnILzqVwHk?si=WVYhX87UZlI5F65n&amp;start=560" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>
+        The area of each rectangle is $5 \cdot 3 = 15$. Then the sum of the
+        areas of the two regions is the sum of the areas of the two rectangles,
+        minus the area of their overlap. To find the area of the overlap, we
+        note that the region of overlap is a square, each of whose sides have
+        length $2.5$ (as they are formed by the midpoint of one of the long
+        sides, the vertex, and also, since it is rotated 90 degrees). Then the
+        answer is $15+15-2.5^2=\boxed{\textbf{(D)}~23.75}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/BRnILzqVwHk?si=WVYhX87UZlI5F65n&amp;start=560"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q11" hidden="true">
-        <h2>Queston 11</h2>
-        <p>A $\textit{tetromino}$ consists of four squares connected along their edges. There are five possible tetromino shapes, $I$, $O$, $L$, $T$, and $S$, shown below, which can be rotated or flipped over. Three tetrominoes are used to completely cover a $3\times4$ rectangle. At least one of the tiles is an $S$ tile. What are the other two tiles?</p>
-        <img src="Assets/Images/11Image.png">
-        <button id="11a" onclick="wrong(11, 'a')" class="Q11Button a">A. $I$ and $L$</button>
-        <button id="11b" onclick="wrong(11, 'b')" class="Q11Button b">B. $I$ and $T$</button>
-        <button id="11c" onclick="right(11, 'c')" class="Q11Button c right">C. $L$ and $L$</button>
-        <button id="11d" onclick="wrong(11, 'd')" class="Q11Button d">D. $L$ and $S$</button>
-        <button id="11e" onclick="wrong(11, 'e')" class="Q11Button e">E. $O$ and $T$</button>
+      <h2>Queston 11</h2>
+      <p>
+        A $\textit{tetromino}$ consists of four squares connected along their
+        edges. There are five possible tetromino shapes, $I$, $O$, $L$, $T$, and
+        $S$, shown below, which can be rotated or flipped over. Three
+        tetrominoes are used to completely cover a $3\times4$ rectangle. At
+        least one of the tiles is an $S$ tile. What are the other two tiles?
+      </p>
+      <img src="Assets/Images/11Image.png" />
+      <button id="11a" onclick="wrong(11, 'a')" class="Q11Button a">
+        A. $I$ and $L$
+      </button>
+      <button id="11b" onclick="wrong(11, 'b')" class="Q11Button b">
+        B. $I$ and $T$
+      </button>
+      <button id="11c" onclick="right(11, 'c')" class="Q11Button c right">
+        C. $L$ and $L$
+      </button>
+      <button id="11d" onclick="wrong(11, 'd')" class="Q11Button d">
+        D. $L$ and $S$
+      </button>
+      <button id="11e" onclick="wrong(11, 'e')" class="Q11Button e">
+        E. $O$ and $T$
+      </button>
     </div>
     <div class="solution" id="Q11Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>The $3\times4$ rectangle allows for $7$ possible places to put the S piece, with each possible placement having an inverted version. One of the cases looks like this:</p>
-        <img src="./Assets/Images/Q11Sol1.png">
-        <p>As you can see, there is a hole in the top left corner of the board, which would be impossible to fill using the tetrominos. There are three cases in which a hole isn't created; the S lies flat in the bottom left corner, it lies flat in the top right corner, or it stands upright in the center. All three tilings are shown below.</p>
-        <img src="./Assets/Images/Q11Sol2.png">
-        <img src="./Assets/Images/Q11Sol3.png">
-        <img src="./Assets/Images/Q11Sol4.png">
-        <p>For each of the inverted cases, the L pieces can be inverted along with the S piece. Because the only cases that fill the rectangle after the S is placed are the ones that use two L pieces, the answer must be $\boxed{\textbf{(C)}~L \ and \ L}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=eZopaGBiLpRg0lhi&amp;start=965" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>
+        The $3\times4$ rectangle allows for $7$ possible places to put the S
+        piece, with each possible placement having an inverted version. One of
+        the cases looks like this:
+      </p>
+      <img src="./Assets/Images/Q11Sol1.png" />
+      <p>
+        As you can see, there is a hole in the top left corner of the board,
+        which would be impossible to fill using the tetrominos. There are three
+        cases in which a hole isn't created; the S lies flat in the bottom left
+        corner, it lies flat in the top right corner, or it stands upright in
+        the center. All three tilings are shown below.
+      </p>
+      <img src="./Assets/Images/Q11Sol2.png" />
+      <img src="./Assets/Images/Q11Sol3.png" />
+      <img src="./Assets/Images/Q11Sol4.png" />
+      <p>
+        For each of the inverted cases, the L pieces can be inverted along with
+        the S piece. Because the only cases that fill the rectangle after the S
+        is placed are the ones that use two L pieces, the answer must be
+        $\boxed{\textbf{(C)}~L \ and \ L}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=eZopaGBiLpRg0lhi&amp;start=965"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q12" hidden="true">
-        <h2>Queston 12</h2>
-        <p>The region shown below consists of 24 squares, each with side length 1 centimeter. What is the area, in square centimeters, of the largest circle that can fit inside the region, possibly touching the boundaries?</p>
-        <img src="Assets/Images/12Image.svg">
-        <button id="12a" onclick="wrong(12, 'a')" class="Q12Button a">A. $3\pi$</button>
-        <button id="12b" onclick="wrong(12, 'b')" class="Q12Button b">B. $4\pi$</button>
-        <button id="12c" onclick="right(12, 'c')" class="Q12Button c right">C. $5\pi$</button>
-        <button id="12d" onclick="wrong(12, 'd')" class="Q12Button d">D. $6\pi$</button>
-        <button id="12e" onclick="wrong(12, 'e')" class="Q12Button e">E. $8\pi$</button>
+      <h2>Queston 12</h2>
+      <p>
+        The region shown below consists of 24 squares, each with side length 1
+        centimeter. What is the area, in square centimeters, of the largest
+        circle that can fit inside the region, possibly touching the boundaries?
+      </p>
+      <img src="Assets/Images/12Image.svg" />
+      <button id="12a" onclick="wrong(12, 'a')" class="Q12Button a">
+        A. $3\pi$
+      </button>
+      <button id="12b" onclick="wrong(12, 'b')" class="Q12Button b">
+        B. $4\pi$
+      </button>
+      <button id="12c" onclick="right(12, 'c')" class="Q12Button c right">
+        C. $5\pi$
+      </button>
+      <button id="12d" onclick="wrong(12, 'd')" class="Q12Button d">
+        D. $6\pi$
+      </button>
+      <button id="12e" onclick="wrong(12, 'e')" class="Q12Button e">
+        E. $8\pi$
+      </button>
     </div>
     <div class="solution" id="Q12Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>The largest circle that can fit inside the figure has its center in the middle of the figure and will be tangent to the figure in $8$ points. By the Pythagorean Theorem, the distance from the center to one of these $8$ points is $\sqrt{2^2 + 1^2} = \sqrt5$, so the area of this circle is $\pi \sqrt{5}^2 = \boxed{\textbf{(C) } 5\pi}$.</p>
-        <h3>Solution 2</h3>
-        <p>Draw the circle in the grid and analyze the radius. Its radius is a little more than 2 but a lot less than 2.5, so the area is a little more than 4π. So, the area of the circle is $\boxed{\textbf{(C) } 5\pi}$ with a radius of approximately 2.23.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=uXsoJaMCWGXKT0c7&amp;start=1096" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>
+        The largest circle that can fit inside the figure has its center in the
+        middle of the figure and will be tangent to the figure in $8$ points. By
+        the Pythagorean Theorem, the distance from the center to one of these
+        $8$ points is $\sqrt{2^2 + 1^2} = \sqrt5$, so the area of this circle is
+        $\pi \sqrt{5}^2 = \boxed{\textbf{(C) } 5\pi}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Draw the circle in the grid and analyze the radius. Its radius is a
+        little more than 2 but a lot less than 2.5, so the area is a little more
+        than 4π. So, the area of the circle is $\boxed{\textbf{(C) } 5\pi}$ with
+        a radius of approximately 2.23.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=uXsoJaMCWGXKT0c7&amp;start=1096"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q13" hidden="true">
-        <h2>Queston 13</h2>
-        <p>Each of the even numbers $2, 4, 6, \ldots, 50$ is divided by $7$. The remainders are recorded. Which histogram displays the number of times each remainder occurs?</p>
-        <button id="13a" onclick="right(13, 'a')" class="Q13Button a right">A. <img src="./Assets/Images/13a.png" class="I13Image"></button>
-        <button id="13b" onclick="wrong(13, 'b')" class="Q13Button b">B. <img src="./Assets/Images/13b.png" class="I13Image"></button>
-        <button id="13c" onclick="wrong(13, 'c')" class="Q13Button c">C. <img src="./Assets/Images/13c.png" class="I13Image"></button>
-        <button id="13d" onclick="wrong(13, 'd')" class="Q13Button d">D. <img src="./Assets/Images/13d.png" class="I13Image"></button>
-        <button id="13e" onclick="wrong(13, 'e')" class="Q13Button e">E. <img src="./Assets/Images/13e.png" class="I13Image"></button>
+      <h2>Queston 13</h2>
+      <p>
+        Each of the even numbers $2, 4, 6, \ldots, 50$ is divided by $7$. The
+        remainders are recorded. Which histogram displays the number of times
+        each remainder occurs?
+      </p>
+      <button id="13a" onclick="right(13, 'a')" class="Q13Button a right">
+        A. <img src="./Assets/Images/13a.png" class="I13Image" />
+      </button>
+      <button id="13b" onclick="wrong(13, 'b')" class="Q13Button b">
+        B. <img src="./Assets/Images/13b.png" class="I13Image" />
+      </button>
+      <button id="13c" onclick="wrong(13, 'c')" class="Q13Button c">
+        C. <img src="./Assets/Images/13c.png" class="I13Image" />
+      </button>
+      <button id="13d" onclick="wrong(13, 'd')" class="Q13Button d">
+        D. <img src="./Assets/Images/13d.png" class="I13Image" />
+      </button>
+      <button id="13e" onclick="wrong(13, 'e')" class="Q13Button e">
+        E. <img src="./Assets/Images/13e.png" class="I13Image" />
+      </button>
     </div>
     <div class="solution" id="Q13Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>Let's take the numbers 2 through 14 (evens). The remainders will be 2, 4, 6, 1, 3, 5, and 0. This sequence keeps repeating itself over and over. We can take $\left\lfloor\frac{50}{14}\right\rfloor$, so after the number 42, every remainder has been achieved 3 times. However, since 44, 46, 48, and 50 are left, the remainders of those will be 2, 4, 6, and 1 respectively. The only histogram in which those 4 numbers are set at 4 is histogram $\boxed{\textbf{(A)}}$.</p>
-        <h3>Solution 2</h3>
-        <p>Writing down all the remainders gives us $2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1.$ In this list, there are $3$ numbers with remainder $0$, $4$ numbers with remainder $1$, $4$ numbers with remainder $2$, $3$ numbers with remainder $3$, $4$ numbers with remainder $4$, $3$ numbers with remainder $5$, and $4$ numbers with remainder $6$. Manually computation of every single term can be avoided by recognizing the pattern alternates from $0, 2, 4, 6$ to $1, 3, 5$ and there are $25$ terms. The only histogram that matches this is $\boxed{\textbf{(A)}}$.</p>    
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=__rcMMLj2_c32K3K&amp;start=1269" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <h3>Solution 1</h3>
+      <p>
+        Let's take the numbers 2 through 14 (evens). The remainders will be 2,
+        4, 6, 1, 3, 5, and 0. This sequence keeps repeating itself over and
+        over. We can take $\left\lfloor\frac{50}{14}\right\rfloor$, so after the
+        number 42, every remainder has been achieved 3 times. However, since 44,
+        46, 48, and 50 are left, the remainders of those will be 2, 4, 6, and 1
+        respectively. The only histogram in which those 4 numbers are set at 4
+        is histogram $\boxed{\textbf{(A)}}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Writing down all the remainders gives us $2, 4, 6, 1, 3, 5, 0, 2, 4, 6,
+        1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1.$ In this list, there are
+        $3$ numbers with remainder $0$, $4$ numbers with remainder $1$, $4$
+        numbers with remainder $2$, $3$ numbers with remainder $3$, $4$ numbers
+        with remainder $4$, $3$ numbers with remainder $5$, and $4$ numbers with
+        remainder $6$. Manually computation of every single term can be avoided
+        by recognizing the pattern alternates from $0, 2, 4, 6$ to $1, 3, 5$ and
+        there are $25$ terms. The only histogram that matches this is
+        $\boxed{\textbf{(A)}}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=__rcMMLj2_c32K3K&amp;start=1269"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q14" hidden="true">
-        <h2>Queston 14</h2>
-        <p>A number $N$ is inserted into the list $2$, $6$, $7$, $7$, $28$. The mean is now twice as great as the median. What is $N$?</p>
-        <button id="14a" onclick="wrong(14, 'a')" class="Q14Button a">A. 7</button>
-        <button id="14b" onclick="wrong(14, 'b')" class="Q14Button b">B. 14</button>
-        <button id="14c" onclick="wrong(14, 'c')" class="Q14Button c">C. 20</button>
-        <button id="14d" onclick="wrong(14, 'd')" class="Q14Button d">D. 28</button>
-        <button id="14e" onclick="right(14, 'e')" class="Q14Button e right">E. 34</button>
+      <h2>Queston 14</h2>
+      <p>
+        A number $N$ is inserted into the list $2$, $6$, $7$, $7$, $28$. The
+        mean is now twice as great as the median. What is $N$?
+      </p>
+      <button id="14a" onclick="wrong(14, 'a')" class="Q14Button a">
+        A. 7
+      </button>
+      <button id="14b" onclick="wrong(14, 'b')" class="Q14Button b">
+        B. 14
+      </button>
+      <button id="14c" onclick="wrong(14, 'c')" class="Q14Button c">
+        C. 20
+      </button>
+      <button id="14d" onclick="wrong(14, 'd')" class="Q14Button d">
+        D. 28
+      </button>
+      <button id="14e" onclick="right(14, 'e')" class="Q14Button e right">
+        E. 34
+      </button>
     </div>
     <div class="solution" id="Q14Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>The median of the list is $7$, so the mean of the new list will be $7 \cdot 2 = 14$. Since there are $6$ numbers in the new list, the sum of the $6$ numbers will be $14 \cdot 6 = 84$. Therefore, $2+6+7+7+28+N = 84 \implies N = \boxed{\text{(E)\ 34}}$</p>
-        <h3>Solution 2</h3>
-        <p>Since the average right now is $10$, and the median is $7$, we see that $N$ must be larger than $10$, which means that the median of the 6 resulting numbers should be $7$, making the mean of these $14$. We can do $2 + 6 + 7 + 7 + 28 + N = 14 * 6 = 84$. $50 + N = 84$, so $N$ = $\boxed{\text{(E)\ 34}}$</p>
-        <h3>Solution 3</h3>
-        <p>We try out every option by inserting each number into the list. After trying out each number, we get $\boxed{\text{(E)\ 34}}$</p>
-        <p>Note that this is very time-consuming and it is not the most practical solution.</p>
-        <h3>Solution 4</h3>
-        <p>We could use answer choices to solve this problem. The sum of the $5$ numbers is $50$. If you add $7$ to the list, $57$ is not divisible by $6$, therefore it will not work. Same thing applies to $14$ and $20$. The only possible choices left are $28$ and $34$. Now you check $28$. You see that $28$ doesn't work because $(28+50) \div 6 = 13$ and $13$ is not twice of the median, which is still $7$. Therefore, only choice left is $\boxed{\text{(E)\ 34}}$</p>
-        <!-- TODO: ADD VIDEO -->
+      <h3>Solution 1</h3>
+      <p>
+        The median of the list is $7$, so the mean of the new list will be $7
+        \cdot 2 = 14$. Since there are $6$ numbers in the new list, the sum of
+        the $6$ numbers will be $14 \cdot 6 = 84$. Therefore, $2+6+7+7+28+N = 84
+        \implies N = \boxed{\text{(E)\ 34}}$
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        Since the average right now is $10$, and the median is $7$, we see that
+        $N$ must be larger than $10$, which means that the median of the 6
+        resulting numbers should be $7$, making the mean of these $14$. We can
+        do $2 + 6 + 7 + 7 + 28 + N = 14 * 6 = 84$. $50 + N = 84$, so $N$ =
+        $\boxed{\text{(E)\ 34}}$
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        We try out every option by inserting each number into the list. After
+        trying out each number, we get $\boxed{\text{(E)\ 34}}$
+      </p>
+      <p>
+        Note that this is very time-consuming and it is not the most practical
+        solution.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        We could use answer choices to solve this problem. The sum of the $5$
+        numbers is $50$. If you add $7$ to the list, $57$ is not divisible by
+        $6$, therefore it will not work. Same thing applies to $14$ and $20$.
+        The only possible choices left are $28$ and $34$. Now you check $28$.
+        You see that $28$ doesn't work because $(28+50) \div 6 = 13$ and $13$ is
+        not twice of the median, which is still $7$. Therefore, only choice left
+        is $\boxed{\text{(E)\ 34}}$
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=IhK-svSsk60XCh2C&amp;start=1442"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
-        <div class="Question" id="Q15" hidden="true">
-        <h2>Queston 15</h2>
-        <p>Kei draws a $6$-by-$6$ grid. He colors $13$ of the unit squares silver and the remaining squares gold. Kei then folds the grid in half vertically, forming pairs of overlapping unit squares. Let $m$ and $M$ equal the least and greatest possible number of gold-on-gold pairs, respectively. What is the value of $m+M$?</p>
-        <img src="./Assets/Images/Q15Image.png">
-        <button id="15a" onclick="wrong(15, 'a')" class="Q15Button a">A. 12</button>
-        <button id="15b" onclick="wrong(15, 'b')" class="Q15Button b">B. 14</button>
-        <button id="15c" onclick="right(15, 'c')" class="Q15Button c right">C. 16</button>
-        <button id="15d" onclick="wrong(15, 'd')" class="Q15Button d">D. 18</button>
-        <button id="15e" onclick="wrong(15, 'e')" class="Q15Button e">E. 20</button>
+    <div class="Question" id="Q15" hidden="true">
+      <h2>Queston 15</h2>
+      <p>
+        Kei draws a $6$-by-$6$ grid. He colors $13$ of the unit squares silver
+        and the remaining squares gold. Kei then folds the grid in half
+        vertically, forming pairs of overlapping unit squares. Let $m$ and $M$
+        equal the least and greatest possible number of gold-on-gold pairs,
+        respectively. What is the value of $m+M$?
+      </p>
+      <img src="./Assets/Images/Q15Image.png" />
+      <button id="15a" onclick="wrong(15, 'a')" class="Q15Button a">
+        A. 12
+      </button>
+      <button id="15b" onclick="wrong(15, 'b')" class="Q15Button b">
+        B. 14
+      </button>
+      <button id="15c" onclick="right(15, 'c')" class="Q15Button c right">
+        C. 16
+      </button>
+      <button id="15d" onclick="wrong(15, 'd')" class="Q15Button d">
+        D. 18
+      </button>
+      <button id="15e" onclick="wrong(15, 'e')" class="Q15Button e">
+        E. 20
+      </button>
     </div>
     <div class="solution" id="Q15Sol" hidden="true">
-        <h3>Solution 1</h3>
-        <p>First, we note that there are $18$ "pairs" of squares folded on top of each other after the folding. The minimum number of gold pairs occurs when silver squares occupy the maximum number of pairs, and the maximum number of gold pairs occurs when silver squares occupy the minimum number of pairs. The latter case occurs when all $13$ silver squares are placed in different pairs, resulting in $18-13=5$ gold pairs. The former case occurs when the silver squares are paired up as much as possible, resulting in $6$ complete pairs and another square occupying another pair slot. Then there are $18-7=11$ gold pairs. Our answer is $11+5=\boxed{\textbf{(C) }16}$. </p>
-        <h3>Solution 2</h3>
-        <p>We can see that the least number of gold-on-gold pairs will be obtained when the $13$ silver squares are placed on the two sides so that they don't overlap when folded over (because then it will minimize the number of gold-on-golds). We can see that if we split them up $6$ and $7$ on both sides, and then fold it, the number of gold-on-golds will be $18-13 = 5$.</p>
-        <p>The maximum number of gold-on-golds will be achieved when the silver squares overlap when folded over, which will increase the number of gold-on-golds. If we align 6 silver squares with each other on each side, and put the last one somewhere else, we get the maximum is $18 - 7 = 11$. Therefore, the answer is $11+5=\boxed{\textbf{(C)}~16}$.</p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=XJ7kSYCcWDqflyls&amp;start=1572" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </div>
-    <div id="QuestionNavigator">
-        <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
-        <button class="questionNavButton" id="Q2NavButton" onclick="QuestionSwitch(2)">2</button>
-        <button class="questionNavButton" id="Q3NavButton" onclick="QuestionSwitch(3)">3</button>
-        <button class="questionNavButton" id="Q4NavButton" onclick="QuestionSwitch(4)">4</button>
-        <button class="questionNavButton" id="Q5NavButton" onclick="QuestionSwitch(5)">5</button>
-        <button class="questionNavButton" id="Q6NavButton" onclick="QuestionSwitch(6)">6</button>
-        <button class="questionNavButton" id="Q7NavButton" onclick="QuestionSwitch(7)">7</button>
-        <button class="questionNavButton" id="Q8NavButton" onclick="QuestionSwitch(8)">8</button>
-        <button class="questionNavButton" id="Q9NavButton" onclick="QuestionSwitch(9)">9</button>
-        <button class="questionNavButton" id="Q10NavButton" onclick="QuestionSwitch(10)">10</button>
-        <button class="questionNavButton" id="Q11NavButton" onclick="QuestionSwitch(11)">11</button>
-        <button class="questionNavButton" id="Q12NavButton" onclick="QuestionSwitch(12)">12</button>
-        <button class="questionNavButton" id="Q13NavButton" onclick="QuestionSwitch(13)">13</button>
-        <button class="questionNavButton" id="Q14NavButton" onclick="QuestionSwitch(14)">14</button>
-        <button class="questionNavButton" id="Q15NavButton" onclick="QuestionSwitch(15)">15</button>
-        <button class="questionNavButton" id="Q16NavButton" onclick="QuestionSwitch(16)">16</button>
-        <button class="questionNavButton" id="Q17NavButton" onclick="QuestionSwitch(17)">17</button>
-        <button class="questionNavButton" id="Q18NavButton" onclick="QuestionSwitch(18)">18</button>
-        <button class="questionNavButton" id="Q19NavButton" onclick="QuestionSwitch(19)">19</button>
-        <button class="questionNavButton" id="Q20NavButton" onclick="QuestionSwitch(20)">20</button>
-        <button class="questionNavButton" id="Q21NavButton" onclick="QuestionSwitch(21)">21</button>
-        <button class="questionNavButton" id="Q22NavButton" onclick="QuestionSwitch(22)">22</button>
-        <button class="questionNavButton" id="Q23NavButton" onclick="QuestionSwitch(23)">23</button>
-        <button class="questionNavButton" id="Q24NavButton" onclick="QuestionSwitch(24)">24</button>
-        <button class="questionNavButton" id="Q25NavButton" onclick="QuestionSwitch(25)">25</button>
+      <h3>Solution 1</h3>
+      <p>
+        First, we note that there are $18$ "pairs" of squares folded on top of
+        each other after the folding. The minimum number of gold pairs occurs
+        when silver squares occupy the maximum number of pairs, and the maximum
+        number of gold pairs occurs when silver squares occupy the minimum
+        number of pairs. The latter case occurs when all $13$ silver squares are
+        placed in different pairs, resulting in $18-13=5$ gold pairs. The former
+        case occurs when the silver squares are paired up as much as possible,
+        resulting in $6$ complete pairs and another square occupying another
+        pair slot. Then there are $18-7=11$ gold pairs. Our answer is
+        $11+5=\boxed{\textbf{(C) }16}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        We can see that the least number of gold-on-gold pairs will be obtained
+        when the $13$ silver squares are placed on the two sides so that they
+        don't overlap when folded over (because then it will minimize the number
+        of gold-on-golds). We can see that if we split them up $6$ and $7$ on
+        both sides, and then fold it, the number of gold-on-golds will be $18-13
+        = 5$.
+      </p>
+      <p>
+        The maximum number of gold-on-golds will be achieved when the silver
+        squares overlap when folded over, which will increase the number of
+        gold-on-golds. If we align 6 silver squares with each other on each
+        side, and put the last one somewhere else, we get the maximum is $18 - 7
+        = 11$. Therefore, the answer is $11+5=\boxed{\textbf{(C)}~16}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=XJ7kSYCcWDqflyls&amp;start=1572"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
 
-</body>
+    <div class="Question" id="Q16" hidden="true">
+      <h2>Queston 16</h2>
+      <p>
+        Five distinct integers from $1$ to $10$ are chosen, and five distinct
+        integers from $11$ to $20$ are chosen. No two numbers differ by exactly
+        $10$. What is the sum of the ten chosen numbers?
+      </p>
+      <button id="16a" onclick="wrong(16, 'a')" class="Q16Button a">
+        A. 95
+      </button>
+      <button id="16b" onclick="wrong(16, 'b')" class="Q16Button b">
+        B. 100
+      </button>
+      <button id="16c" onclick="right(16, 'c')" class="Q16Button c right">
+        C. 105
+      </button>
+      <button id="16d" onclick="wrong(16, 'd')" class="Q16Button d">
+        D. 110
+      </button>
+      <button id="16e" onclick="wrong(16, 'e')" class="Q16Button e">
+        E. 115
+      </button>
+    </div>
+    <div class="solution" id="Q16Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p>
+        Note that for no two numbers to differ by $10$, every number chosen must
+        have a different units digit. To make computations easier, we can choose
+        $(1, 2, 3, 4, 5)$ from the first group and $(16, 17, 18, 19, 20)$ from
+        the second group. Then the sum evaluates to $1+2+3+4+5+16+17+18+19+20 =
+        \boxed{\text{(C)\ 105}}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        For $1+2+3+4+5+16+17+18+19+20$, we can add the first term and the last
+        term, which is $21$. If we add the second term and the second-to-last
+        term it is also $21$. There are $5$ pairs that sum to $21$, so the
+        answer is $21 \times 5$ which equals $\boxed{\text{(C)\ 105}}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        One efficient method is to quickly add $(1, 2, 3, 4, 5, 6, 7, 8, 9,
+        10)$, which is $55$. Then because you took $50$ in total away from $(16,
+        17, 18, 19, 20)$, you add $50$. $55+50= \boxed{\text{(C)\ 105}}$.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        To solve this problem, I started with the easiest/smallest case
+        possible. In my opinion, that was
+        <br />$1+2+3+4+5+16+17+18+19+20$.<br />
+        I then solved this equation quickly using Little Gauss's method,
+        rearranging that into <br />$1+19+2+18+3+17+4+16+5+20$.<br />
+        I simplified this into <br />$20+20+20+20+25$.<br />
+        Solving this simple equation gives us the answer, which is
+        $\boxed{\text{(C)\ 105}}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=liWHn2m6L6DBRrR3&amp;start=1815"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <div class="Question" id="Q17" hidden="true">
+      <h2>Queston 17</h2>
+      <p></p>
+      <button id="17a" onclick="wrong(17, 'a')" class="Q17Button a">A.</button>
+      <button id="17b" onclick="wrong(17, 'b')" class="Q17Button b">B.</button>
+      <button id="17c" onclick="wrong(17, 'c')" class="Q17Button c">C.</button>
+      <button id="17d" onclick="right(17, 'd')" class="Q17Button d right">
+        D.
+      </button>
+      <button id="17e" onclick="wrong(17, 'e')" class="Q17Button e">E.</button>
+    </div>
+    <div class="solution" id="Q17Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p></p>
+      <h3>Solution 2</h3>
+      <p></p>
+    </div>
+    <div class="Question" id="Q18" hidden="true">
+      <h2>Queston 18</h2>
+      <p></p>
+      <button id="18a" onclick="wrong(18, 'a')" class="Q18Button a">A.</button>
+      <button id="18b" onclick="right(18, 'b')" class="Q18Button b right">
+        B.
+      </button>
+      <button id="18c" onclick="wrong(18, 'c')" class="Q18Button c">C.</button>
+      <button id="18d" onclick="wrong(18, 'd')" class="Q18Button d">D.</button>
+      <button id="18e" onclick="wrong(18, 'e')" class="Q18Button e">E.</button>
+    </div>
+    <div class="solution" id="Q18Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p></p>
+      <h3>Solution 2</h3>
+      <p></p>
+    </div>
+    <div class="Question" id="Q19" hidden="true">
+      <h2>Queston 19</h2>
+      <p></p>
+      <button id="19a" onclick="wrong(19, 'a')" class="Q19Button a">A.</button>
+      <button id="19b" onclick="wrong(19, 'b')" class="Q19Button b">B.</button>
+      <button id="19c" onclick="right(19, 'c')" class="Q19Button c right">
+        C.
+      </button>
+      <button id="19d" onclick="wrong(19, 'd')" class="Q19Button d">D.</button>
+      <button id="19e" onclick="wrong(19, 'e')" class="Q19Button e">E.</button>
+    </div>
+    <div class="solution" id="Q19Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p></p>
+      <h3>Solution 2</h3>
+      <p></p>
+    </div>
+    <div class="Question" id="Q20" hidden="true">
+      <h2>Queston 20</h2>
+      <p></p>
+      <button id="20a" onclick="wrong(20, 'a')" class="Q20Button a">A.</button>
+      <button id="20b" onclick="wrong(20, 'b')" class="Q20Button b">B.</button>
+      <button id="20c" onclick="right(20, 'c')" class="Q20Button c right">
+        C.
+      </button>
+      <button id="20d" onclick="wrong(20, 'd')" class="Q20Button d">D.</button>
+      <button id="20e" onclick="wrong(20, 'e')" class="Q20Button e">E.</button>
+    </div>
+    <div class="solution" id="Q20Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p></p>
+      <h3>Solution 2</h3>
+      <p></p>
+    </div>
+    <div class="Question" id="Q21" hidden="true">
+      <h2>Queston 21</h2>
+      <p></p>
+      <button id="21a" onclick="wrong(21, 'a')" class="Q21Button a">A.</button>
+      <button id="21b" onclick="wrong(21, 'b')" class="Q21Button b">B.</button>
+      <button id="21c" onclick="right(21, 'c')" class="Q21Button c right">
+        C.
+      </button>
+      <button id="21d" onclick="wrong(21, 'd')" class="Q21Button d">D.</button>
+      <button id="21e" onclick="wrong(21, 'e')" class="Q21Button e">E.</button>
+    </div>
+    <div class="solution" id="Q21Sol" hidden="true">
+      <h3>Solution 1</h3>
+      <p></p>
+      <h3>Solution 2</h3>
+      <p></p>
+    </div>
+    <div id="QuestionNavigator">
+      <button
+        class="questionNavButton"
+        id="Q1NavButton"
+        onclick="QuestionSwitch(1)"
+      >
+        1
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q2NavButton"
+        onclick="QuestionSwitch(2)"
+      >
+        2
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q3NavButton"
+        onclick="QuestionSwitch(3)"
+      >
+        3
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q4NavButton"
+        onclick="QuestionSwitch(4)"
+      >
+        4
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q5NavButton"
+        onclick="QuestionSwitch(5)"
+      >
+        5
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q6NavButton"
+        onclick="QuestionSwitch(6)"
+      >
+        6
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q7NavButton"
+        onclick="QuestionSwitch(7)"
+      >
+        7
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q8NavButton"
+        onclick="QuestionSwitch(8)"
+      >
+        8
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q9NavButton"
+        onclick="QuestionSwitch(9)"
+      >
+        9
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q10NavButton"
+        onclick="QuestionSwitch(10)"
+      >
+        10
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q11NavButton"
+        onclick="QuestionSwitch(11)"
+      >
+        11
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q12NavButton"
+        onclick="QuestionSwitch(12)"
+      >
+        12
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q13NavButton"
+        onclick="QuestionSwitch(13)"
+      >
+        13
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q14NavButton"
+        onclick="QuestionSwitch(14)"
+      >
+        14
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q15NavButton"
+        onclick="QuestionSwitch(15)"
+      >
+        15
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q16NavButton"
+        onclick="QuestionSwitch(16)"
+      >
+        16
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q17NavButton"
+        onclick="QuestionSwitch(17)"
+      >
+        17
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q18NavButton"
+        onclick="QuestionSwitch(18)"
+      >
+        18
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q19NavButton"
+        onclick="QuestionSwitch(19)"
+      >
+        19
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q20NavButton"
+        onclick="QuestionSwitch(20)"
+      >
+        20
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q21NavButton"
+        onclick="QuestionSwitch(21)"
+      >
+        21
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q22NavButton"
+        onclick="QuestionSwitch(22)"
+      >
+        22
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q23NavButton"
+        onclick="QuestionSwitch(23)"
+      >
+        23
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q24NavButton"
+        onclick="QuestionSwitch(24)"
+      >
+        24
+      </button>
+      <button
+        class="questionNavButton"
+        id="Q25NavButton"
+        onclick="QuestionSwitch(25)"
+      >
+        25
+      </button>
+    </div>
+  </body>
 </html>
