@@ -372,6 +372,25 @@
         <p>Note that this is very time-consuming and it is not the most practical solution.</p>
         <h3>Solution 4</h3>
         <p>We could use answer choices to solve this problem. The sum of the $5$ numbers is $50$. If you add $7$ to the list, $57$ is not divisible by $6$, therefore it will not work. Same thing applies to $14$ and $20$. The only possible choices left are $28$ and $34$. Now you check $28$. You see that $28$ doesn't work because $(28+50) \div 6 = 13$ and $13$ is not twice of the median, which is still $7$. Therefore, only choice left is $\boxed{\text{(E)\ 34}}$</p>
+        <!-- TODO: ADD VIDEO -->
+    </div>
+        <div class="Question" id="Q15" hidden="true">
+        <h2>Queston 15</h2>
+        <p>Kei draws a $6$-by-$6$ grid. He colors $13$ of the unit squares silver and the remaining squares gold. Kei then folds the grid in half vertically, forming pairs of overlapping unit squares. Let $m$ and $M$ equal the least and greatest possible number of gold-on-gold pairs, respectively. What is the value of $m+M$?</p>
+        <img src="./Assets/Images/Q15Image.png">
+        <button id="15a" onclick="wrong(15, 'a')" class="Q15Button a">A. 12</button>
+        <button id="15b" onclick="wrong(15, 'b')" class="Q15Button b">B. 14</button>
+        <button id="15c" onclick="right(15, 'c')" class="Q15Button c right">C. 16</button>
+        <button id="15d" onclick="wrong(15, 'd')" class="Q15Button d">D. 18</button>
+        <button id="15e" onclick="wrong(15, 'e')" class="Q15Button e">E. 20</button>
+    </div>
+    <div class="solution" id="Q15Sol" hidden="true">
+        <h3>Solution 1</h3>
+        <p>First, we note that there are $18$ "pairs" of squares folded on top of each other after the folding. The minimum number of gold pairs occurs when silver squares occupy the maximum number of pairs, and the maximum number of gold pairs occurs when silver squares occupy the minimum number of pairs. The latter case occurs when all $13$ silver squares are placed in different pairs, resulting in $18-13=5$ gold pairs. The former case occurs when the silver squares are paired up as much as possible, resulting in $6$ complete pairs and another square occupying another pair slot. Then there are $18-7=11$ gold pairs. Our answer is $11+5=\boxed{\textbf{(C) }16}$. </p>
+        <h3>Solution 2</h3>
+        <p>We can see that the least number of gold-on-gold pairs will be obtained when the $13$ silver squares are placed on the two sides so that they don't overlap when folded over (because then it will minimize the number of gold-on-golds). We can see that if we split them up $6$ and $7$ on both sides, and then fold it, the number of gold-on-golds will be $18-13 = 5$.</p>
+        <p>The maximum number of gold-on-golds will be achieved when the silver squares overlap when folded over, which will increase the number of gold-on-golds. If we align 6 silver squares with each other on each side, and put the last one somewhere else, we get the maximum is $18 - 7 = 11$. Therefore, the answer is $11+5=\boxed{\textbf{(C)}~16}$.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VP7g-s8akMY?si=XJ7kSYCcWDqflyls&amp;start=1572" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div id="QuestionNavigator">
         <button class="questionNavButton" id="Q1NavButton" onclick="QuestionSwitch(1)">1</button>
