@@ -1452,25 +1452,88 @@
     </div>
     <div class="Question" id="Q20" hidden="true">
       <h2>Queston 20</h2>
-      <p></p>
-      <button id="20a" onclick="wrong(20, 'a')" class="Q20Button a">A.</button>
-      <br />
-      <button id="20b" onclick="wrong(20, 'b')" class="Q20Button b">B.</button>
-      <br />
-      <button id="20c" onclick="right(20, 'c')" class="Q20Button c right">
-        C.
+      <p>
+        Sarika, Dev, and Rajiv are sharing a large block of cheese. They take
+        turns cutting off half of what remains and eating it: first Sarika eats
+        half of the cheese, then Dev eats half of the remaining half, then Rajiv
+        eats half of what remains, then back to Sarika, and so on. They stop
+        when the cheese is too small to see. About what fraction of the original
+        block of cheese does Sarika eat in total?
+      </p>
+      <button id="20a" onclick="right(20, 'a')" class="Q20Button a right">
+        A. $\frac{4}{7}$
       </button>
       <br />
-      <button id="20d" onclick="wrong(20, 'd')" class="Q20Button d">D.</button>
+      <button id="20b" onclick="wrong(20, 'b')" class="Q20Button b">
+        B. $\frac{3}{5}$
+      </button>
       <br />
-      <button id="20e" onclick="wrong(20, 'e')" class="Q20Button e">E.</button>
+      <button id="20c" onclick="wrong(20, 'c')" class="Q20Button c">
+        C. $\frac{2}{3}$
+      </button>
+      <br />
+      <button id="20d" onclick="wrong(20, 'd')" class="Q20Button d">
+        D. $\frac{3}{4}$
+      </button>
+      <br />
+      <button id="20e" onclick="wrong(20, 'e')" class="Q20Button e">
+        E. $\frac{7}{8}$
+      </button>
     </div>
     <div class="solution" id="Q20Sol" hidden="true">
       <h3>Solution 1</h3>
-      <p></p>
+      <p>
+        Let the total amount of cheese be $1$. We will track the amount of
+        cheese Sarika eats throughout the process.<br />
+
+        First Round: Sarika eats half of the total cheese, so she
+        eats:\[\frac{1}{2}.\]Second Round: Dev eats half of what remains after
+        Sarika's turn, which is:\[\frac{1}{4}.\]Third Round: Rajiv eats half of
+        the remaining cheese after Dev’s turn, which is:\[\frac{1}{8}.\]<br />
+
+        At the end of the first round, the total cheese eaten is:\[\frac{1}{2} +
+        \frac{1}{4} + \frac{1}{8} = \frac{7}{8}.\]<br />
+
+        We observe that Sarika’s consumption follows a geometric sequence. In
+        the first round, she eats $\frac{1}{2}$, and in subsequent rounds, she
+        eats half of what remains from the previous round. This gives the
+        following series for Sarika’s total consumption:<br />
+
+        \[\frac{1}{2} + \frac{1}{16} + \frac{1}{128} + \cdots\]<br />
+
+        This is a geometric series with first term $\frac{1}{2}$ and common
+        ratio $\frac{1}{8}$. The sum $S$ of this infinite geometric series is
+        given by the formula:<br />
+
+        \[S = \frac{a}{1 - r},\]where $a$ is the first term and $r$ is the
+        common ratio. Substituting $a = \frac{1}{2}$ and $r = \frac{1}{8}$:<br />
+
+        \[S = \frac{\frac{1}{2}}{1 - \frac{1}{8}} =
+        \frac{\frac{1}{2}}{\frac{7}{8}} = \frac{1}{2} \times \frac{8}{7} =
+        \frac{4}{7}.\]<br />
+
+        Thus, Sarika eats $\frac{4}{7}$ of the original block of cheese. The
+        correct answer is:\[\boxed{\textbf{(A) } \frac{4}{7}}.\]<br />
+      </p>
       <h3>Solution 2</h3>
-      <p></p>
+      <p>
+        Sarika eats $1/2$ of the original cheese, and then because the others
+        eat $1/4$ and $1/8$, she eats $1/16$ next, and then $1/128$, and then so
+        on. Since the values later are going to be too small to make a huge
+        difference, we can use these $3$ values. She ate $(64 + 8 + 1)/128 =
+        73/128$. We can replace the $73$ with a $72$ for now, so $72/128 =
+        9/16$, which simplifies to around $56.25$. Since there is a little bit
+        more of the cheese to be accounted for, the amount that she eats will be
+        around $\boxed{\textbf{(A) }\frac{4}{7}}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Her first $2$ bites will be $\frac{1}{2}$ and $\frac{1}{16}$. Everything
+        else won't matter, so the answer will be closest to $\frac{9}{16}$,
+        $\frac{4}{7}$.
+      </p>
       <h3>Video Solution</h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/VUR5VYabbrc?si=B1-zHthx6N7qYSgd&amp;start=11" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
     <div class="Question" id="Q21" hidden="true">
       <h2>Queston 21</h2>
@@ -1502,14 +1565,14 @@
       <button id="22b" onclick="wrong(22, 'b')" class="Q22Button b">B.</button>
       <br />
       <button id="22c" onclick="right(22, 'c')" class="Q22Button c right">
-      C.
+        C.
       </button>
       <br />
       <button id="22d" onclick="wrong(22, 'd')" class="Q22Button d">D.</button>
       <br />
       <button id="22e" onclick="wrong(22, 'e')" class="Q22Button e">E.</button>
     </div>
-    <div class="solution" id="Q22Sol" hidden="true"></div>
+    <div class="solution" id="Q22Sol" hidden="true">
       <h3>Solution 1</h3>
       <p></p>
       <h3>Solution 2</h3>
@@ -1524,7 +1587,7 @@
       <button id="23b" onclick="wrong(23, 'b')" class="Q23Button b">B.</button>
       <br />
       <button id="23c" onclick="right(23, 'c')" class="Q23Button c right">
-      C.
+        C.
       </button>
       <br />
       <button id="23d" onclick="wrong(23, 'd')" class="Q23Button d">D.</button>
@@ -1546,7 +1609,7 @@
       <button id="24b" onclick="wrong(24, 'b')" class="Q24Button b">B.</button>
       <br />
       <button id="24c" onclick="right(24, 'c')" class="Q24Button c right">
-      C.
+        C.
       </button>
       <br />
       <button id="24d" onclick="wrong(24, 'd')" class="Q24Button d">D.</button>
@@ -1568,14 +1631,14 @@
       <button id="25b" onclick="wrong(25, 'b')" class="Q25Button b">B.</button>
       <br />
       <button id="25c" onclick="right(25, 'c')" class="Q25Button c right">
-      C.
+        C.
       </button>
       <br />
       <button id="25d" onclick="wrong(25, 'd')" class="Q25Button d">D.</button>
       <br />
       <button id="25e" onclick="wrong(25, 'e')" class="Q25Button e">E.</button>
     </div>
-    <div class="solution" id="Q25Sol" hidden="true"></div>
+    <div class="solution" id="Q25Sol" hidden="true">
       <h3>Solution 1</h3>
       <p></p>
       <h3>Solution 2</h3>
