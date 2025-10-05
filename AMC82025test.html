@@ -1056,37 +1056,254 @@
     </div>
     <div class="Question" id="Q17" hidden="true">
       <h2>Queston 17</h2>
-      <p></p>
-      <button id="17a" onclick="wrong(17, 'a')" class="Q17Button a">A.</button>
-      <button id="17b" onclick="wrong(17, 'b')" class="Q17Button b">B.</button>
-      <button id="17c" onclick="wrong(17, 'c')" class="Q17Button c">C.</button>
-      <button id="17d" onclick="right(17, 'd')" class="Q17Button d right">
-        D.
+      <p>
+        In the land of Markovia, there are three cities: $A$, $B$, and $C$.
+        There are 100 people who live in $A$, 120 who live in $B$, and 160 who
+        live in $C$. Everyone works in one of the three cities, and a person may
+        work in the same city where they live. In the figure below, an arrow
+        pointing from one city to another is labeled with the fraction of people
+        living in the first city who work in the second city. (For example,
+        $\frac{1}{4}$ of the people who live in $A$ work in $B$.) How many
+        people work in $A$?
+      </p>
+      <img src="./Assets/Images/Q17Image.png" />
+      <button id="17a" onclick="wrong(17, 'a')" class="Q17Button a">
+        A. 55
       </button>
-      <button id="17e" onclick="wrong(17, 'e')" class="Q17Button e">E.</button>
+      <button id="17b" onclick="wrong(17, 'b')" class="Q17Button b">
+        B. 60
+      </button>
+      <button id="17c" onclick="wrong(17, 'c')" class="Q17Button c">
+        C. 85
+      </button>
+      <button id="17d" onclick="right(17, 'd')" class="Q17Button d right">
+        D. 115
+      </button>
+      <button id="17e" onclick="wrong(17, 'e')" class="Q17Button e">
+        E. 160
+      </button>
     </div>
     <div class="solution" id="Q17Sol" hidden="true">
       <h3>Solution 1</h3>
-      <p></p>
+      <p>
+        There are $100 \cdot (\frac{1}{4} + \frac{1}{5}) = 100 \cdot
+        \frac{9}{20} = 45$ people who do not work in city $A$ that live in city
+        $A$, meaning that $100 - 45 = 55$ people who live in city $A$ work in
+        city $A$. There are $\frac{1}{3} \cdot 120 = 40$ people who live in city
+        $B$ and work in $A$, as well as $\frac{1}{8} \cdot 160 = 20$ people who
+        live in city $C$ that work in city $A$. Therefore, the answer is $55 +
+        40 + 20 = \boxed{\textbf{(D)}\ 115}$.
+      </p>
       <h3>Solution 2</h3>
-      <p></p>
+      <p>
+        We could also make an equation. Let's denote the number of people that
+        live in city $A$ as $a$, $B$ as $b$, and $C$ as $c$. If $x$ denotes the
+        number of people working in city $A$, then $x = \frac{1}{8}c +
+        \frac{1}{3}b + a - \frac{1}{4}a - \frac{1}{5}a$. This is because
+        $\frac{1}{8}$ of the people from City $C$ and $\frac{1}{3}$ of the
+        people from City $B$ work in city $A$ as shown in the image. We also
+        know that $\frac{9}{20}$ of the people living in $A$ work in other
+        cities. We are already given the values of variables $a$, $b$, and $c$
+        as $100$, $120$, and $160$ respectively. Plug the values it into the
+        main equation like this:<br />
+        $x = 160 \cdot \frac{1}{8} + 120 \cdot \frac{1}{3} + 100 - 100 \cdot
+        \frac{1}{4} - 100 \cdot \frac{1}{5}$. We solve for it and get our answer
+        $\boxed{\textbf{(D)}\ 115}$.
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=_Zef1Mn7o9dxzmtb&amp;start=2020"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q18" hidden="true">
       <h2>Queston 18</h2>
-      <p></p>
-      <button id="18a" onclick="wrong(18, 'a')" class="Q18Button a">A.</button>
-      <button id="18b" onclick="right(18, 'b')" class="Q18Button b right">
-        B.
+      <p>
+        The circle shown below on the left has a radius of 1 unit. The region
+        between the circle and the inscribed square is shaded. In the circle
+        shown on the right, one quarter of the region between the circle and the
+        inscribed square is shaded. The shaded regions in the two circles have
+        the same area. What is the radius $R$, in units, of the circle on the
+        right?
+      </p>
+      <img src="./Assets/Images/Q18Image.png" />
+      <button id="18a" onclick="wrong(18, 'a')" class="Q18Button a">
+        A. $\sqrt{2}$
       </button>
-      <button id="18c" onclick="wrong(18, 'c')" class="Q18Button c">C.</button>
-      <button id="18d" onclick="wrong(18, 'd')" class="Q18Button d">D.</button>
-      <button id="18e" onclick="wrong(18, 'e')" class="Q18Button e">E.</button>
+      <button id="18b" onclick="right(18, 'b')" class="Q18Button b right">
+        B. 2
+      </button>
+      <button id="18c" onclick="wrong(18, 'c')" class="Q18Button c">
+        C. $2 \sqrt{2}$
+      </button>
+      <button id="18d" onclick="wrong(18, 'd')" class="Q18Button d">
+        D. 4
+      </button>
+      <button id="18e" onclick="wrong(18, 'e')" class="Q18Button e">
+        E. $4 \sqrt{2}$
+      </button>
     </div>
     <div class="solution" id="Q18Sol" hidden="true">
       <h3>Solution 1</h3>
-      <p></p>
+      <p>
+        The area of the shaded region in the circle on the left is the area of
+        the circle minus the area of the square, or $\big(\pi-2)$. The shaded
+        area in the circle on the right is $\dfrac{1}{4}$ of the area of the
+        circle minus the area of the square, or $\dfrac{\pi R^2-2R^2}{4}$, which
+        can be factored as $\dfrac{R^2(\pi-2)}{4}$. Since the shaded areas are
+        equal to each other, we have $\pi-2=\dfrac{R^2(\pi-2)}{4}$, which
+        simplifies to $R^2=4$. Taking the square root, we have
+        $R=\boxed{\text{(B)\ 2}}$
+      </p>
       <h3>Solution 2</h3>
-      <p></p>
+      <p>
+        The side length of the smaller square is $\sqrt{2}$, which follows from
+        the Pythagorean Theorem since the square is inscribed in a circle of
+        radius $1$, making the diagonal equal to $2$. Thus, the area of the
+        square is $(\sqrt{2})^2 = 2$. The circle in which the square is
+        inscribed has radius $1$, so its area is $\pi \cdot 1^2 = \pi$.
+        Therefore, the area of the shaded region (the part of the circle not
+        covered by the square) is $\pi - 2$.<br />
+
+        Now, consider the larger square, which is inscribed in a circle of
+        radius $R$. This square can be divided into four congruent right
+        triangles by drawing lines from the center of the circle to the vertices
+        of the square. Each triangle has legs of length $R$ and includes a
+        $90^\circ$ angle at the center. Using the triangle area formula
+        $\frac{1}{2}ab\sin(C)$ with $a = b = R$ and $C = 90^\circ$, each
+        triangle has area $\frac{1}{2}R^2$. Since there are four such triangles,
+        the area of the square is $4 \cdot \frac{1}{2}R^2 = 2R^2$. The area of
+        the circle is $\pi R^2$, so the area of the shaded region (the part of
+        the circle outside the square) is $\frac{1}{4}(\pi R^2 - 2R^2) =
+        \frac{1}{4}R^2(\pi - 2)$.<br />
+
+        We are told that this shaded region also has area equal to $\pi - 2$, so
+        we set up the equation $\frac{1}{4}R^2(\pi - 2) = \pi - 2$. Assuming
+        $\pi - 2 \neq 0$, we divide both sides by $\pi - 2$, giving
+        $\frac{1}{4}R^2 = 1$, which leads to $R^2 = 4$, and finally $R = 2$.
+        Thus, the answer is $\boxed{\text{(B) } 2}$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        We start with the first area. Since the square is inscribed, its
+        diagonal is $2\implies$ its side length is $\sqrt{2}\implies$ its area
+        is $2$, therefore the first area is $\pi-2$. The second area is
+        $\dfrac{R^2\pi-2R^2}{4}$, found in a similar manner. Writing and solving
+        the equation, we
+        have\[\pi-2=\dfrac{R^2\pi-2R^2}{4}\implies4(\pi-2)=R^2(\pi-2)\implies
+        R=2.\]The answer is $\boxed{\text{(B) }2}$
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        Since the two figures are similar, and the 4 regions in the first circle
+        are equal in area to one of the four regions in the second circle, the
+        second figure's area is $4$ times the first figure's area. Therefore,
+        the side lengths are multiplied by a factor of $\sqrt{4} = 2$, so the
+        answer is $1 \cdot 2 = \boxed{\textbf{(B)} 2}$.
+      </p>
+      <h3>Solution 5</h3>
+      <p>
+        First find the area of the smaller circle with the known radius. Since
+        the radius is $1$, the area of the circle is $\pi$, and finding the side
+        length of the square would equal to $\sqrt{2}$. Squaring that gives us
+        the area of the square which is $2$, and the shaded area of the first
+        one is equal to $\pi - 2$. The second area can be shortened to
+        $\frac{R^2\pi}{4} - \frac{\left(\sqrt{2R^2}\right)^2}{4}$, since we only
+        need $\frac{1}{4}$th of the sections. We then make them equal, which
+        makes this equation:<br />
+
+        $\pi - 2 = \frac{R^2\pi}{4} - \frac{\left(\sqrt{2R^2}\right)^2}{4}$<br />
+
+        Simplifying this equation would be $4\pi - 8 = R^2\pi - 2R^2$. We can
+        factor out the $R^2$ which makes $4\pi - 8 = R^2\left(\pi - 2\right)$.
+        Dividing out the $\pi - 2$ would give us $4$ on the left side. $4 = R^2$
+        which leaves us to choice $\boxed{\text{(B) }2}$.
+      </p>
+      <h3>Solution 6</h3>
+      <p>
+        We are given two circles, each with an inscribed square. In the first
+        circle, the radius is 1 unit, and the region between the circle and the
+        inscribed square is shaded. In the second circle, one quarter of the
+        region between the circle and the inscribed square is shaded. The shaded
+        areas in both circles are the same. Our goal is to determine the radius
+        $R$ of the second circle.<br />
+
+        Step 1: Set up a ratio for the areas of the shaded regions We know that
+        the shaded region in the first circle (with radius 1) and the shaded
+        region in the second circle (with radius $R$) are proportional in terms
+        of the total area between the circle and the inscribed square. The
+        shaded area in the second circle is one quarter of the total area
+        between the circle and the square, while the shaded area in the first
+        circle is the entire region.<br />
+
+        Step 2: Relate the areas to the radius<br />
+
+        Let’s recall that the area between the circle and the inscribed square
+        is proportional to the square of the radius of the circle because the
+        square's side length scales with the radius of the circle.<br />
+
+        So, in the first circle with radius 1:\[\text{Area between circle and
+        square} \propto 1^2 = 1\]and the shaded area is proportional to the
+        entire area between the circle and the square, i.e., 1.<br />
+
+        In the second circle with radius $R$:\[\text{Area between circle and
+        square} \propto R^2\]and the shaded area is one-quarter of this total
+        area, so it is proportional to $\frac{1}{4} R^2$.<br />
+
+        Step 3: Set up the ratio of shaded areas<br />
+
+        We are told that the shaded areas in both circles are the same, so we
+        set up the following equation:\[1 = \frac{1}{4} R^2\]<br />
+
+        Step 4: Solve for $R$<br />
+
+        Multiply both sides of the equation by 4:\[4 = R^2\]Taking the square
+        root of both sides:\[R = 2\]<br />
+
+        Thus, the radius of the second circle is $\boxed{\text{(B) 2}}$.<br />
+      </p>
+      <h3>Solution 7</h3>
+      <p>
+        Notice that if you shaded the rest of the region between the square and
+        the circle, then the area would be $4$ times the area of the shaded
+        region in the smaller circle. Since the radius changes by a factor of
+        $k^2$, $k^2 = 4$, solving for gets you $2$. Hence, the answer is
+        $\fbox{\textbf{(B)}\ 2}$
+      </p>
+      <h3>Solution 8</h3>
+      <p>
+        We want to find a quick and easy formula that can be applied to this
+        (not necessarily a formula, but a rule). We take the area of the circle
+        and subtract it from the area of the square and you will find the area
+        of the $4$ outer shaded regions. This rule is basically $\pi
+        r^2-2r^2=r^2(\pi-2)$. We plug in the radius from the first figure and
+        compute the answer to be $\pi-2$. Since this represents the area of ONE
+        region in the second figure, we have to multiply our result by four
+        which gets us $4\pi-8$ or to make it easier, you can factor the four and
+        make it $4(\pi-2)$. Using our rule, we can set both equations equal to
+        each other.<br />
+
+        $R^2(\pi-2)=4(\pi-2)$<br />
+
+        $R^2=4$<br />
+
+        $R=\boxed{\textbf{(B)}2}$
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/VP7g-s8akMY?si=6nQYa1rxfqaa8zCN&amp;start=2146"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
     </div>
     <div class="Question" id="Q19" hidden="true">
       <h2>Queston 19</h2>
