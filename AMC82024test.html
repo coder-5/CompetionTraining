@@ -466,52 +466,63 @@
     <div class="Question" id="Q8" hidden="true">
       <h2>Queston 8</h2>
       <p>
-        Isaiah cuts open a cardboard cube along some of its edges to form the
-        flat shape shown on the right, which has an area of $18$ square
-        centimeters. What is the volume of the cube in cubic centimeters?
+        On Monday, Taye has $$2$. Every day, he either gains $$3$ or doubles the
+        amount of money he had on the previous day. How many different dollar
+        amounts could Taye have on Thursday, $3$ days later?
       </p>
       <img src="Assets/Images/Amc8_2025_prob8.png" />
       <br />
-      <button id="8a" onclick="right(8, 'a')" class="Q8Button a right">
-        A. $3\sqrt{3}$
+      <button id="8a" onclick="wrong(8, 'a')" class="Q8Button a">A. 3</button>
+      <br />
+      <button id="8b" onclick="wrong(8, 'b')" class="Q8Button b">B. 4</button>
+      <br />
+      <button id="8c" onclick="wrong(8, 'c')" class="Q8Button c">C. 5</button>
+      <br />
+      <button id="8d" onclick="right(8, 'd')" class="Q8Button d right">
+        D. 6
       </button>
       <br />
-      <button id="8b" onclick="wrong(8, 'b')" class="Q8Button b">B. $6$</button>
-      <br />
-      <button id="8c" onclick="wrong(8, 'c')" class="Q8Button c">C. $9$</button>
-      <br />
-      <button id="8d" onclick="wrong(8, 'd')" class="Q8Button d">
-        D. $6\sqrt{3}$
-      </button>
-      <br />
-      <button id="8e" onclick="wrong(8, 'e')" class="Q8Button e">
-        E. $9\sqrt{3}$
-      </button>
+      <button id="8e" onclick="wrong(8, 'e')" class="Q8Button e">E. 7</button>
     </div>
     <div class="solution" id="Q8Sol" hidden="true">
       <h3>Solution 1</h3>
       <p>
-        Each of the $6$ faces of the cube have equal area, so the area of each
-        face is equal to $\frac{18}{6} = 3$, making the side length $\sqrt3$.
-        From this, we can see that the volume of the cube is $\sqrt{3}^3 =
-        \boxed{\textbf{(A)}3\sqrt{3}}$.
+        How many dollar values could be on the first day? Only $2$ dollars. The
+        second day, you can either add $3$ dollars, or double, so you can have
+        $5$ dollars, or $4$. For each of these values, you have $2$ values for
+        each. For $5$ dollars, you have $10$ dollars or $8$, and for $4$
+        dollars, you have $8$ dollars or $7$ dollars. Now, you have $2$ values
+        for each of these. For $10$ dollars, you have $13$ dollars or $20$, for
+        $8$ dollars, you have $16$ dollars or $11$, for $8$ dollars, you have
+        $16$ dollars or $11$, and for $7$ dollars, you have $14$ dollars or
+        $10$.<br />
+
+        On the final day, there are 11, 11, 16, and 16 repeating, leaving you
+        with $8-2 = \boxed{\textbf{(D)\ 6}}$ different values.
       </p>
       <h3>Solution 2</h3>
       <p>
-        Let the side length of the cube shown be equal to $s$ centimeters. The
-        surface area of this cube is equal to the area of the net of the cube,
-        which is equal to $18$ square centimeters. The surface area of this cube
-        is also $6s^2$ square centimeters, so we have\[6s^2 = 18 \implies s^2 =
-        \frac{18}{6} = 3 \implies s = \sqrt{3}.\]However, we aren't done. We
-        have found that the side length of the cube is $\sqrt{3} cm$, but the
-        question asks for the volume of the cube, which is equal to $s^3 =
-        \sqrt{3}^3 = \boxed{\textbf{(A)}3\sqrt{3}}$ cubic centimeters.
+        Continue as in Solution 1 to get $7$, $8$, or $10$ dollars by the 2nd
+        day. The only way to get the same dollar amount occurring twice by
+        branching (multiply by $2$ or adding $3$) from here is if $7+3=10\cdot
+        2$ or $7+3=8\cdot 2$ which both aren't true. Hence our answer is
+        $3\cdot2=\boxed{\textbf{(D)\ 6}}$.
+      </p>
+      <h3>Solution 3(Brute Force)</h3>
+      <p>
+        Let $a$ represent Taye adding $3$ dollars and $d$ represent Taye
+        doubling his money. We can list out all the possibilities: $a$ => $a$ =>
+        $a$ = $11$, $a$ => $a$ => $d$ = $16$, $a$ => $d$ => $a$ = $12$, $a$ =>
+        $d$ => $d$ = $20$, $d$ => $a$ => $a$ = $10$, $d$ => $a$ => $d$ = $14$,
+        $d$ => $d$ => $a$ = $11$, $d$ => $d$ => $d$ = $16$. The unique values
+        are $10,11,12,14,16,20$. Thus, our desired answer is
+        $\boxed{\textbf{(D)\ 6}}$
       </p>
       <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/VP7g-s8akMY?si=cXBOnHlVV66aHWOL&amp;start=577"
+        src="https://www.youtube.com/embed/dC0inhFYaTw?si=HSnON9TNm7uM5KWs"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -522,61 +533,60 @@
     <div class="Question" id="Q9" hidden="true">
       <h2>Queston 9</h2>
       <p>
-        Ningli looks at the $6$ pairs of numbers directly across from each other
-        on a clock. She takes the average of each pair of numbers. What is the
-        average of the resulting $6$ numbers?
+        All the marbles in Maria's collection are red, green, or blue. Maria has
+        half as many red marbles as green marbles, and twice as many blue
+        marbles as green marbles. Which of the following could be the total
+        number of marbles in Maria's collection?
       </p>
       <img src="Assets/Images/9Image.svg" />
       <br />
-      <button id="9a" onclick="wrong(8, 'a')" class="Q9Button a">A. $5$</button>
+      <button id="9a" onclick="wrong(8, 'a')" class="Q9Button a">A. 24</button>
       <br />
-      <button id="8b" onclick="right(9, 'b')" class="Q9Button b right">
-        B. $6.5$
-      </button>
+      <button id="8b" onclick="wrong(9, 'b')" class="Q9Button b">B. 25</button>
       <br />
-      <button id="9c" onclick="wrong(9, 'c')" class="Q9Button c">C. $8$</button>
+      <button id="9c" onclick="wrong(9, 'c')" class="Q9Button c">C. 26</button>
       <br />
-      <button id="9d" onclick="wrong(9, 'd')" class="Q9Button d">
-        D. $9.5$
-      </button>
+      <button id="9d" onclick="wrong(9, 'd')" class="Q9Button d">D. 27</button>
       <br />
-      <button id="9e" onclick="wrong(9, 'e')" class="Q9Button e">
-        E. $12$
+      <button id="9e" onclick="right(9, 'e')" class="Q9Button e right">
+        E. 28
       </button>
     </div>
     <div class="solution" id="Q9Sol" hidden="true">
       <h3>Solution 1</h3>
       <p>
-        Our answer is\[\frac{\frac{1+7}{2} + \frac{2+8}{2} + \cdots +
-        \frac{6+12}{2}}{6} = \frac{\frac{1}{2}((1+7)+(2+8)+\cdots+(6+12))}{6} =
-        \frac{1+2+3+4+5+6+7+8+9+10+11+12}{2 \cdot 6} = \frac{\frac{12 \cdot
-        13}{2}}{2 \cdot 6} = \frac{78}{12} =\boxed{\textbf{(B)}~6.5}\]
+        Since she has half as many red marbles as green, we can call the number
+        of red marbles $x$, and the number of green marbles $2x$. Since she has
+        half as many green marbles as blue, we can call the number of blue
+        marbles $4x$. Adding them up, we have: $7x$ marbles. The number of
+        marbles therefore must be a multiple of $7$, as $x$ represents an
+        integer, so the only possible answer is $\boxed{\textbf{(E) 28}}.$
       </p>
       <h3>Solution 2</h3>
       <p>
-        We proceed with brute force. All of the pairs of opposite numbers on the
-        clock are $(12,6)$, $(1,7)$, $(2,8)$, $(3,9)$, $(4,10)$, $(5,11)$, where
-        order doesn't matter. The averages of each of these pairs are $9, 4, 5,
-        6, 7,$ and $8$ respectively, and the average these numbers is
-        $\frac{9+4+5+6+7+8}{6}=\boxed{\textbf{(B)}~6.5}$
+        Suppose Maria has $g$ green marbles and $t$ total marbles. She then has
+        $\frac{g}{2}$ red marbles and $2g$ blue marbles. Altogether, Maria
+        has<br />\[g + \frac{g}{2} + 2g = \frac{7g}{2} = t\]<br />marbles, so $g
+        = \dfrac{2t}{7},$ so $t$ must be a multiple of $7$. The only multiple of
+        $7$ in the answer choices is $\boxed{\textbf{(E) 28}}.$
       </p>
       <h3>Solution 3</h3>
       <p>
-        The problem is asking for the average of all $12$ numbers. To find the
-        average of all $12$ numbers, you find the sum of all the integers from
-        $1$ to $12$ which is $78$, and divide it by $12$ because there are 12
-        terms. Therefore, the answer is
-        $\frac{78}{12}=\boxed{\textbf{(B)}~6.5}$. You could also see that the
-        average of, $2$ and $8$, is $5$, only one more that it's consecutive
-        pair, $1$ and $7$ which is $4$. Assuming that this is the pattern, we
-        can find the average $4$ to $9$ (6 consecutive integers starting with
-        $4$), and we that find our answer is $\boxed{\textbf{(B)}~6.5}$.
+        This solution is similar to Solution 1. The most simplest and effective
+        way to solve this problem is equations. We have the following
+        equations:<br />
+
+        2r=g and 2g=b We essentialy want to find out the total number of mables
+        in Maria's collection or in equation terms (r+g+b). Converting that
+        equation and substituting the values we get r+2r+4r=7r Now, we know the
+        total is a multiple of 7 leaving our answer as $\boxed{\textbf{(E)
+        28}}.$
       </p>
       <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/BRnILzqVwHk?si=vt1ES1YUw3Ma7Wgd&amp;start=399"
+        src="https://www.youtube.com/embed/QZTmQHWAYrI?si=rUPaGvT9FAfBq6J0"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -587,51 +597,50 @@
     <div class="Question" id="Q10" hidden="true">
       <h2>Queston 10</h2>
       <p>
-        In the figure below, $ABCD$ is a rectangle with sides of length $AB = 5$
-        inches and $AD$ = 3 inches. Rectangle $ABCD$ is rotated $90^\circ$
-        clockwise around the midpoint of side $DC$ to give a second rectangle.
-        What is the total area, in square inches, covered by the two overlapping
-        rectangles?
+        In January $1980$ the Mauna Loa Observatory recorded carbon dioxide
+        $(CO2)$ levels of $338$ ppm (parts per million). Over the years the
+        average $CO2$ reading has increased by about $1.515$ ppm each year. What
+        is the expected $CO2$ level in ppm in January $2030$? Round your answer
+        to the nearest integer.
       </p>
-      <img src="Assets/Images/10Image.svg" />
-      <br />
       <button id="10a" onclick="wrong(10, 'a')" class="Q10Button a">
-        A. $21$
+        A. 399
       </button>
       <br />
-      <button id="10b" onclick="wrong(10, 'b')" class="Q10Button b">
-        B. $22.25$
+      <button id="10b" onclick="right(10, 'b')" class="Q10Button b right">
+        B. 414
       </button>
       <br />
       <button id="10c" onclick="wrong(10, 'c')" class="Q10Button c">
-        C. $23$
+        C. 420
       </button>
       <br />
-      <button id="10d" onclick="right(10, 'd')" class="Q10Button d right">
-        D. $23.75$
+      <button id="10d" onclick="wrong(10, 'd')" class="Q10Button d">
+        D. 444
       </button>
       <br />
       <button id="10e" onclick="wrong(10, 'e')" class="Q10Button e">
-        E. $25$
+        E. 459
       </button>
       <br />
     </div>
     <div class="solution" id="Q10Sol" hidden="true">
       <h3>Solution 1</h3>
       <p>
-        The area of each rectangle is $5 \cdot 3 = 15$. Then the sum of the
-        areas of the two regions is the sum of the areas of the two rectangles,
-        minus the area of their overlap. To find the area of the overlap, we
-        note that the region of overlap is a square, each of whose sides have
-        length $2.5$ (as they are formed by the midpoint of one of the long
-        sides, the vertex, and also, since it is rotated 90 degrees). Then the
-        answer is $15+15-2.5^2=\boxed{\textbf{(D)}~23.75}$.
+        This is a time period of $2030 - 1980 = 50$ years, so we can expect the
+        ppm to increase by $50*1.515=75.75\approx 76$ ppm. Since we started with
+        $338$ ppm, we have $76+338=\boxed{\textbf{(B)\ 414}}$.
+      </p>
+      <h3>Solution 2</h3>
+      <p>
+        $2030 - 1980 = 50$ years. The ppm level in 2030 is $338 + 50 * 1.515 =
+        338 + 75.75 = 413.75$ $\approx \boxed{\textbf{(B)\ 414}}$.
       </p>
       <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/BRnILzqVwHk?si=WVYhX87UZlI5F65n&amp;start=560"
+        src="https://www.youtube.com/embed/qjb6WP1gjIQ?si=E2BqncBezeS8dvjc"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -642,64 +651,115 @@
     <div class="Question" id="Q11" hidden="true">
       <h2>Queston 11</h2>
       <p>
-        A $\textit{tetromino}$ consists of four squares connected along their
-        edges. There are five possible tetromino shapes, $I$, $O$, $L$, $T$, and
-        $S$, shown below, which can be rotated or flipped over. Three
-        tetrominoes are used to completely cover a $3\times4$ rectangle. At
-        least one of the tiles is an $S$ tile. What are the other two tiles?
+        The coordinates of $\triangle ABC$ are $A(5,7)$, $B(11,7)$, and
+        $C(3,y)$, with $y>7$. The area of $\triangle ABC$ is 12. What is the
+        value of $y$?
       </p>
-      <img src="Assets/Images/Q11Image.png" id="Q11Image" />
+      <img
+        src="https://latex.artofproblemsolving.com/3/a/1/3a1150ef27a4bba82b5f1aa665dc3e1dbe92d9f8.png"
+        id="Q11Image"
+      />
       <br />
       <button id="11a" onclick="wrong(11, 'a')" class="Q11Button a">
-        A. $I$ and $L$
+        A. 8
       </button>
       <br />
       <button id="11b" onclick="wrong(11, 'b')" class="Q11Button b">
-        B. $I$ and $T$
+        B. 9
       </button>
       <br />
-      <button id="11c" onclick="right(11, 'c')" class="Q11Button c right">
-        C. $L$ and $L$
+      <button id="11c" onclick="wrong(11, 'c')" class="Q11Button c">
+        C. 10
       </button>
       <br />
-      <button id="11d" onclick="wrong(11, 'd')" class="Q11Button d">
-        D. $L$ and $S$
+      <button id="11d" onclick="right(11, 'd')" class="Q11Button d right">
+        D. 11
       </button>
       <br />
       <button id="11e" onclick="wrong(11, 'e')" class="Q11Button e">
-        E. $O$ and $T$
+        E. 12
       </button>
       <br />
     </div>
     <div class="solution" id="Q11Sol" hidden="true">
       <h3>Solution 1</h3>
       <p>
-        The $3\times4$ rectangle allows for $7$ possible places to put the S
-        piece, with each possible placement having an inverted version. One of
-        the cases looks like this:
+        Since the triangle has a base of $6$, we can plug in that value as the
+        base. Then, we can solve the equation for the height. Doing so gives
+        us,<br />\[\dfrac{6h}{2}=3h=12.\]<br />This means that $h=4$, so that
+        means that we have to add 4 to the $y$-coordinate. So the answer is
+        $7+4=\boxed{(D) 11}$
       </p>
-      <img src="./Assets/Images/Q11Sol1.png" class="Q11SolImage" />
+      <h3>Solution 2</h3>
       <p>
-        As you can see, there is a hole in the top left corner of the board,
-        which would be impossible to fill using the tetrominos. There are three
-        cases in which a hole isn't created; the S lies flat in the bottom left
-        corner, it lies flat in the top right corner, or it stands upright in
-        the center. All three tilings are shown below.
+        By the Shoelace Theorem, $\triangle ABC$ has area\[\frac{1}{2}|(y \cdot
+        11 + 7 \cdot 5 + 7 \cdot 3) - (3 \cdot 7 + 11 \cdot 7 + 5 \cdot y)| =
+        \frac{1}{2}|(11y + 56) - (98 + 5y)| = \frac{1}{2}|6y - 42|.\]From the
+        problem, this is equal to $12$. We now solve for y.<br />
+
+        $\frac{1}{2}|6y - 42| = 12$<br />
+
+        $|6y-42| = 24$<br />
+
+        $6y - 42 = 24$ OR $6y - 42 = -24$<br />
+
+        $6y = 66$ OR $6y = 18$<br />
+
+        $y = 11$ OR $y = 3$<br />
+
+        However, since, as stated in the problem, $y > 7$, our only valid
+        solution is $\boxed{\textbf{(D)} 11}$.
       </p>
-      <img src="./Assets/Images/Q11Sol2.png" class="Q11SolImage" />
-      <img src="./Assets/Images/Q11Sol3.png" class="Q11SolImage" />
-      <img src="./Assets/Images/Q11Sol4.png" class="Q11SolImage" />
+      <h3>Solution 3</h3>
       <p>
-        For each of the inverted cases, the L pieces can be inverted along with
-        the S piece. Because the only cases that fill the rectangle after the S
-        is placed are the ones that use two L pieces, the answer must be
-        $\boxed{\textbf{(C)}~L \ and \ L}$.
+        As in the figure, the triangle is determined by the vectors
+        $\begin{bmatrix}-2 \\ y-7\end{bmatrix}$ and
+        $\begin{bmatrix}6\\0\end{bmatrix}$. Recall that the absolute value of
+        the determinant of these vectors is the area of the parallelogram
+        determined by those vectors; the triangle has half the area of that
+        parallelogram. Then we must have that $\frac{1}{2}|\begin{vmatrix}-2 &
+        y-7\\6 & 0\end{vmatrix}| = 12 \implies \begin{vmatrix}-2 & y-7\\6 &
+        0\end{vmatrix} = \pm 24$. Expanding the determinants, we find that
+        $-6(y-7) = 24$ or $-6(y-7) = -24$. Solving each equation individually,
+        we find that $y = 3$ or $y = 11$. However, the problem states that $y >
+        7$, so the only valid solution is $\boxed{\textbf{(D)} 11}$.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        Draw a rectangle so that the hypotenuse is the diagonal of the
+        rectangle. The base is 8 and the height is , so the area is ${8(y - 7) =
+        8y - 56}$<br />
+
+        Inside the rectangle, there are 2 extra right triangles along with the
+        original triangle. The larger right triangle has an area of half the
+        rectangle, so it has an area of<br />
+
+        ${\frac{8y - 56}{2} = 4y - 28}$<br />
+
+        The smaller right triangle has a base of 2 and a height of <br />
+        , so its area is ${\frac{2(y - 7)}{2} = y - 7}$<br />
+
+        Subtracting the extra right triangles from the area of the rectangle,
+        you get<br />
+
+        ${(8y - 56) - (4y - 28) - (y - 7) = 3y - 21}$<br />
+
+        Since the problem told us that the original triangle had an area of 12,
+        you get the equation<br />
+
+        ${3y - 21 = 12}$<br />
+
+        ${3y = 33}$<br />
+
+        ${y = 11}$<br />
+
+        So the answer to the problem is \boxed{\textbf{D}} .
       </p>
       <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/VP7g-s8akMY?si=eZopaGBiLpRg0lhi&amp;start=965"
+        src="https://www.youtube.com/embed/D0pFHbZ5788?si=hosrMRZVDQvC3fMm"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -710,12 +770,7 @@
     <div class="Question" id="Q12" hidden="true">
       <h2>Queston 12</h2>
       <p>
-        The region shown below consists of 24 squares, each with side length 1
-        centimeter. What is the area, in square centimeters, of the largest
-        circle that can fit inside the region, possibly touching the boundaries?
       </p>
-      <img src="Assets/Images/12Image.svg" />
-      <br />
       <button id="12a" onclick="wrong(12, 'a')" class="Q12Button a">
         A. $3\pi$
       </button>
