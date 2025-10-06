@@ -220,64 +220,31 @@
         Lucius is counting backward by $7$s. His first three numbers are $100$,
         $93$, and $86$. What is his $10$th number?
       </p>
-      <button id="4a" onclick="wrong(4, 'a')" class="Q4Button a">
-        A. $30$
-      </button>
+      <button id="4a" onclick="wrong(4, 'a')" class="Q4Button a">A. 5</button>
       <br />
       <button id="4b" onclick="right(4, 'b')" class="Q4Button b right">
-        B. $37$
+        B. 5
       </button>
       <br />
-      <button id="4c" onclick="wrong(4, 'c')" class="Q4Button c">
-        C. $42$
-      </button>
+      <button id="4c" onclick="wrong(4, 'c')" class="Q4Button c">C. 7</button>
       <br />
-      <button id="4d" onclick="wrong(4, 'd')" class="Q4Button d">
-        D. $44$
-      </button>
+      <button id="4d" onclick="wrong(4, 'd')" class="Q4Button d">D. 8</button>
       <br />
-      <button id="4e" onclick="wrong(4, 'e')" class="Q4Button e">
-        E. $47$
-      </button>
+      <button id="4e" onclick="wrong(4, 'e')" class="Q4Button e">E. 9</button>
     </div>
     <div class="solution" id="Q4Sol" hidden="true">
       <h3>Solution 1</h3>
       <p>
-        We work inwards. The area of the outer shaded square is the area of the
-        whole square minus the area of the second largest square. The area of
-        the inner shaded region is the area of the third largest square minus
-        the area of the smallest square. The sum of these areas is<br />\[10^2 -
-        9^2 + 7^2 - 4^2 = 100 - 81 + 49 - 16 = 19 + 33 = \boxed{\textbf{(E)}\
-        52}\]<br />
-
-        This problem appears multiple times in various math competitions
-        including the AMC and MATHCOUNTS.
-      </p>
-      <h3>Solution 2</h3>
-      <p>
-        In solution 1, we can use Difference of squares to get the answer,
-        rather than calculating the squares of the numbers:<br />\[10^2 - 9^2 +
-        7^2 - 4^2 = (10 - 9)(10 + 9) - (7 - 4)(7 + 4) = 1\cdot19 + 3\cdot11 = 19
-        + 33 = \boxed{\textbf{(E)}\ 52}\]
-      </p>
-      <h3>Solution 3</h3>
-      <p>
-        Solve for the areas for each square inside the larger one , and then
-        subtract the areas of the white regions from the areas of each
-        square:<br />\[(10^2 + 7^2) - (9^2 + 4^2) = 149 - 97 =
-        \boxed{\textbf{(E)}\ 52}\]
-      </p>
-      <h3>Solution 4</h3>
-      <p>
-        We can calculate it as the sum of the areas of $2$ smaller trapezoids
-        and $2$ larger trapezoids.<br />\[2\left(\cfrac{(7+4)(7-4)}{2}\right)+2\left(\cfrac{(10+9)(10-9)}{2}\right)=10^2
-        - 9^2 + 7^2 - 4^2 = 19 + 33 = \boxed{\textbf{(E)}\ 52}\]
+        Adding numbers 1 through 9 gives us 45. This was her expected sum, but
+        what she got was a perfect square. Since she got that perfect square sum
+        by forgetting a number, that sum is less than 45. The square number
+        right under 45 is 36. So 45 - 36 = 9. So the solution is E[9].
       </p>
       <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/ZNAm6x17gro?si=JXw6kE6XjqiksFJS"
+        src="https://www.youtube.com/embed/5mCSOiqX8sA?si=G9_S-7mVy0xjimPI"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -288,57 +255,56 @@
     <div class="Question" id="Q5" hidden="true">
       <h2>Queston 5</h2>
       <p>
-        Betty drives a truck to deliver packages in a neighborhood whose street
-        map is shown below. Betty starts at the factory (labled $F$) and drives
-        to location $A$, then $B$, then $C$, before returning to $F$. What is
-        the shortest distance, in blocks, she can drive to complete the route?
+        Aaliyah rolls two standard 6-sided dice. She notices that the product of
+        the two numbers rolled is a multiple of $6$. Which of the following
+        integers cannot be the sum of the two numbers?
       </p>
-      <img src="./Assets/Images/5Image.svg" />
       <br />
-      <button id="5a" onclick="wrong(5, 'a')" class="Q5Button a">
-        A. $20$
+      <button id="5a" onclick="wrong(5, 'a')" class="Q5Button a">A. 5</button>
+      <br />
+      <button id="5b" onclick="right(5, 'b')" class="Q5Button b right">
+        B. 6
       </button>
       <br />
-      <button id="5b" onclick="wrong(5, 'b')" class="Q5Button b">
-        B. $22$
-      </button>
+      <button id="5c" onclick="wrong(5, 'c')" class="Q5Button c">C. 7</button>
       <br />
-      <button id="5c" onclick="right(5, 'c')" class="Q5Button c right">
-        C. $24$
-      </button>
+      <button id="5d" onclick="wrong(5, 'd')" class="Q5Button d">D. 8</button>
       <br />
-      <button id="5d" onclick="wrong(5, 'd')" class="Q5Button d">
-        D. $26$
-      </button>
-      <br />
-      <button id="5e" onclick="wrong(5, 'e')" class="Q5Button e">
-        E. $28$
-      </button>
+      <button id="5e" onclick="wrong(5, 'e')" class="Q5Button e">E. 9</button>
     </div>
     <div class="solution" id="Q5Sol" hidden="true">
       <h3>Solution 1</h3>
       <p>
-        Each shortest possible path from $A$ to $B$ follows the edges of the
-        rectangle. The following path outlines a path of $\boxed{\textbf{(C)}\
-        24}$ units:
+        First, figure out all pairs of numbers whose product is 6. Then, using
+        the process of elimination, we can find the following:<br />
+
+        $\textbf{(A)}$ is possible: $2\times 3$<br />
+
+        $\textbf{(C)}$ is possible: $1\times 6$<br />
+
+        $\textbf{(D)}$ is possible: $2\times 6$<br />
+
+        The only integer that cannot be the sum is $\boxed{\textbf{(B) } 6}$.<br />
       </p>
-      <img src="./Assets/Images/Q5SolImage.png" />
       <h3>Solution 2</h3>
       <p>
-        We can find the shortest distance using a line diagonally from one point
-        to the other, creating a sort of slope, then find the sum of rise and
-        run of the slope, which happens to be the shortest distance, repeat this
-        process until you get back to Point $F$, and you should get $2 + 1 + 3 +
-        7 + 4 + 2 + 1 + 4$, which is equal to $\boxed{\textbf{(C)}\ 24}$.
+        First, see that in order for the two numbers to have a product of 6, it
+        must either have 6 as a factor or have factors that have a product of 6
+        (Notably $2\times 3$).<br />
+
+        When we look at the answer choices, we see that answers $C, D, E$ all
+        are more than 6, so they can all be added as a sum of 6. Answer $A$
+        works because $2+3=5$, so 6 is the only answer choice that doesn't work.
+        Thus, the answer is $\boxed{\textbf{(B) } 6}$.
       </p>
       <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/n6M3y_1dsOk?si=JrQdVHiRiIwAA6Ns"
+        src="https://www.youtube.com/embed/SreOL9LLmiI?si=YIRbn54wmPRTDauy"
         title="YouTube video player"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
       ></iframe>
@@ -346,48 +312,84 @@
     <div class="Question" id="Q6" hidden="true">
       <h2>Queston 6</h2>
       <p>
-        Sekou writes the numbers $15, 16, 17, 18, 19.$ After he erases one of
-        his numbers, the sum of the remaining four numbers is a multiple of $4.$
-        Which number did he erase?
+        Sergai skated around an ice rink, gliding along different paths. The
+        gray lines in the figures below show four of the paths labeled P, Q, R,
+        and S. What is the sorted order of the four paths from shortest to
+        longest?
       </p>
+      <img src="./Assets/Images/Q6Image2024.png" />
+      <br />
       <button id="6a" onclick="wrong(6, 'a')" class="Q6Button a">
-        A. $15$
+        A. P,Q,R,S
       </button>
       <br />
       <button id="6b" onclick="wrong(6, 'b')" class="Q6Button b">
-        B. $16$
+        B. R,R,S,Q
       </button>
       <br />
-      <button id="6c" onclick="right(6, 'c')" class="Q6Button c right">
-        C. $17$
+      <button id="6c" onclick="wrong(6, 'c')" class="Q6Button c">
+        C. Q,S,P,R
       </button>
       <br />
-      <button id="6d" onclick="wrong(6, 'd')" class="Q6Button d">
-        D. $18$
+      <button id="6d" onclick="right(6, 'd')" class="Q6Button d right">
+        D. R,P,S,Q
       </button>
       <br />
       <button id="6e" onclick="wrong(6, 'e')" class="Q6Button e">
-        E. $19$
+        E. R,S,P,Q
       </button>
     </div>
     <div class="solution" id="Q6Sol" hidden="true">
       <h3>Solution 1</h3>
       <p>
-        The sum of all five numbers is $85$. Since $85$ is $1$ more than a
-        multiple of $4$, the number being subtracted must be $1$ more than a
-        multiple of $4$. Thus, the answer is $\boxed{\textbf{(C)}~17}$.
+        You can measure the lengths of the paths until you find a couple of
+        guaranteed true inferred statements as such: $Q$ is greater than $S$,
+        $P$ is greater than $R$, and $R$ and $P$ are the smallest two, therefore
+        the order is $R, P, S, Q.$ Thus we get the answer
+        $\boxed{\textbf{(D)}~R, P, S, Q}$.
       </p>
-      <h3>Solution 2</h3>
+      <h3>Solution 2(intuitive)</h3>
       <p>
-        The sum of the residues of these numbers modulo $4$ is $-1+0+1+2+3=5
-        \equiv 1 \pmod 4$. Hence, the number being subtracted must be congruent
-        to $1$ modulo $4$. The only such answer is $\boxed{\textbf{(C)}~17}$.
+        Obviously Path Q is the longest path, followed by Path S.<br />
+
+        So, it is down to Paths P and R.<br />
+
+        Notice that curved lines are always longer than the straight ones that
+        meet their endpoints, therefore Path P is longer than Path R.<br />
+
+        Thus, the order from shortest to longest is $\boxed{\textbf{(D) }
+        \text{R, P, S, Q}}$.<br />
+      </p>
+      <h3>Solution 3(Indepth version of solution 1)</h3>
+      <p>
+        We can compare paths that look similar, $P$ with $R$ and $Q$ with
+        $S$.<br />
+
+        $R$ is shorter than $P$ because it replaces curved lines in $P$ with
+        straight lines, and straight lines are always the shortest distance
+        between two points.<br />
+
+        The two straight lines in $S$ can be seen as paths going diagonally
+        straight across the rink, and the straight lines in $Q$ can be seen as
+        initially going diagonally across the rink, before taking a short detour
+        and then finishing its path. Since a straight line between two points is
+        shorter than zig-zagging lines, path $S$ is shorter than path $Q$.<br />
+
+        The only difference between path $P$ and path $S$ is the straight lines,
+        with $P$ going up and down while $S$ goes diagonally. A right triangle
+        can be drawn from a line from $P$ and a line from $S$. We can see that
+        the straight lines in $P$ act as the leg of the right triangle while the
+        hypotenuse is the straight lines from $S$. The legs of a right triangle
+        are always less than the hypotenuse, so $P$ is shorter than $S$.<br />
+
+        Putting together these inequality statements, the answer is
+        $\boxed{\textbf{(D)}~R, P, S, Q}$.
       </p>
       <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/nkpdskFVgdM?si=n-Dpzv5sn-R1ffdt"
+        src="https://www.youtube.com/embed/_mMSxc7vXlg?si=gWX9IAeqnGYuu55m"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -397,56 +399,63 @@
     </div>
     <div class="Question" id="Q7" hidden="true">
       <h2>Queston 7</h2>
-      <p>On the most recent exam on Prof. Xochi's class,</p>
-      <ul style="list-style-type: square">
-        <li>$5$ students earned a score of at least $95\%$,</li>
-        <li>$13$ students earned a score of at least $90\%$,</li>
-        <li>$27$ students earned a score of at least $85\%$,</li>
-        <li>$50$ students earned a score of at least $80\%$,</li>
-      </ul>
       <p>
-        How many students earned a score of at least $80\%$ and less than
-        $90\%$?
+        A $3 \times 7$ rectangle is covered without overlap by 3 shapes of
+        tiles: $2 \times 2$, $1\times4$, and $1\times1$, shown below. What is
+        the minimum possible number of $1\times1$ tiles used?
       </p>
-      <button id="7a" onclick="wrong(7, 'a')" class="Q7Button a">A. $8$</button>
+      <img
+        src="https://wiki-images.artofproblemsolving.com//e/ee/2024-AMC8-q7.png"
+      />
       <br />
-      <button id="7b" onclick="wrong(7, 'b')" class="Q7Button b">
-        B. $14$
-      </button>
+      <button id="7a" onclick="wrong(7, 'a')" class="Q7Button a">A. 1</button>
       <br />
-      <button id="7c" onclick="wrong(7, 'c')" class="Q7Button c">
-        C. $22$
-      </button>
+      <button id="7b" onclick="wrong(7, 'b')" class="Q7Button b">B. 2</button>
+      <br />
+      <button id="7c" onclick="wrong(7, 'c')" class="Q7Button c">C. 3</button>
       <br />
       <button id="7d" onclick="right(7, 'd')" class="Q7Button d right">
-        D. $37$
+        D. 4
       </button>
       <br />
-      <button id="7e" onclick="wrong(7, 'e')" class="Q7Button e">
-        E. $45$
-      </button>
+      <button id="7e" onclick="wrong(7, 'e')" class="Q7Button e">E. 5</button>
     </div>
     <div class="solution" id="Q7Sol" hidden="true">
       <h3>Solution 1</h3>
       <p>
-        $50$ people scored at least $80\%$, and out of these $50$ people, $13$
-        of them earned a score that was not less than $90\%$, so the number of
-        people that scored in between at least $80\%$ and less than $90\%$ is
-        $50-13 = \boxed{\text{(D) 37}}$.
+        We can eliminate B, C, and D, because they are not $21$ subtracted by
+        any multiple of $4$. Finally, we see that there is no way to have A, so
+        the solution is $\boxed{\textbf{(E)\ 5}}$.
       </p>
       <h3>Solution 2</h3>
       <p>
-        Let $a$ denote the number of people who had a score of at least $85$,
-        but less than $90$, and let $b$ denote the number of people who had a
-        score of at least $80$ but less than $85$. Our answer is equal to $a+b$.
-        We find $a = 27 - 13 = 14$, while $b = 50 - 27 = 23$. Thus, the answer
-        is $23 + 14 = \boxed{\text{(D) 37}}$.
+        Let $x$ be the number of $1$ by $1$ tiles. There are $21$ squares and
+        each $2$ by $2$ or $1$ by $4$ tile takes up 4 squares, so $x \equiv 1
+        \pmod{4}$, so it is either $1$ or $5$. Color the columns, starting with
+        red, then blue, and alternating colors, ending with a red column. There
+        are $12$ red squares and $9$ blue squares, but each $2$ by $2$ and $1$
+        by $4$ shape takes up an equal number of blue and red squares, so there
+        must be $3$ more $1$ by $1$ tiles on red squares than on blue squares,
+        which is impossible if there is just one, so the answer is
+        $\boxed{\textbf{(E)\ 5}}$, which can easily be confirmed to work.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        Suppose there are $a$ different $2\times 2$ tiles, $b$ different
+        $4\times 1$ tiles and $c$ different $1\times 1$ tiles. Since the areas
+        of these tiles must total up to $21$ (area of the whole grid), we
+        have<br />\[4a + 4b + c = 21.\]<br />Reducing modulo $4$ gives $c\equiv
+        1\pmod{4}$, or $c = 1$ or $c = 5$.<br />
+
+        If $c = 1$, then $a + b = 5$. After some testing, there is no valid pair
+        $(a, b)$ that works, so the answer must be $\boxed{\textbf{(E)\ 5}}$,
+        which can be constructed in many ways.
       </p>
       <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/nkpdskFVgdM?si=9h2a26OHBRK27drU&amp;start=245"
+        src="https://www.youtube.com/embed/-MD8uFguEUQ?si=BWul4dJtb66iJ-np"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
