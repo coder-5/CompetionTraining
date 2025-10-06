@@ -1,0 +1,71 @@
+#Q1Image {
+  width: 200px;
+  height: 200px;
+}
+button {
+  border-radius: 25px;
+  padding: 10px 20px;
+  background-color: aquamarine;
+}
+div {
+  background-color: rgb(233, 233, 233);
+  border-radius: 25px;
+  margin: 10px;
+  padding: 20px;
+}
+.Question {
+  width: 1000px;
+  height: auto;
+}
+#QuestionNavigator {
+  position: absolute;
+  left: 1100px;
+  bottom: 600px;
+  width: 600px;
+  height: 200px;
+}
+button {
+  margin: 10px;
+}
+.questionNavButton {
+  background-color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 5px;
+  text-align: center;
+  vertical-align: middle;
+}
+.solution {
+  width: 1000px;
+}
+.I13Image {
+  width: 300px;
+  height: 150px;
+}
+#Q11Image {
+  width: 600px;
+  height: 224px;
+}
+#Q18Image {
+  width: 350px;
+  height: 200px;
+}
+#Q9Sol {
+  width: 1200px;
+}
+.Q11SolImage {
+  width: 200px;
+  height: 150px;
+}
+#Q15Image {
+    width: 180px;
+    height: 230px;
+}
+#Q17Image {
+    width: 200px;
+    height: 206px;
+}
+#Q13 {
+    height: 1100px;
+}

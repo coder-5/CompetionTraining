@@ -28,7 +28,7 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
     <script src="./quiz.js"></script>
-    <link href="./AMC8Quiz.css" rel="stylesheet" />
+    <link href="./AMC82024Quiz.css" rel="stylesheet" />
   </head>
   <body>
     <h1>AMC 8 2024 Test</h1>
@@ -845,59 +845,121 @@
     <div class="Question" id="Q13" hidden="true">
       <h2>Queston 13</h2>
       <p>
-        Each of the even numbers $2, 4, 6, \ldots, 50$ is divided by $7$. The
-        remainders are recorded. Which histogram displays the number of times
-        each remainder occurs?
+        Buzz Bunny is hopping up and down a set of stairs, one step at a time.
+        In how many ways can Buzz Bunny start on the ground, make a sequence of
+        $6$ hops, and end up back on the ground? (For example, one sequence of
+        hops is up-up-down-down-up-down.)
       </p>
-      <button id="13a" onclick="right(13, 'a')" class="Q13Button a right">
-        A. <img src="./Assets/Images/13a.png" class="I13Image" />
+      <img
+        src="https://artofproblemsolving.com/wiki/index.php/2025_AMC_8_Problems/Problem_21"
+      />
+      <br />
+      <button id="13a" onclick="wrong(13, 'a')" class="Q13Button a">
+        A. 4
       </button>
       <br />
-      <button id="13b" onclick="wrong(13, 'b')" class="Q13Button b">
-        B. <img src="./Assets/Images/13b.png" class="I13Image" />
+      <button id="13b" onclick="right(13, 'b')" class="Q13Button b right">
+        B. 5
       </button>
       <br />
       <button id="13c" onclick="wrong(13, 'c')" class="Q13Button c">
-        C. <img src="./Assets/Images/13c.png" class="I13Image" />
+        C. 6
       </button>
       <br />
       <button id="13d" onclick="wrong(13, 'd')" class="Q13Button d">
-        D. <img src="./Assets/Images/13d.png" class="I13Image" />
+        D. 8
       </button>
       <br />
       <button id="13e" onclick="wrong(13, 'e')" class="Q13Button e">
-        E. <img src="./Assets/Images/13e.png" class="I13Image" />
+        E. 12
       </button>
       <br />
     </div>
     <div class="solution" id="Q13Sol" hidden="true">
       <h3>Solution 1</h3>
       <p>
-        Let's take the numbers 2 through 14 (evens). The remainders will be 2,
-        4, 6, 1, 3, 5, and 0. This sequence keeps repeating itself over and
-        over. We can take $\left\lfloor\frac{50}{14}\right\rfloor$, so after the
-        number 42, every remainder has been achieved 3 times. However, since 44,
-        46, 48, and 50 are left, the remainders of those will be 2, 4, 6, and 1
-        respectively. The only histogram in which those 4 numbers are set at 4
-        is histogram $\boxed{\textbf{(A)}}$.
+        Looking at the answer choices, you see that you can list them out. Doing
+        this gets you:<br />
+
+        $\mathit{UUDDUD}$<br />
+
+        $\mathit{UDUDUD}$<br />
+
+        $\mathit{UUUDDD}$<br />
+
+        $\mathit{UDUUDD}$<br />
+
+        $\mathit{UUDUDD}$<br />
+
+        Counting all the paths listed above gets you $\boxed{\textbf{(B)} \
+        5}$.<br />
       </p>
       <h3>Solution 2</h3>
       <p>
-        Writing down all the remainders gives us $2, 4, 6, 1, 3, 5, 0, 2, 4, 6,
-        1, 3, 5, 0, 2, 4, 6, 1, 3, 5, 0, 2, 4, 6, 1.$ In this list, there are
-        $3$ numbers with remainder $0$, $4$ numbers with remainder $1$, $4$
-        numbers with remainder $2$, $3$ numbers with remainder $3$, $4$ numbers
-        with remainder $4$, $3$ numbers with remainder $5$, and $4$ numbers with
-        remainder $6$. Manually computation of every single term can be avoided
-        by recognizing the pattern alternates from $0, 2, 4, 6$ to $1, 3, 5$ and
-        there are $25$ terms. The only histogram that matches this is
-        $\boxed{\textbf{(A)}}$.
+        Any combination can be written as some re-arrangement of
+        $\mathit{UUUDDD}$. Clearly we must end going down, and start going up,
+        so we need the number of ways to insert 2 $U$'s and 2 $D$'s into $U\, \_
+        \, \_ \, \_ \, \_ \, D$. There are ${4\choose 2}=6$ ways, but we have to
+        remove the case $\mathit{UDDUUD}$, giving us $\boxed{\textbf{(B)}\
+        5}$.<br />
+
+        - We know there are no more cases since there will be at least one $U$
+        before we have a $D$ (from the first $U$), at least two $U$'S before two
+        $D$'s (since we removed the one case), and at least three $U$'s before
+        three $D$'s, as we end with the third $D$.
+      </p>
+      <h3>Solution 3</h3>
+      <p>
+        These numbers are clearly the Catalan numbers. Since we have $6$ steps,
+        we need the third Catalan number, which is $\boxed{\textbf{(B)}\ 5}$.
+      </p>
+      <h3>Solution 4</h3>
+      <p>
+        The first step must be a U, last step must be a D. After the third step
+        we can get only position 3 or position 1. In the first case there is
+        only one way: UUUDDD. In the second case we have two way to get this
+        position UDU and UUD. Similarly, we have two way return to position 0
+        (UDD and DUD). Therefore, we have $1 + 2 \cdot 2 = \boxed{\textbf{(B)}\
+        5}$.
+      </p>
+      <h3>Solution 5</h3>
+      <p>
+        We can find the total cases then deduct the ones that don't work.<br />
+
+        Let $U$ represent "Up" and $D$ represent "Down". We know that in order
+        to land back at the bottom of the stairs, we must have an equal number
+        of $U$'s and $D$'s, therefore six hops means $3$ of each.<br />
+
+        The number of ways to arrange $3$ $U$'s and $3$ $D$'s is
+        $\dfrac{6!}{(3!)^2}=\dfrac{720}{36}=20$.<br />
+
+        Case $1$: Start with $\mathit D$<br />
+
+        Case $2$: Start with $\mathit{UDD}$<br />
+
+        Case $3$: Start with $\mathit{UUDDD}$<br />
+
+        Case $4$: Start with $\mathit{UDUDD}$<br />
+
+        Case $1$ is asking us how many ways there are to arrange $3$ $U$'s and
+        $2$ $D$'s, which is $\dfrac{5!}{3!2!}=\dfrac{120}{12}=10$.<br />
+
+        Case $2$ is asking us how many ways there are to arrange $2$ $U$'s and
+        $1$ $D$, which is $\dfrac{3!}{2!1!}=\dfrac{6}{2}=3$.<br />
+
+        Case $3$ is asking us how many ways there are to arrange $1$ $U$, which
+        is $1$.<br />
+
+        Case $4$ is asking us the same thing as Case $3$, giving us $1$.<br />
+
+        Therefore, deducting all cases from $20$ gives
+        $20-10-3-1-1=\boxed{\textbf{(B)}\,5}$.
       </p>
       <h3>Video Solution</h3>
       <iframe
         width="560"
         height="315"
-        src="https://www.youtube.com/embed/VP7g-s8akMY?si=__rcMMLj2_c32K3K&amp;start=1269"
+        src="https://www.youtube.com/embed/aMmHkyEOmAc?si=lK-5RVWgALX48hjm"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
